@@ -3,6 +3,7 @@ import os
 import logging
 from dotenv import load_dotenv
 from openai import OpenAI
+import aiohttp
 
 from .config import AgentConfig
 from ..agents_async.SearchAgents.simple_search_agent import SimpleSearchAgent
@@ -131,6 +132,13 @@ async def setup_prompting_web_agent(
     ):
 
     logger = setup_logger()
+    reset_url = os.environ["ACCOUNT_RESET_URL"]
+    async with aiohttp.ClientSession() as session:
+        headers = {'Connection': 'close'}  # Similar to curl -N
+        async with session.get(reset_url, headers=headers) as response:
+            if response.status == 200:
+                data = await response.json()
+                print(f"Account reset successful: {data}")
     playwright_manager = await setup_playwright(storage_state=storage_state, headless=headless, mode=browser_mode)
     if features is None:
         features = DEFAULT_FEATURES

@@ -62,6 +62,7 @@ class PromptAgent:
             demo_mode="default"
         )
         self.log_folder = log_folder
+        
 
     async def send_completion_request(self, plan: str, depth: int = 0, trajectory=[]) -> Dict:
         if depth >= 1:

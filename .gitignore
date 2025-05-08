@@ -1,0 +1,16 @@
+baselines/search-agents-main/results/*
+*clicku*
+__pycache__/
+*.pyc
+.idea
+.DS_Store
+lwats.egg-info/
+log/
+log_*/
+.env
+venv/
+.idea/
+test_configs/*
+.vscode/
+temp/
+
