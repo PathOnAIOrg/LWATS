@@ -1,5 +1,13 @@
 # README
 
+## Set Up
+```
+python3.11 -m venv venv
+. venv/bin/activate
+pip3.11 install -e .
+```
+
+
 ## Get started
 ```
 python run_demo_treesearch.py \
