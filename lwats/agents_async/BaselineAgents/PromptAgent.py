@@ -65,7 +65,7 @@ class PromptAgent:
         
 
     async def send_completion_request(self, plan: str, depth: int = 0, trajectory=[]) -> Dict:
-        if depth >= 1:
+        if depth >= 3:
             return trajectory
 
         context = await self.playwright_manager.get_context()
