@@ -8,6 +8,7 @@ from .config import AgentConfig
 from ..agents_async.SearchAgents.simple_search_agent import SimpleSearchAgent
 from ..agents_async.SearchAgents.lats_agent import LATSAgent
 from ..agents_async.SearchAgents.mcts_agent import MCTSAgent
+from ..agents_async.BaselineAgents.PromptAgent import PromptAgent
 from ..webagent_utils_async.utils.utils import setup_logger
 from ..webagent_utils_async.utils.playwright_manager import setup_playwright
 
@@ -104,6 +105,84 @@ async def setup_search_agent(
         )
     else:
         error_message = f"Unsupported agent type: {agent_type}. Please use 'FunctionCallingAgent', 'HighLevelPlanningAgent', 'ContextAwarePlanningAgent', 'PromptAgent' or 'PromptSearchAgent' ."
+        logger.error(error_message)
+        return {"error": error_message}
+    return agent, playwright_manager
+
+
+async def setup_prompting_web_agent(
+    starting_url,
+    goal,
+    images,
+    agent_type="PromptAgent",
+    features=['axtree'],
+    elements_filter=None,
+    branching_factor=None,
+    log_folder="log",
+    storage_state='state.json',
+    headless=False,
+    browser_mode="browserbase",
+    default_model="gpt-4o-mini",
+    planning_model="gpt-4o",
+    action_generation_model="gpt-4o-mini",
+    action_grounding_model="gpt-4o",
+    evaluation_model="gpt-4o",
+    fullpage=True,
+    ):
+
+    logger = setup_logger()
+    playwright_manager = await setup_playwright(storage_state=storage_state, headless=headless, mode=browser_mode)
+    if features is None:
+        features = DEFAULT_FEATURES
+
+    messages = [
+        {
+            "role": "system",
+            "content": """You are a web search agent designed to perform specific tasks on web pages as instructed by the user. Your primary objectives are:
+
+    1. Execute ONLY the task explicitly provided by the user.
+    2. Perform the task efficiently and accurately using the available functions.
+    3. If there are errors, retry using a different approach within the scope of the given task.
+    4. Once the current task is completed, stop and wait for further instructions.
+
+    Critical guidelines:
+    - Strictly limit your actions to the current task. Do not attempt additional tasks or next steps.
+    - Use only the functions provided to you. Do not attempt to use functions or methods that are not explicitly available.
+    - For navigation or interaction with page elements, always use the appropriate bid (browser element ID) when required by a function.
+    - If a task cannot be completed with the available functions, report the limitation rather than attempting unsupported actions.
+    - After completing a task, report its completion and await new instructions. Do not suggest or initiate further actions.
+
+    Remember: Your role is to execute the given task precisely as instructed, using only the provided functions and within the confines of the current web page. Do not exceed these boundaries under any circumstances."""
+        }
+    ]
+
+    page = await playwright_manager.get_page()
+    await page.goto(starting_url)
+    # Maximize the window on macOS
+    # page.set_viewport_size({"width": 1440, "height": 900})
+
+    file_path = os.path.join(log_folder, 'flow', 'steps.json')
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, 'w') as file:
+        file.write(goal + '\n')
+        file.write(starting_url + '\n')
+
+    if agent_type == "PromptAgent":
+        agent = PromptAgent(messages=messages, 
+                            goal=goal, 
+                            images=images,
+                            playwright_manager=playwright_manager, 
+                            features=features, 
+                            elements_filter=elements_filter, 
+                            branching_factor=branching_factor, 
+                            log_folder=log_folder,
+                            default_model=default_model,
+                            planning_model=planning_model,
+                            action_generation_model=action_generation_model,
+                            action_grounding_model=action_grounding_model,
+                            evaluation_model=evaluation_model)
+    else:
+        error_message = f"Unsupported agent type: {agent_type}. Please use 'PromptAgent'."
         logger.error(error_message)
         return {"error": error_message}
     return agent, playwright_manager
