@@ -31,6 +31,6 @@ python run_demo_baseline.py \
     --action_generation_model "gpt-4o-mini" \
     --goal "Can you add the item Yemeni Hawayij on this page, to my cart?" \
     --evaluator-type "BaseEvaluator" \
-    --eval-url "http://128.105.146.96:7770/checkout/cart" \
+    --eval-url "http://xwebarena.pathonai.org:7770/checkout/cart" \
     --eval-criteria "check if Yemeni Hawayij is in the cart"
 ```

@@ -62,7 +62,7 @@ if __name__ == "__main__":
                         help="Storage state json file")
     parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
                         help="action grounding model, right now only supports openai models")
-    parser.add_argument("--starting-url", type=str, default="http://128.105.146.96:7770/",
+    parser.add_argument("--starting-url", type=str, default="http://xwebarena.pathonai.org:7770/",
                         help="Starting URL for the web agent")
     parser.add_argument("--agent-type", type=str, default="LATSAgent",
                         help="Type of agent to use (default: LATSAgent)")
