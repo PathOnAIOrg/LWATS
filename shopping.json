@@ -154,7 +154,7 @@
         "value": "",
         "domain": "xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1778111734,
+        "expires": 1778577169,
         "httpOnly": false,
         "secure": false,
         "sameSite": "Strict"
@@ -210,42 +210,22 @@
         "sameSite": "Lax"
     },
     {
-        "name": "form_key",
-        "value": "4uLdYaoDOxEQJT56",
-        "domain": "xwebarena.pathonai.org",
-        "path": "/",
-        "expires": 1746586155,
-        "httpOnly": false,
-        "secure": false,
-        "sameSite": "Lax"
-    },
-    {
         "name": "private_content_version",
-        "value": "e1d9874ab961263ff285c225eb92567b",
+        "value": "a3121e9f958d22918179fc1a9062d3dc",
         "domain": "xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1781135731.993161,
+        "expires": 1781601167.643087,
         "httpOnly": false,
         "secure": false,
         "sameSite": "Lax"
     },
     {
         "name": "PHPSESSID",
-        "value": "d7bfb3cbca929b8b54beb2b83c0a1b93",
+        "value": "bf1209349009a24a46d7f857615523fc",
         "domain": ".xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1778111736.636755,
+        "expires": 1778577171.287437,
         "httpOnly": true,
-        "secure": false,
-        "sameSite": "Lax"
-    },
-    {
-        "name": "form_key",
-        "value": "4uLdYaoDOxEQJT56",
-        "domain": ".xwebarena.pathonai.org",
-        "path": "/",
-        "expires": 1778111736.636922,
-        "httpOnly": false,
         "secure": false,
         "sameSite": "Lax"
     },
@@ -254,8 +234,18 @@
         "value": "9bf9a599123e6402b85cde67144717a08b817412",
         "domain": "xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1778111736.636988,
+        "expires": 1778577171.28765,
         "httpOnly": true,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "form_key",
+        "value": "UjW8Q9XURYVidSyc",
+        "domain": "xwebarena.pathonai.org",
+        "path": "/",
+        "expires": 1747127568,
+        "httpOnly": false,
         "secure": false,
         "sameSite": "Lax"
     },
@@ -264,17 +254,27 @@
         "value": "true",
         "domain": "xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1778111734,
+        "expires": 1778577169,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "form_key",
+        "value": "UjW8Q9XURYVidSyc",
+        "domain": ".xwebarena.pathonai.org",
+        "path": "/",
+        "expires": 1778577171.287592,
         "httpOnly": false,
         "secure": false,
         "sameSite": "Lax"
     },
     {
         "name": "section_data_ids",
-        "value": "{%22messages%22:1746575735%2C%22customer%22:1746575735%2C%22compare-products%22:1746575735%2C%22last-ordered-items%22:1746575735%2C%22cart%22:1746575735%2C%22directory-data%22:1746575735%2C%22captcha%22:1746575735%2C%22instant-purchase%22:1746575735%2C%22loggedAsCustomer%22:1746575735%2C%22persistent%22:1746575735%2C%22review%22:1746575735%2C%22wishlist%22:1746575735%2C%22recently_viewed_product%22:1746575735%2C%22recently_compared_product%22:1746575735%2C%22product_data_storage%22:1746575735%2C%22paypal-billing-agreement%22:1746575735}",
+        "value": "{%22messages%22:1747041169%2C%22customer%22:1747041169%2C%22compare-products%22:1747041169%2C%22last-ordered-items%22:1747041169%2C%22cart%22:1747041169%2C%22directory-data%22:1747041169%2C%22captcha%22:1747041169%2C%22instant-purchase%22:1747041169%2C%22loggedAsCustomer%22:1747041169%2C%22persistent%22:1747041169%2C%22review%22:1747041169%2C%22wishlist%22:1747041169%2C%22recently_viewed_product%22:1747041169%2C%22recently_compared_product%22:1747041169%2C%22product_data_storage%22:1747041169%2C%22paypal-billing-agreement%22:1747041169}",
         "domain": "xwebarena.pathonai.org",
         "path": "/",
-        "expires": 1778111734,
+        "expires": 1778577169,
         "httpOnly": false,
         "secure": false,
         "sameSite": "Lax"
