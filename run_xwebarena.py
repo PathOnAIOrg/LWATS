@@ -83,16 +83,12 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
     print(score)
     
     # Close the playwright_manager when done
-    playwright_manager.close()
+    await playwright_manager.close()
     return trajectory, result, score
 
 
 '''
-python run_xwebarena.py \
-    --browser-mode chromium \
-    --config-file ./xwebarena_evaluation_suite/configs/wa_117.json \
-    --agent-type "PromptAgent" \
-    --action_generation_model "gpt-4o-mini" 
+python run_xwebarena.py --browser-mode chromium --agent-type "PromptAgent" --action_generation_model "gpt-4o-mini" --config-file ./xwebarena_evaluation_suite/configs/wa_117.json
 '''
 
 
