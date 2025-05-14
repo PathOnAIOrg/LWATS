@@ -1,0 +1,224 @@
+import argparse
+from dotenv import load_dotenv
+load_dotenv()
+from lwats.core_async.agent_factory import setup_prompting_web_agent
+import asyncio
+import os
+import json
+import datetime
+import logging
+
+WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. Please note that certain options can be chosen inside the product page such as color or size which means the image in the search page is only one example of the product. Also, there might not be a perfect match, in which case you should try to find the closest match as possible. The searched result is ranked from the most relevant to the least relevant so usually next page will give less relevant products. If there is no result in the next page, consider to go back to search and try different queries. Also, you only have ten actions each time, so please use them wisely. If you end up buy nothing after ten rounds, then you will receive zero score. It is better to at least select something that matches imperfectly."""
+
+def setup_logger(task_id, log_folder="log"):
+    """Set up logging for a specific task with both file and console handlers."""
+    logger = logging.getLogger(f"{task_id}")
+    logger.setLevel(logging.INFO)
+    os.makedirs(log_folder, exist_ok=True)
+    log_fh = logging.FileHandler(os.path.join(log_folder, f'{task_id}.log'), encoding='utf-8')
+    log_fh.setLevel(logging.INFO)
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    log_format = logging.Formatter('%(asctime)s - %(message)s')
+    terminal_format = logging.Formatter('%(message)s')
+    log_fh.setFormatter(log_format)
+    console_handler.setFormatter(terminal_format)
+    logger.addHandler(log_fh)
+    logger.addHandler(console_handler)
+    return logger, log_fh, console_handler
+
+async def main(headless, browser_mode, storage_state, starting_url, agent_type, goal, 
+         action_generation_model, images, plan, evaluator_type, eval_url, eval_criteria, task_id=None):
+    """
+    Main function to run the WebShop evaluation.
+    
+    Args:
+        headless (bool): Whether to run browser in headless mode
+        browser_mode (str): Browser mode (chromium/browserbase)
+        storage_state (str): Path to storage state file
+        starting_url (str): Initial URL to start from
+        agent_type (str): Type of agent to use
+        goal (str): Task goal/instruction
+        action_generation_model (str): Model to use for action generation
+        images (str): Comma-separated list of image paths
+        plan (str): Optional plan to follow
+        evaluator_type (str): Type of evaluator to use
+        eval_url (str): URL for evaluation
+        eval_criteria (str): Evaluation criteria
+        task_id (str): Optional task ID for logging
+    """
+    # Setup logging
+    if task_id:
+        log_folder = os.path.join("log", task_id)
+        os.makedirs(log_folder, exist_ok=True)
+        logger, log_fh, console_handler = setup_logger(task_id, log_folder)
+        logger.info(f"Starting evaluation for task {task_id}")
+        logger.info(f"Starting URL: {starting_url}")
+    else:
+        logger = logging.getLogger("default")
+        logger.setLevel(logging.INFO)
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        logger.addHandler(console_handler)
+        log_fh = None
+
+    # Split the comma-separated string into a list of images
+    images_list = [img.strip() for img in images.split(',')] if images else []
+    
+    try:
+        agent, playwright_manager = await setup_prompting_web_agent(
+            starting_url=starting_url,
+            goal=goal,
+            images=images_list,
+            agent_type=agent_type,
+            features="axtree",
+            branching_factor=5,
+            log_folder=log_folder if task_id else "log",
+            storage_state=storage_state,
+            headless=headless,
+            browser_mode=browser_mode,
+            default_model="gpt-4o",
+            planning_model="gpt-4o",
+            action_generation_model=action_generation_model,
+            action_grounding_model="gpt-4o",
+            evaluation_model="gpt-4o",
+            fullpage=True,
+        )
+        
+        # Ensure the agent is of the specified type
+        expected_agent_class = globals().get(agent_type)
+        if expected_agent_class and not isinstance(agent, expected_agent_class):
+            raise TypeError(f"Agent is not an instance of {agent_type}")
+        
+        # Run the search
+        trajectory, result = await agent.send_prompt(plan if plan is not None else goal)
+        logger.info("Trajectory:")
+        logger.info(trajectory)
+        logger.info("Result:")
+        logger.info(result)
+        
+        # Save results
+        if task_id:
+            result_file = os.path.join(log_folder, 'result.json')
+            final_json = {
+                "task_id": task_id,
+                "goal": goal,
+                "starting_url": starting_url,
+                "trajectory": trajectory,
+                "result": result,
+                "timestamp": datetime.datetime.now().isoformat(),
+                "agent_type": agent_type,
+                "action_generation_model": action_generation_model,
+                "evaluator_type": evaluator_type,
+                "eval_url": eval_url,
+                "eval_criteria": eval_criteria
+            }
+            with open(result_file, 'w', encoding='utf-8') as f:
+                json.dump(final_json, f, indent=4)
+        
+        # Close the playwright_manager when done
+        await playwright_manager.close()
+        return trajectory, result
+
+    except Exception as e:
+        logger.error(f"Error occurred: {str(e)}")
+        if task_id:
+            result_file = os.path.join(log_folder, 'error.json')
+            error_json = {
+                "task_id": task_id,
+                "goal": goal,
+                "starting_url": starting_url,
+                "error": str(e),
+                "timestamp": datetime.datetime.now().isoformat(),
+                "agent_type": agent_type,
+                "action_generation_model": action_generation_model
+            }
+            with open(result_file, 'w', encoding='utf-8') as f:
+                json.dump(error_json, f, indent=4)
+        raise
+    finally:
+        if log_fh:
+            logger.removeHandler(log_fh)
+        logger.removeHandler(console_handler)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run WebShop evaluation")
+    parser.add_argument("--headless", type=bool, default=False,
+                        help="Specify if the browser should run in headless mode (default: False)")
+    parser.add_argument("--browser-mode", type=str, default="chromium",
+                        help="Specify the browser mode (default: chromium)")
+    parser.add_argument("--storage-state", type=str, default=None,
+                        help="Storage state json file")
+    parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
+                        help="Action generation model (default: gpt-4o)")
+    parser.add_argument("--starting-url", type=str, default="http://127.0.0.1:3000/fixed_1",
+                        help="Starting URL for the web agent (default: http://127.0.0.1:3000/fixed_1)")
+    parser.add_argument("--agent-type", type=str, default="PromptAgent",
+                        help="Type of agent to use (default: PromptAgent)")
+    parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
+                        help="Goal for the web agent to accomplish")
+    parser.add_argument("--images", type=str, default="",
+                        help="Comma-separated paths to image files (e.g., 'path1.jpg,path2.jpg')")
+    parser.add_argument("--plan", type=str, default=None,
+                        help="Optional plan for the web agent to follow (default: None)")
+    parser.add_argument("--evaluator-type", type=str, default=None,
+                        help="Type of evaluator to use (default: None, no evaluation)")
+    parser.add_argument("--eval-url", type=str, default=None,
+                        help="URL for evaluation purposes")
+    parser.add_argument("--eval-criteria", type=str, default=None,
+                        help="Criteria for evaluation")
+    parser.add_argument("--task-id", type=str, default=None,
+                        help="Task ID for this evaluation run")
+    parser.add_argument("--batch-start", type=int, default=None,
+                        help="Start task number for batch evaluation")
+    parser.add_argument("--batch-end", type=int, default=None,
+                        help="End task number for batch evaluation")
+    
+    args = parser.parse_args()
+
+    # Handle batch evaluation
+    if args.batch_start is not None and args.batch_end is not None:
+        base_url = args.starting_url.rstrip('/')
+        base_url = base_url.rsplit('_', 1)[0]  # Remove the task number if present
+        for task_num in range(args.batch_start, args.batch_end + 1):
+            task_url = f"{base_url}_{task_num}"
+            task_id = f"webshop_task_{task_num}"
+            print(f"\nRunning WebShop task {task_num} at {task_url}")
+            try:
+                trajectory, result = asyncio.run(main(
+                    args.headless,
+                    args.browser_mode,
+                    args.storage_state,
+                    task_url,
+                    args.agent_type,
+                    args.goal,
+                    args.action_generation_model,
+                    args.images,
+                    args.plan,
+                    args.evaluator_type,
+                    args.eval_url,
+                    args.eval_criteria,
+                    task_id
+                ))
+                print(f"Completed task {task_num}")
+            except Exception as e:
+                print(f"Error in task {task_num}: {str(e)}")
+                continue
+    else:
+        # Single task evaluation
+        task_id = args.task_id or f"webshop_task_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        trajectory, result = asyncio.run(main(
+            args.headless,
+            args.browser_mode,
+            args.storage_state,
+            args.starting_url,
+            args.agent_type,
+            args.goal,
+            args.action_generation_model,
+            args.images,
+            args.plan,
+            args.evaluator_type,
+            args.eval_url,
+            args.eval_criteria,
+            task_id
+        )) 
