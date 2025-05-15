@@ -85,6 +85,9 @@ async def store_cookies(browser_tab: Page, cookie_file_path: str):
 
 async def restore_cookies(browser_tab: Page, cookie_file_path: str):
     """Load cookies from our local file into the current browser context, if present."""
+    if cookie_file_path is None:
+        print("No cookie file specified. Skipping cookie restoration.")
+        return False
     try:
         with open(cookie_file_path) as cookie_file:
             cookies = json.load(cookie_file)

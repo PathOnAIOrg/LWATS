@@ -34,3 +34,11 @@ python run_demo_baseline.py \
     --eval-url "http://xwebarena.pathonai.org:7770/checkout/cart" \
     --eval-criteria "check if Yemeni Hawayij is in the cart"
 ```
+
+```
+# run single task
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0"  --agent-type PromptAgent
+
+# run batch of tasks
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --agent-type PromptAgent --batch-start 1 --batch-end 5
+```
