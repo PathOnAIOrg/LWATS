@@ -14,7 +14,7 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
     num_simulations = 100
     exploration_weight = 1.41
     
-    print("******************************config_file******************************")
+    cfgfileContent=""
     with open(config_file) as f:
         _c = json.load(f)
         goal = _c["intent"]
@@ -33,14 +33,13 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
                 else:
                     input_image = Image.open(image_path)
                 images.append(input_image)
-        print(f"[Config file]: {config_file}")
-        print(f"[Goal]: {goal}")
-        print(f"[Starting Url]: {starting_url}")
-        print(f"[Storage State]: {storage_state}")
-        print(f"[Task id]: {task_id}")
-        print(f"[len(images)]: {len(images)}")
-    print("************************************************************")
-    
+        cfgfileContent += f"[Config file]: {config_file}" + "\n"
+        cfgfileContent += f"[Goal]: {goal}" + "\n"
+        cfgfileContent += f"[Starting Url]: {starting_url}" + "\n"
+        cfgfileContent += f"[Storage State]: {storage_state}" + "\n"
+        cfgfileContent += f"[Task id]: {task_id}" + "\n"
+        cfgfileContent += f"[len(images)]: {len(images)}" + "\n"
+
     # Split the comma-separated string into a list of images
     images_list = [img.strip() for img in images.split(',')] if images else []
     
@@ -82,7 +81,14 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
     
     # Close the playwright_manager when done
     await playwright_manager.close()
-    return trajectory, result, score
+
+    res="******************************config_file******************************" + "\n" + str(cfgfileContent) + "\n" +    \
+        "******************************trajectory******************************" +"\n" + str(trajectory) + "\n"+    \
+        "******************************result******************************" + "\n" + str(result) + "\n" +    \
+        "******************************score******************************" + "\n" + str(score) + "\n"    
+    print(res)
+    with open(log_folder+"output.txt", "w") as f:
+        f.write(res)
 
 
 '''
@@ -123,16 +129,9 @@ if __name__ == "__main__":
     config_file = args.config_file
 
     # # Run the async main function with asyncio
-    trajectory, result, score = asyncio.run(main(args.headless,
+    asyncio.run(main(args.headless,
         args.browser_mode,
         args.config_file,
         args.agent_type,
         args.action_generation_model,
         args.plan))
-
-    print("******************************trajectory******************************")
-    print(trajectory)
-    print("******************************result******************************")
-    print(result)
-    print("******************************score******************************")
-    print(score)
