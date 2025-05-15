@@ -8,13 +8,13 @@ import asyncio,json
 
 
 async def main(headless, browser_mode, config_file, agent_type, action_generation_model, plan):
-    log_folder = "log"
+    log_folder = "./log/"+config_file.replace(".json","")+"/"
     model = "gpt-4-mini"
     features = "axtree"
     num_simulations = 100
     exploration_weight = 1.41
     
-    print(config_file)
+    print("******************************config_file******************************")
     with open(config_file) as f:
         _c = json.load(f)
         goal = _c["intent"]
@@ -38,7 +38,8 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
         print(f"[Starting Url]: {starting_url}")
         print(f"[Storage State]: {storage_state}")
         print(f"[Task id]: {task_id}")
-        print(len(images))
+        print(f"[len(images)]: {len(images)}")
+    print("************************************************************")
     
     # Split the comma-separated string into a list of images
     images_list = [img.strip() for img in images.split(',')] if images else []
@@ -69,18 +70,15 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
     
     # Run the search
     trajectory, result = await agent.send_prompt(plan if plan is not None else goal)
-    print(trajectory)
-    print(result)
 
     evaluator = evaluator_router(
         config_file, captioning_fn=None
     )
-    score = evaluator(
+    score = evaluator(    # TODO: score not always working
         trajectory=trajectory,
         config_file=config_file,
         page=playwright_manager.page
     )
-    print(score)
     
     # Close the playwright_manager when done
     await playwright_manager.close()
@@ -132,6 +130,9 @@ if __name__ == "__main__":
         args.action_generation_model,
         args.plan))
 
+    print("******************************trajectory******************************")
     print(trajectory)
+    print("******************************result******************************")
     print(result)
+    print("******************************score******************************")
     print(score)
