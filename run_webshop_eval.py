@@ -8,7 +8,26 @@ import json
 import datetime
 import logging
 
-WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. Please note that certain options can be chosen inside the product page such as color or size which means the image in the search page is only one example of the product. Also, there might not be a perfect match, in which case you should try to find the closest match as possible. The searched result is ranked from the most relevant to the least relevant so usually next page will give less relevant products. If there is no result in the next page, consider to go back to search and try different queries. Also, you only have ten actions each time, so please use them wisely. If you end up buy nothing after ten rounds, then you will receive zero score. It is better to at least select something that matches imperfectly."""
+WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
+
+IMPORTANT SEARCH QUERY GUIDANCE:
+1. When searching, use short, general terms (2-4 words) instead of copying the entire product description. For example:
+   - GOOD: "black loafers" or "men's shoes" or "rubber sole shoes"
+   - BAD: "men's size 10.5 black loafers with rubber soles under $70"
+
+2. Start with broader terms, then narrow down by filtering or browsing specific product pages. Search for the main product category first, then check details like size and price on individual product pages.
+
+3. If you get zero search results, try:
+   - Using fewer, more general terms
+   - Removing specific qualifiers (size, price, etc.)
+   - Using alternative terms (e.g., "shoes" instead of "loafers")
+
+Please note that certain options can be chosen inside the product page such as color or size which means the image in the search page is only one example of the product. Also, there might not be a perfect match, in which case you should try to find the closest match as possible. 
+
+The searched result is ranked from the most relevant to the least relevant so usually next page will give less relevant products. If there is no result in the next page, consider going back to search and trying different queries. 
+
+Also, you only have limited number ofactions each time, so please use them wisely. If you end up buying nothing after ten rounds, then you will receive zero score. It is better to at least select something that matches imperfectly.
+"""
 
 def setup_logger(task_id, log_folder="log"):
     """Set up logging for a specific task with both file and console handlers."""
@@ -27,24 +46,20 @@ def setup_logger(task_id, log_folder="log"):
     logger.addHandler(console_handler)
     return logger, log_fh, console_handler
 
-async def main(headless, browser_mode, storage_state, starting_url, agent_type, goal, 
-         action_generation_model, images, plan, evaluator_type, eval_url, eval_criteria, task_id=None):
+async def main(headless, browser_mode, starting_url, agent_type, goal, 
+         action_generation_model, images, plan, task_id=None):
     """
     Main function to run the WebShop evaluation.
     
     Args:
         headless (bool): Whether to run browser in headless mode
         browser_mode (str): Browser mode (chromium/browserbase)
-        storage_state (str): Path to storage state file
         starting_url (str): Initial URL to start from
         agent_type (str): Type of agent to use
         goal (str): Task goal/instruction
         action_generation_model (str): Model to use for action generation
         images (str): Comma-separated list of image paths
         plan (str): Optional plan to follow
-        evaluator_type (str): Type of evaluator to use
-        eval_url (str): URL for evaluation
-        eval_criteria (str): Evaluation criteria
         task_id (str): Optional task ID for logging
     """
     # Setup logging
@@ -74,7 +89,7 @@ async def main(headless, browser_mode, storage_state, starting_url, agent_type, 
             features="axtree",
             branching_factor=5,
             log_folder=log_folder if task_id else "log",
-            storage_state=storage_state,
+            storage_state=None,  # No storage state for WebShop
             headless=headless,
             browser_mode=browser_mode,
             default_model="gpt-4o",
@@ -84,11 +99,6 @@ async def main(headless, browser_mode, storage_state, starting_url, agent_type, 
             evaluation_model="gpt-4o",
             fullpage=True,
         )
-        
-        # Ensure the agent is of the specified type
-        expected_agent_class = globals().get(agent_type)
-        if expected_agent_class and not isinstance(agent, expected_agent_class):
-            raise TypeError(f"Agent is not an instance of {agent_type}")
         
         # Run the search
         trajectory, result = await agent.send_prompt(plan if plan is not None else goal)
@@ -109,9 +119,6 @@ async def main(headless, browser_mode, storage_state, starting_url, agent_type, 
                 "timestamp": datetime.datetime.now().isoformat(),
                 "agent_type": agent_type,
                 "action_generation_model": action_generation_model,
-                "evaluator_type": evaluator_type,
-                "eval_url": eval_url,
-                "eval_criteria": eval_criteria
             }
             with open(result_file, 'w', encoding='utf-8') as f:
                 json.dump(final_json, f, indent=4)
@@ -147,26 +154,18 @@ if __name__ == "__main__":
                         help="Specify if the browser should run in headless mode (default: False)")
     parser.add_argument("--browser-mode", type=str, default="chromium",
                         help="Specify the browser mode (default: chromium)")
-    parser.add_argument("--storage-state", type=str, default=None,
-                        help="Storage state json file")
-    parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
-                        help="Action generation model (default: gpt-4o)")
     parser.add_argument("--starting-url", type=str, default="http://127.0.0.1:3000/fixed_1",
                         help="Starting URL for the web agent (default: http://127.0.0.1:3000/fixed_1)")
     parser.add_argument("--agent-type", type=str, default="PromptAgent",
                         help="Type of agent to use (default: PromptAgent)")
     parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
                         help="Goal for the web agent to accomplish")
+    parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
+                        help="Action generation model (default: gpt-4o)")
     parser.add_argument("--images", type=str, default="",
                         help="Comma-separated paths to image files (e.g., 'path1.jpg,path2.jpg')")
     parser.add_argument("--plan", type=str, default=None,
                         help="Optional plan for the web agent to follow (default: None)")
-    parser.add_argument("--evaluator-type", type=str, default=None,
-                        help="Type of evaluator to use (default: None, no evaluation)")
-    parser.add_argument("--eval-url", type=str, default=None,
-                        help="URL for evaluation purposes")
-    parser.add_argument("--eval-criteria", type=str, default=None,
-                        help="Criteria for evaluation")
     parser.add_argument("--task-id", type=str, default=None,
                         help="Task ID for this evaluation run")
     parser.add_argument("--batch-start", type=int, default=None,
@@ -179,7 +178,10 @@ if __name__ == "__main__":
     # Handle batch evaluation
     if args.batch_start is not None and args.batch_end is not None:
         base_url = args.starting_url.rstrip('/')
-        base_url = base_url.rsplit('_', 1)[0]  # Remove the task number if present
+        # Get the base URL before the task number
+        if '_' in base_url:
+            base_url = base_url.rsplit('_', 1)[0]
+        
         for task_num in range(args.batch_start, args.batch_end + 1):
             task_url = f"{base_url}_{task_num}"
             task_id = f"webshop_task_{task_num}"
@@ -188,16 +190,12 @@ if __name__ == "__main__":
                 trajectory, result = asyncio.run(main(
                     args.headless,
                     args.browser_mode,
-                    args.storage_state,
                     task_url,
                     args.agent_type,
                     args.goal,
                     args.action_generation_model,
                     args.images,
                     args.plan,
-                    args.evaluator_type,
-                    args.eval_url,
-                    args.eval_criteria,
                     task_id
                 ))
                 print(f"Completed task {task_num}")
@@ -210,15 +208,11 @@ if __name__ == "__main__":
         trajectory, result = asyncio.run(main(
             args.headless,
             args.browser_mode,
-            args.storage_state,
             args.starting_url,
             args.agent_type,
             args.goal,
             args.action_generation_model,
             args.images,
             args.plan,
-            args.evaluator_type,
-            args.eval_url,
-            args.eval_criteria,
             task_id
         )) 
