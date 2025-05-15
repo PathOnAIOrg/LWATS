@@ -8,6 +8,7 @@ from ...webagent_utils_async.evaluation.feedback import capture_post_action_feed
 import time
 import logging
 import os
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -65,7 +66,10 @@ class PromptAgent:
         
 
     async def send_completion_request(self, plan: str, depth: int = 0, trajectory=[]) -> Dict:
-        if depth >= 3:
+        # Increase depth limit to allow more steps (like clicking Buy Now)
+        if depth >= 10:
+            # Save a default score of 0 if we reached the depth limit without completing
+            self._save_default_score(trajectory)
             return trajectory
 
         context = await self.playwright_manager.get_context()
@@ -104,8 +108,86 @@ class PromptAgent:
             messages.append({"role": "user", "content": 'action result is: {}'.format(action_result)})
 
         goal_finished = await is_goal_finished(messages, openai_client)
+        
+        # Check for WebShop completion with "Thank you for shopping with us!" and score on page
+        webshop_completed = False
+        webshop_score = None
+        try:
+            # Check if this is a WebShop task by checking the URL or content
+            content = await page.content()
+            if "fixed_" in page.url or ("webshop" in page.url.lower()) or ("Thank you for shopping with us!" in content):
+                # Try to detect completion markers
+                thank_you_locator = page.locator("text=Thank you for shopping with us!")
+                score_locator = page.locator("#reward")
+                
+                thank_you_count = await thank_you_locator.count()
+                score_count = await score_locator.count()
+                
+                if thank_you_count > 0 and score_count > 0:
+                    webshop_completed = True
+                    score_text = await score_locator.text_content()
+                    webshop_score = score_text.strip()
+                    logger.info(f"WebShop completion detected with score: {webshop_score}")
+                    
+                    # Save score to result file
+                    try:
+                        result_file = os.path.join(self.log_folder, 'webshop_score.json')
+                        score_data = {
+                            "score": webshop_score,
+                            "url": page.url,
+                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                        }
+                        with open(result_file, 'w', encoding='utf-8') as f:
+                            json.dump(score_data, f, indent=4)
+                        logger.info(f"WebShop score saved to {result_file}")
+                    except Exception as e:
+                        logger.error(f"Error saving WebShop score: {str(e)}")
+        except Exception as e:
+            logger.error(f"Error checking WebShop completion: {str(e)}")
 
-        if goal_finished:
+        if webshop_completed or goal_finished:
+            # If WebShop completion detected, add score to final result
+            if webshop_completed and webshop_score:
+                trajectory.append({
+                    'action': 'TERMINATE', 
+                    'action_description': 'WebShop purchase completed', 
+                    'action_result': f"Task complete! {webshop_score}",
+                    "pre_action_url": post_action_url, 
+                    "post_action_url": post_action_url
+                })
             return trajectory
 
         return await self.send_completion_request(plan, depth + 1, trajectory)
+        
+    def _save_default_score(self, trajectory):
+        """Save a default score of 0 if the task wasn't completed properly"""
+        try:
+            # Only save default score for WebShop tasks
+            post_action_url = trajectory[-1]['post_action_url'] if trajectory else ""
+            if "fixed_" in post_action_url or "webshop" in post_action_url.lower():
+                result_file = os.path.join(self.log_folder, 'webshop_score.json')
+                
+                # Check if score already exists
+                if os.path.exists(result_file):
+                    return
+                
+                score_data = {
+                    "score": "Your score (min 0.0, max 1.0): 0.0",
+                    "url": post_action_url,
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "note": "Default score - task not fully completed"
+                }
+                with open(result_file, 'w', encoding='utf-8') as f:
+                    json.dump(score_data, f, indent=4)
+                logger.info(f"Default WebShop score (0.0) saved to {result_file}")
+                
+                # Add completion message to trajectory
+                trajectory.append({
+                    'action': 'TERMINATE', 
+                    'action_description': 'WebShop task timed out', 
+                    'action_result': "Task incomplete. Default score: 0.0",
+                    "pre_action_url": post_action_url, 
+                    "post_action_url": post_action_url
+                })
+        except Exception as e:
+            logger.error(f"Error saving default WebShop score: {str(e)}")

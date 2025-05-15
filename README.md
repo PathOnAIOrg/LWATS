@@ -37,8 +37,8 @@ python run_demo_baseline.py \
 
 ```
 # run single task
-python run_webshop_eval.py --starting-url "http://127.0.0.1:3000/fixed_1"  --agent-type PromptAgent
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0"  --agent-type PromptAgent
 
 # run batch of tasks
-python run_webshop_eval.py --starting-url "http://127.0.0.1:3000/fixed_1" --agent-type PromptAgent --batch-start 1 --batch-end 5
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --agent-type PromptAgent --batch-start 1 --batch-end 5
 ```

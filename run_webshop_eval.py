@@ -15,18 +15,50 @@ IMPORTANT SEARCH QUERY GUIDANCE:
    - GOOD: "black loafers" or "men's shoes" or "rubber sole shoes"
    - BAD: "men's size 10.5 black loafers with rubber soles under $70"
 
-2. Start with broader terms, then narrow down by filtering or browsing specific product pages. Search for the main product category first, then check details like size and price on individual product pages.
+2. Start with broader terms, then narrow down by filtering or browsing specific product pages. Scroll through all results on the first page and identify if there is any product matches the requirement. If there is, click on the product to go to the product page. If there is no product matches the requirement, try to navigate to next page or trya different search query. Search for the main product category first, then check details like size and price on individual product pages.
 
-3. If you get zero search results, try:
-   - Using fewer, more general terms
-   - Removing specific qualifiers (size, price, etc.)
-   - Using alternative terms (e.g., "shoes" instead of "loafers")
+3. Select the relevant color and size of the product if there is any. Click on "Buy Now" button to go to the checkout page if you are confident that you have found the product that matches the requirement.
+
+4. The page with "Thank you for shopping with us!" and "Your score" is the only page that confirms the task is complete.
+
+BROWSING AND NAVIGATION GUIDANCE:
+1. Always scroll down to view all results on the current page. Relevant items may be lower on the page and not immediately visible.
+
+2. If you don't find suitable items on the first page:
+   - Look for and click on "Next" button to go to the next page
+   - Try at least 2-3 pages of results before changing your search query
+
+3. When examining a product page:
+   - Scroll the entire page to see all options, details, and variations
+   - Many products have multiple options (sizes, colors) that only appear when browsing the full product page
+
+COMPLETION AND SCORING GUIDANCE:
+1. The task is ONLY complete when you see "Your score (min 0.0, max 1.0)" displayed on the page. This confirms your purchase was evaluated.
+
+2. If you've clicked "Buy Now" but don't see "Your score":
+   - DO NOT end the task or close the browser
+   - You may need to complete additional steps (like confirming purchase)
+   - Continue interacting with the page until you see the score
+
+3. If you've explored extensively and can't find a good match:
+   - It's better to purchase something that partially matches the requirements than to make no purchase
+   - Any purchase (even if imperfect) will score higher than no purchase
 
 Please note that certain options can be chosen inside the product page such as color or size which means the image in the search page is only one example of the product. Also, there might not be a perfect match, in which case you should try to find the closest match as possible. 
 
 The searched result is ranked from the most relevant to the least relevant so usually next page will give less relevant products. If there is no result in the next page, consider going back to search and trying different queries. 
 
-Also, you only have limited number ofactions each time, so please use them wisely. If you end up buying nothing after ten rounds, then you will receive zero score. It is better to at least select something that matches imperfectly.
+Also, you only have limited number of actions each time, so please use them wisely. If you end up buying nothing, then you will receive zero score. It is better to at least select something that matches imperfectly.
+
+EXAMPLE SHOPPING STRATEGY:
+1. Read the full product requirement from the instruction
+2. Search with general terms (e.g., "black shoes" for "men's size 10.5 black loafers with rubber soles under $70")
+3. Scroll through all results on the first page
+4. Check next pages of results if needed
+5. Open promising product pages to check details (size, price, material)
+6. If no good match is found, try a different search query
+7. Select the closest matching product before running out of actions
+8. Verify that "Your score" appears after completing the purchase
 """
 
 def setup_logger(task_id, log_folder="log"):
@@ -154,8 +186,8 @@ if __name__ == "__main__":
                         help="Specify if the browser should run in headless mode (default: False)")
     parser.add_argument("--browser-mode", type=str, default="chromium",
                         help="Specify the browser mode (default: chromium)")
-    parser.add_argument("--starting-url", type=str, default="http://127.0.0.1:3000/fixed_1",
-                        help="Starting URL for the web agent (default: http://127.0.0.1:3000/fixed_1)")
+    parser.add_argument("--starting-url", type=str, default="http://54.224.220.64:3000/fixed_0",
+                        help="Starting URL for the web agent (default: http://54.224.220.64:3000/fixed_0)")
     parser.add_argument("--agent-type", type=str, default="PromptAgent",
                         help="Type of agent to use (default: PromptAgent)")
     parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
