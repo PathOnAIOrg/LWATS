@@ -96,7 +96,13 @@ class PromptAgent:
         # action_logger.log(f"Action: {updated_actions[0]}", "Action")
         post_action_url = page.url
 
-        trajectory.append({'action': updated_actions[0]['action'],'action_description': updated_actions[0]['natural_language_description'],  'action_result': feedback, "pre_action_url": pre_action_url, "post_action_url": post_action_url})
+        trajectory.append({
+            'action': updated_actions[0]['action'],
+            'action_description': updated_actions[0]['natural_language_description'],  
+            'action_result': feedback, 
+            "pre_action_url": pre_action_url, 
+            "post_action_url": post_action_url
+            })
 
         print(f"The action is: {next_action} - The action result is: {feedback}")
 
