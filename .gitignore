@@ -13,4 +13,5 @@ venv/
 test_configs/*
 .vscode/
 temp/
+WebShop*
 
