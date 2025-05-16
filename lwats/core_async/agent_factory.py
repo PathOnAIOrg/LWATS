@@ -9,6 +9,7 @@ from .config import AgentConfig
 from ..agents_async.SearchAgents.simple_search_agent import SimpleSearchAgent
 from ..agents_async.SearchAgents.lats_agent import LATSAgent
 from ..agents_async.SearchAgents.mcts_agent import MCTSAgent
+from ..agents_async.SearchAgents.webshop_tree_search_agent import WebShopTreeSearchAgent
 from ..agents_async.BaselineAgents.PromptAgent import PromptAgent
 from ..webagent_utils_async.utils.utils import setup_logger
 from ..webagent_utils_async.utils.playwright_manager import setup_playwright
@@ -74,38 +75,25 @@ async def setup_search_agent(
         "content": SEARCH_AGENT_SYSTEM_PROMPT,
     }]
 
-    if agent_type == "SimpleSearchAgent": 
-        print("SimpleSearchAgent")
-        agent = SimpleSearchAgent(
+    agent_classes = {
+        "SimpleSearchAgent": SimpleSearchAgent,
+        "LATSAgent": LATSAgent,
+        "MCTSAgent": MCTSAgent,
+        "WebShopTreeSearchAgent": WebShopTreeSearchAgent
+    }
+
+    if agent_type in agent_classes:
+        agent = agent_classes[agent_type](
             starting_url=starting_url,
             messages=messages,
             goal=goal,
-            images = images,
+            images=images,
             playwright_manager=playwright_manager,
-            config=agent_config,
-        )
-    elif agent_type == "LATSAgent":
-        print("LATSAgent")
-        agent = LATSAgent(
-            starting_url=starting_url,
-            messages=messages,
-            goal=goal,
-            images = images,
-            playwright_manager=playwright_manager,
-            config=agent_config,
-        )
-    elif agent_type == "MCTSAgent":
-        print("MCTSAgent")
-        agent = MCTSAgent(
-            starting_url=starting_url,
-            messages=messages,
-            goal=goal,
-            images = images,
-            playwright_manager=playwright_manager,
-            config=agent_config,
+            config=agent_config
         )
     else:
-        error_message = f"Unsupported agent type: {agent_type}. Please use 'FunctionCallingAgent', 'HighLevelPlanningAgent', 'ContextAwarePlanningAgent', 'PromptAgent' or 'PromptSearchAgent' ."
+        supported_agents = list(agent_classes.keys())
+        error_message = f"Unsupported agent type: {agent_type}. Please use one of {supported_agents}."
         logger.error(error_message)
         return {"error": error_message}
     return agent, playwright_manager
@@ -190,7 +178,8 @@ async def setup_prompting_web_agent(
                             action_grounding_model=action_grounding_model,
                             evaluation_model=evaluation_model)
     else:
-        error_message = f"Unsupported agent type: {agent_type}. Please use 'PromptAgent'."
+        supported_prompt_agents = ["PromptAgent"]
+        error_message = f"Unsupported agent type: {agent_type}. Please use one of {supported_prompt_agents}."
         logger.error(error_message)
         return {"error": error_message}
     return agent, playwright_manager
