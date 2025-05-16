@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 load_dotenv()
 from lwats.core_async.agent_factory import setup_prompting_web_agent
 from xwebarena_evaluation_suite import evaluator_router, image_utils
-import asyncio,json
-
+import asyncio,json,requests
+from PIL import Image
 
 
 async def main(headless, browser_mode, config_file, agent_type, action_generation_model, plan):
@@ -22,26 +22,23 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
         starting_url = _c["start_url"]
         storage_state = _c["storage_state"]
         image_paths = _c.get("image", None)   # only for vwa
-        images = []
         if image_paths is not None:
             if isinstance(image_paths, str):
-                image_paths = [image_paths]
-            for image_path in image_paths:
-                # Load image either from the web or from a local path.
-                if image_path.startswith("http"):
-                    input_image = Image.open(requests.get(image_path, stream=True).raw)
-                else:
-                    input_image = Image.open(image_path)
-                images.append(input_image)
+                images_list = [image_paths]
+            elif isinstance(image_paths, list):
+                images_list = image_paths
+            else:
+                images_list = []
+        else:
+            images_list = []
         cfgfileContent += f"[Config file]: {config_file}" + "\n"
         cfgfileContent += f"[Goal]: {goal}" + "\n"
         cfgfileContent += f"[Starting Url]: {starting_url}" + "\n"
         cfgfileContent += f"[Storage State]: {storage_state}" + "\n"
         cfgfileContent += f"[Task id]: {task_id}" + "\n"
-        cfgfileContent += f"[len(images)]: {len(images)}" + "\n"
+        cfgfileContent += f"[len(images_list)]: {len(images_list)}" + "\n"
 
-    # Split the comma-separated string into a list of images
-    images_list = [img.strip() for img in images.split(',')] if images else []
+    # images_list is now a list of image paths (strings)
     
     agent, playwright_manager = await setup_prompting_web_agent(
         starting_url=starting_url,
