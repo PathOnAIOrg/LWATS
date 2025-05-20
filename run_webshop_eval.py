@@ -7,59 +7,170 @@ import os
 import json
 import datetime
 import logging
+from playwright.async_api import async_playwright
 
-WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
+async def extract_instructions_from_webpage(url, browser_mode="chromium"):
+    """
+    Extract task instructions from the WebShop page.
+    
+    Args:
+        url (str): URL of the WebShop task page
+        browser_mode (str): Browser engine to use (chromium/browserbase)
+        
+    Returns:
+        str: Extracted instructions text
+    """
+    async with async_playwright() as p:
+        # Choose browser engine based on browser_mode parameter
+        if browser_mode.lower() == "browserbase":
+            browser = await p.firefox.launch(headless=True)
+        else:  # Default to chromium
+            browser = await p.chromium.launch(headless=True)
+            
+        page = await browser.new_page()
+        try:
+            await page.goto(url, wait_until="networkidle")
+            
+            # Try multiple different selectors that might contain the instruction
+            # Since we don't know the exact structure, we'll try several common patterns
+            possible_selectors = [
+                "div.instruction-text", 
+                "div.instruction", 
+                "div.task-instruction",
+                "div.description",
+                "div:has-text('Instruction:')",
+                "div:has-text('Task:')",
+                "div.container div h3:has-text('Instruction') + div",
+                "div.container div h4:has-text('Instruction') + div",
+                "p.instruction"
+            ]
+            
+            instruction_text = None
+            for selector in possible_selectors:
+                try:
+                    # Use a shorter timeout for each individual selector attempt
+                    element = await page.wait_for_selector(selector, timeout=1000, state="visible")
+                    if element:
+                        instruction_text = await element.inner_text()
+                        if instruction_text and len(instruction_text.strip()) > 10:  # Ensure we got meaningful text
+                            instruction_text = instruction_text.strip()
+                            break
+                except Exception:
+                    continue
+            
+            # If we found text using selectors, return it
+            if instruction_text:
+                # Clean up the text
+                instruction_text = clean_instruction_text(instruction_text)
+                return instruction_text
+            
+            # Fallback: Look for text on the page containing common instruction indicators
+            content = await page.content()
+            
+            # Try to find common instruction markers in the page content
+            instruction_markers = ["Instruction:", "Task:", "Your task is", "You need to", "Please find"]
+            
+            for marker in instruction_markers:
+                if marker in content:
+                    # Get the page text rather than HTML - more reliable for extraction
+                    all_text = await page.evaluate("() => document.body.innerText")
+                    
+                    # Find the marker in the text
+                    start_idx = all_text.find(marker)
+                    if start_idx >= 0:
+                        # Extract from marker to the next double newline (paragraph break)
+                        # or up to 500 chars max
+                        start_idx += len(marker)
+                        end_idx = all_text.find("\n\n", start_idx)
+                        if end_idx == -1 or end_idx - start_idx > 500:
+                            end_idx = start_idx + 500
+                        
+                        extracted_text = all_text[start_idx:end_idx].strip()
+                        if len(extracted_text) > 10:  # Ensure we got meaningful text
+                            # Clean up the text
+                            extracted_text = clean_instruction_text(extracted_text)
+                            return extracted_text
+                        
+            # Final fallback: Take a screenshot for debugging and return a generic message
+            await page.screenshot(path="webshop_page.png")
+            
+            # Check if there's a search interface, which likely means it's the WebShop
+            search_box = await page.query_selector("input[type='search'], input[placeholder*='search']")
+            if search_box:
+                return "Explore the WebShop interface and complete the shopping task based on the product requirements shown on the page. Search for appropriate items, navigate through results, select the correct product with matching requirements, and complete the purchase to get your score."
+            
+            return "Could not extract specific instructions from the page. Please proceed with the task as displayed in the browser."
+        finally:
+            await browser.close()
 
-IMPORTANT SEARCH QUERY GUIDANCE:
-1. When searching, use short, general terms (2-4 words) instead of copying the entire product description. For example:
-   - GOOD: "black loafers" or "men's shoes" or "rubber sole shoes"
-   - BAD: "men's size 10.5 black loafers with rubber soles under $70"
+def clean_instruction_text(text):
+    """
+    Clean up the extracted instruction text by removing common prefixes and suffixes.
+    
+    Args:
+        text (str): Raw instruction text
+        
+    Returns:
+        str: Cleaned instruction text
+    """
+    # Remove common prefixes
+    prefixes_to_remove = [
+        "WebShop\nInstruction:\n",
+        "WebShop\nInstruction:",
+        "Instruction:\n",
+        "Instruction:",
+        "Task:\n",
+        "Task:"
+    ]
+    
+    for prefix in prefixes_to_remove:
+        if text.startswith(prefix):
+            text = text[len(prefix):].strip()
+            break
+    
+    # Remove common suffixes
+    suffixes_to_remove = [
+        "\nSearch",
+        "\nSearch:",
+        "\nFind:",
+        "\nClick"
+    ]
+    
+    for suffix in suffixes_to_remove:
+        if text.endswith(suffix):
+            text = text[:-len(suffix)].strip()
+            break
+    
+    return text.strip()
 
-2. Start with broader terms, then narrow down by filtering or browsing specific product pages. Scroll through all results on the first page and identify if there is any product matches the requirement. If there is, click on the product to go to the product page. If there is no product matches the requirement, try to navigate to next page or trya different search query. Search for the main product category first, then check details like size and price on individual product pages.
-
-3. Select the relevant color and size of the product if there is any. Click on "Buy Now" button to go to the checkout page if you are confident that you have found the product that matches the requirement.
-
-4. The page with "Thank you for shopping with us!" and "Your score" is the only page that confirms the task is complete.
-
-BROWSING AND NAVIGATION GUIDANCE:
-1. Always scroll down to view all results on the current page. Relevant items may be lower on the page and not immediately visible.
-
-2. If you don't find suitable items on the first page:
-   - Look for and click on "Next" button to go to the next page
-   - Try at least 2-3 pages of results before changing your search query
-
-3. When examining a product page:
-   - Scroll the entire page to see all options, details, and variations
-   - Many products have multiple options (sizes, colors) that only appear when browsing the full product page
-
-COMPLETION AND SCORING GUIDANCE:
-1. The task is ONLY complete when you see "Your score (min 0.0, max 1.0)" displayed on the page. This confirms your purchase was evaluated.
-
-2. If you've clicked "Buy Now" but don't see "Your score":
-   - DO NOT end the task or close the browser
-   - You may need to complete additional steps (like confirming purchase)
-   - Continue interacting with the page until you see the score
-
-3. If you've explored extensively and can't find a good match:
-   - It's better to purchase something that partially matches the requirements than to make no purchase
-   - Any purchase (even if imperfect) will score higher than no purchase
-
-Please note that certain options can be chosen inside the product page such as color or size which means the image in the search page is only one example of the product. Also, there might not be a perfect match, in which case you should try to find the closest match as possible. 
-
-The searched result is ranked from the most relevant to the least relevant so usually next page will give less relevant products. If there is no result in the next page, consider going back to search and trying different queries. 
-
-Also, you only have limited number of actions each time, so please use them wisely. If you end up buying nothing, then you will receive zero score. It is better to at least select something that matches imperfectly.
-
-EXAMPLE SHOPPING STRATEGY:
-1. Read the full product requirement from the instruction
-2. Search with general terms (e.g., "black shoes" for "men's size 10.5 black loafers with rubber soles under $70")
-3. Scroll through all results on the first page
-4. Check next pages of results if needed
-5. Open promising product pages to check details (size, price, material)
-6. If no good match is found, try a different search query
-7. Select the closest matching product before running out of actions
-8. Verify that "Your score" appears after completing the purchase
-"""
+def get_webshop_score(log_folder):
+    """
+    Get WebShop score from the webshop_score.json file created by PromptAgent.
+    
+    Args:
+        log_folder (str): Path to the log folder
+        
+    Returns:
+        float: The score (0.0 if no score file exists or score can't be parsed)
+    """
+    score_file = os.path.join(log_folder, 'webshop_score.json')
+    if not os.path.exists(score_file):
+        return 0.0
+        
+    try:
+        with open(score_file, 'r', encoding='utf-8') as f:
+            score_data = json.load(f)
+            
+        # Extract numeric score from score text (format like "Your score (min 0.0, max 1.0): 0.75")
+        score_text = score_data.get('score', '0.0')
+        import re
+        score_match = re.search(r'(\d+\.\d+)', score_text)
+        if score_match:
+            return float(score_match.group(1))
+    except Exception as e:
+        logging.error(f"Error reading WebShop score: {str(e)}")
+    
+    return 0.0
 
 def setup_logger(task_id, log_folder="log"):
     """Set up logging for a specific task with both file and console handlers."""
@@ -88,7 +199,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
         browser_mode (str): Browser mode (chromium/browserbase)
         starting_url (str): Initial URL to start from
         agent_type (str): Type of agent to use
-        goal (str): Task goal/instruction
+        goal (str): Task goal/instruction (optional, will be extracted from page if None)
         action_generation_model (str): Model to use for action generation
         images (str): Comma-separated list of image paths
         plan (str): Optional plan to follow
@@ -102,6 +213,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
         logger.info(f"Starting evaluation for task {task_id}")
         logger.info(f"Starting URL: {starting_url}")
     else:
+        log_folder = "log"
         logger = logging.getLogger("default")
         logger.setLevel(logging.INFO)
         console_handler = logging.StreamHandler()
@@ -109,6 +221,13 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
         logger.addHandler(console_handler)
         log_fh = None
 
+    # If goal is None or empty, extract it from the webpage
+    if not goal:
+        logger.info("Extracting instructions from webpage...")
+        extracted_goal = await extract_instructions_from_webpage(starting_url, browser_mode)
+        goal = extracted_goal
+        logger.info(f"Extracted goal: {goal[:100]}...")  # Log first 100 chars for verification
+    
     # Split the comma-separated string into a list of images
     images_list = [img.strip() for img in images.split(',')] if images else []
     
@@ -139,6 +258,10 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
         logger.info("Result:")
         logger.info(result)
         
+        # Get the score from webshop_score.json (created by PromptAgent)
+        score = get_webshop_score(log_folder)
+        logger.info(f"Final score: {score}")
+        
         # Save results
         if task_id:
             result_file = os.path.join(log_folder, 'result.json')
@@ -148,6 +271,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
                 "starting_url": starting_url,
                 "trajectory": trajectory,
                 "result": result,
+                "score": score,
                 "timestamp": datetime.datetime.now().isoformat(),
                 "agent_type": agent_type,
                 "action_generation_model": action_generation_model,
@@ -157,7 +281,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
         
         # Close the playwright_manager when done
         await playwright_manager.close()
-        return trajectory, result
+        return trajectory, result, score
 
     except Exception as e:
         logger.error(f"Error occurred: {str(e)}")
@@ -168,6 +292,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
                 "goal": goal,
                 "starting_url": starting_url,
                 "error": str(e),
+                "score": 0.0,  # Default score of 0 for errors
                 "timestamp": datetime.datetime.now().isoformat(),
                 "agent_type": agent_type,
                 "action_generation_model": action_generation_model
@@ -190,8 +315,8 @@ if __name__ == "__main__":
                         help="Starting URL for the web agent (default: http://54.224.220.64:3000/fixed_0)")
     parser.add_argument("--agent-type", type=str, default="PromptAgent",
                         help="Type of agent to use (default: PromptAgent)")
-    parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
-                        help="Goal for the web agent to accomplish")
+    parser.add_argument("--goal", type=str, default=None,
+                        help="Goal for the web agent to accomplish (if not provided, will be extracted from webpage)")
     parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
                         help="Action generation model (default: gpt-4o)")
     parser.add_argument("--images", type=str, default="",
@@ -219,7 +344,7 @@ if __name__ == "__main__":
             task_id = f"webshop_task_{task_num}"
             print(f"\nRunning WebShop task {task_num} at {task_url}")
             try:
-                trajectory, result = asyncio.run(main(
+                trajectory, result, score = asyncio.run(main(
                     args.headless,
                     args.browser_mode,
                     task_url,
@@ -230,14 +355,14 @@ if __name__ == "__main__":
                     args.plan,
                     task_id
                 ))
-                print(f"Completed task {task_num}")
+                print(f"Completed task {task_num} with score {score}")
             except Exception as e:
                 print(f"Error in task {task_num}: {str(e)}")
                 continue
     else:
         # Single task evaluation
         task_id = args.task_id or f"webshop_task_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}"
-        trajectory, result = asyncio.run(main(
+        trajectory, result, score = asyncio.run(main(
             args.headless,
             args.browser_mode,
             args.starting_url,
@@ -247,4 +372,5 @@ if __name__ == "__main__":
             args.images,
             args.plan,
             task_id
-        )) 
+        ))
+        print(f"Final score: {score}") 
