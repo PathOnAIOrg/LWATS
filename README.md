@@ -40,9 +40,17 @@ python run_xwebarena.py --browser-mode chromium --agent-type "PromptAgent" --act
 ```
 
 ```
+# Prompt Agent on WebShop
 # run single task
-python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0"  --agent-type PromptAgent
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0"  
 
 # run batch of tasks
-python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --agent-type PromptAgent --batch-start 1 --batch-end 5
+python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --batch-start 1 --batch-end 5
+
+# TreeSearch Agent on WebShop
+# run single task
+python run_webshop_tree_search.py --headless
+
+# run batch of tasks
+python run_webshop_tree_search.py --batch-start 0 --batch-end 5
 ```
