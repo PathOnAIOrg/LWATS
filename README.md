@@ -9,6 +9,21 @@ pip3.11 install -e .
 
 
 ## 1. Get started
+### 1.1 run baseline agent: the prompt agent
+```
+python run_demo_baseline.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/grocery-gourmet-food/food-beverage-gifts/herb-spice-seasoning-gifts.html?product_list_mode=list" \
+    --agent-type "PromptAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "Can you add the item Yemeni Hawayij on this page, to my cart?" \
+    --evaluator-type "BaseEvaluator" \
+    --eval-url "http://xwebarena.pathonai.org:7770/checkout/cart" \
+    --eval-criteria "check if Yemeni Hawayij is in the cart"
+```
+
+### 1.2 run tree search
 ```
 python run_demo_treesearch.py \
     --browser-mode chromium \
@@ -23,16 +38,27 @@ python run_demo_treesearch.py \
 ```
 
 ```
-python run_demo_baseline.py \
+python run_demo_treesearch.py \
     --browser-mode chromium \
     --storage-state shopping.json \
-    --starting-url "http://xwebarena.pathonai.org:7770/grocery-gourmet-food/food-beverage-gifts/herb-spice-seasoning-gifts.html?product_list_mode=list" \
-    --agent-type "PromptAgent" \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "LATSAgent" \
     --action_generation_model "gpt-4o-mini" \
-    --goal "Can you add the item Yemeni Hawayij on this page, to my cart?" \
-    --evaluator-type "BaseEvaluator" \
-    --eval-url "http://xwebarena.pathonai.org:7770/checkout/cart" \
-    --eval-criteria "check if Yemeni Hawayij is in the cart"
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
+```
+
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "MCTSAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
 ```
 
 
