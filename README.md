@@ -24,6 +24,7 @@ python run_demo_baseline.py \
 ```
 
 ### 1.2 run tree search
+#### 1.2.1 BFS/ DFS
 ```
 python run_demo_treesearch.py \
     --browser-mode chromium \
@@ -37,6 +38,20 @@ python run_demo_treesearch.py \
     --search_algorithm bfs
 ```
 
+#### 1.2.2 MCTS
+
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "MCTSAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
+```
+#### 1.2.3 older version of LATS/ MCTS agents in the visual tree search demo
 ```
 python run_demo_treesearch.py \
     --browser-mode chromium \
@@ -54,13 +69,12 @@ python run_demo_treesearch.py \
     --browser-mode chromium \
     --storage-state shopping.json \
     --starting-url "http://xwebarena.pathonai.org:7770/" \
-    --agent-type "MCTSAgent" \
+    --agent-type "RMCTSAgent" \
     --action_generation_model "gpt-4o-mini" \
     --goal "search running shoes, click on the first result" \
     --iterations 3 \
     --max_depth 3
 ```
-
 
 ## 2. Run Evaluation on the xwebarena benchmark
 ```
