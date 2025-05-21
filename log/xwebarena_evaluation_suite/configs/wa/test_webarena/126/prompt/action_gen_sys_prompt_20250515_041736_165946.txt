@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "fill('371', 'Canon photo printer')", 'action_description': "type 'Canon photo printer' into the search box to look for its price range.", 'action_result': 'Based on the screenshot provided, the goal of finding the price range for a Canon photo printer in the One Stop Market does not appear to be completed. The search bar shows that "Canon photo printer" was queried, but the results displayed below do not seem to relate to printers. Instead, they feature unrelated products like energy drinks, tea, and other grocery items.\n\nFor the goal to be considered complete, the screenshot should show a page with listings of Canon photo printers, including their prices. You may need to adjust the search or navigation efforts to find the correct listings.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/'}, {'action': "click('376')", 'action_description': "click the 'Search' button to initiate the search for the Canon photo printer.", 'action_result': 'Based on the screenshot, the goal is not yet finished. The image shows search results for "Canon photo printer" on the One Stop Market site, but it does not display any price information for the printers. To determine the price range of Canon photo printers, it would be necessary to have access to the individual product listings where prices are typically shown.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/catalogsearch/result/?q=Canon+photo+printer'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            What is the price range of Canon photo printer in the One Stop Market?
+            

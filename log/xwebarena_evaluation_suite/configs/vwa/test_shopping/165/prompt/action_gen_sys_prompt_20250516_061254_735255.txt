@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using JSON format, with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "click('603')", 'action_description': "Select the 'Sports & Outdoors' category to browse for men's tennis shoes.", 'action_result': 'Based on the screenshot provided, it seems the goal is not yet finished. The following reasons explain this:\n\n1. **Product Listings**: The screenshot shows a category labeled "Sports & Outdoors" with some products displayed, but none of them appear to be men\'s tennis shoes.\n\n2. **Price Filter**: There is no visible indication that the products shown match the price range of $60 to $120. The price range filter displayed is quite broad ($0.00 - $999.99), and there’s no specific evidence concerning the price of any of the items.\n\n3. **Reviews**: There is no visible information regarding the number of reviews for any product, which is a key requirement.\n\n4. **Brand Information**: The products visible do not explicitly show any brand names, which are needed to confirm if they match the brand as required.\n\nTo achieve your goal, more specific filtering or searching within a relevant category would likely be necessary to find the appropriate men\'s tennis shoes with the specified attributes.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/sports-outdoors.html'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            Find me a men's tennis shoe that is of the same brand as products in one of the following pictures. It needs to have price between $60 and $120 with at least 11 reviews., and here are the input images
+            

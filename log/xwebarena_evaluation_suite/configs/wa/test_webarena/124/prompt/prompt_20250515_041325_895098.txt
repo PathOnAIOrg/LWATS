@@ -1,0 +1,448 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'Electronics', focused
+	[224] banner ''
+		[227] list ''
+			[228] listitem ''
+				[229] link 'My Account'
+			[230] listitem ''
+				[231] link 'My Wish List'
+			[232] listitem ''
+				[233] link 'Sign Out'
+			[234] listitem ''
+			[237] listitem ''
+				StaticText 'Welcome, Emma Lopez!'
+		[239] link 'Skip to Content'
+		[244] link 'store logo'
+			[245] image 'one_stop_market_logo'
+		[247] link '\ue611 My Cart 3 3items'
+		[368] Section ''
+			[370] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[373] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[376] link 'Advanced Search'
+			[378] button 'Search', disabled=True
+	[381] tablist '', multiselectable=False, orientation='horizontal'
+		[384] tabpanel ''
+			[385] navigation ''
+				[386] menu '', orientation='vertical'
+					[388] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[605] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[643] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[695] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[822] menuitem '\ue622 Office Products', hasPopup='menu'
+					[854] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[873] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[897] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[916] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1125] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1176] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1225] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1454] list ''
+		[1455] listitem ''
+			[1456] link 'Home'
+			StaticText '\ue608'
+		[1457] listitem ''
+			[1458] strong ''
+				StaticText 'Electronics'
+	[1459] main ''
+		[1462] heading 'Electronics Items 1-12 of 14539'
+		[1474] strong ''
+			StaticText 'View as'
+		[1475] strong 'Grid'
+			StaticText '\ue60d'
+		[1477] link 'View as \ue60b List'
+		[1479] paragraph ''
+			StaticText 'Items'
+			StaticText '-'
+			StaticText '12'
+			StaticText 'of'
+			StaticText '14539'
+		[1484] LabelText ''
+			StaticText 'Sort By'
+		[1485] combobox 'Sort By' value='Position', hasPopup='menu', expanded=False
+			[1486] menuitem 'Position', selected=True
+			[1487] menuitem 'Product Name', selected=False
+			[1488] menuitem 'Price', selected=False
+		[1489] link '\ue613 Set Descending Direction'
+		[1492] list ''
+			[1493] listitem ''
+				[1495] link 'Image'
+					[1498] image 'Image'
+				[1502] strong ''
+					[1503] link 'Navitech Black Hard Carry Bag/Case/Cover with Shoulder Strap Compatible with The VR/Virtual Reality 3D headsets Including The Crypto VR 150 Virtual Reality Headset 3D Glasses'
+				StaticText '$24.99'
+				[1511] Section ''
+					[1515] button 'Add to Cart'
+				[1518] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1520] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1522] listitem ''
+				[1524] link 'Image'
+					[1527] image 'Image'
+				[1531] strong ''
+					[1532] link 'ZOSI H.265+ PoE Home Security Camera System Outdoor Indoor,8-Channel 5MP PoE NVR Recorder,4pcs Wired 2MP 1080p Surveillance Bullet PoE IP Cameras, No Hard Drive (Renewed)'
+				StaticText '$169.99'
+				[1540] Section ''
+					[1544] button 'Add to Cart'
+				[1547] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1549] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1551] listitem ''
+				[1553] link 'Image'
+					[1556] image 'Image'
+				[1560] strong ''
+					[1561] link 'Indoor Pet Camera, HD 1080P No WiFi Security Camera with Night Vision-No Built-in Baterry'
+				StaticText '$28.99'
+				[1569] Section ''
+					[1573] button 'Add to Cart'
+				[1576] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1578] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1580] listitem ''
+				[1582] link 'Image'
+					[1585] image 'Image'
+				[1589] strong ''
+					[1590] link 'Rockville CH103SP Chuchero Car Audio Enclosure For (2) 10" Mids + (2) 3" Tweeter'
+				StaticText '$56.68'
+				[1598] Section ''
+					[1602] button 'Add to Cart'
+				[1605] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1607] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1609] listitem ''
+				[1611] link 'Image'
+					[1614] image 'Image'
+				[1618] strong ''
+					[1619] link '150ft Quad Shield Solid Copper 3GHZ RG-6 Coaxial Cable 75 Ohm (DIRECTV Satellite TV or Broadband Internet) Anti Corrosion Brass Connector RG6 Fittings Assembled in USA by PHAT SATELLITE INTL'
+				StaticText '$57.71'
+				[1627] Section ''
+					[1631] button 'Add to Cart'
+				[1634] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1636] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1638] listitem ''
+				[1640] link 'Image'
+					[1643] image 'Image'
+				[1647] strong ''
+					[1648] link 'Multi Accessory Hub Adapter By JOBY – Get The Right Set Up For Your Vision By Attaching All The GoPro Accessories You Need In One Central Spot'
+				[1649] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '90%'
+					[1658] link '12 \xa0Reviews'
+				StaticText '$14.95'
+				[1667] Section ''
+					[1671] button 'Add to Cart'
+				[1674] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1676] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1678] listitem ''
+				[1680] link 'Image'
+					[1683] image 'Image'
+				[1687] strong ''
+					[1688] link 'Intel NUC Kit NUC6i7KYK Mini PC-no Power Cord'
+				StaticText '$599.99'
+				[1696] Section ''
+					[1700] button 'Add to Cart'
+				[1703] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1705] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1707] listitem ''
+				[1709] link 'Image'
+					[1712] image 'Image'
+				[1716] strong ''
+					[1717] link 'CG7060 Apollo Transparency Film - Letter - 8.50quot; x 11quot; - 50 / Box - Transparent'
+				StaticText '$42.65'
+				[1725] Section ''
+					[1729] button 'Add to Cart'
+				[1732] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1734] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1736] listitem ''
+				[1738] link 'Image'
+					[1741] image 'Image'
+				[1745] strong ''
+					[1746] link 'Sceptre E195BD-SRR 19-Inch 720P LED TV, True Black (2017)'
+				StaticText '$209.99'
+				[1754] Section ''
+					[1758] button 'Add to Cart'
+				[1761] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1763] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1765] listitem ''
+				[1767] link 'Image'
+					[1770] image 'Image'
+				[1774] strong ''
+					[1775] link 'SanDisk Cruzer Glide 32GB (5 Pack) USB 2.0 Flash Drive (SDCZ60-032G) Pen Drive Bundle with (2) Everything But Stromboli Lanyards'
+				[1776] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '70%'
+					[1785] link '12 \xa0Reviews'
+				StaticText '$34.46'
+				[1794] Section ''
+					[1798] button 'Add to Cart'
+				[1801] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1803] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1805] listitem ''
+				[1807] link 'Image'
+					[1810] image 'Image'
+				[1814] strong ''
+					[1815] link 'linxiaojix Waterproof Shell for Osmo Pocket, Camera Case Camera Cover Diving Cover for Osmo Pocket, 60M Waterproof for Travel Trip'
+				StaticText '$17.76'
+				[1823] Section ''
+					[1827] button 'Add to Cart'
+				[1830] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1832] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1834] listitem ''
+				[1836] link 'Image'
+					[1839] image 'Image'
+				[1843] strong ''
+					[1844] link 'Replacement Battery for Garmin Montana 600 600T 650 650T 600t Camo 680 680T,fit Part No 361-00053-00 010-11599-00, 2200mAh'
+				[1845] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '80%'
+					[1854] link '3 \xa0Reviews'
+				StaticText '$25.99'
+				[1863] Section ''
+					[1867] button 'Add to Cart'
+				[1870] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1872] button 'Add to Compare'
+					StaticText '\ue61f'
+		[1876] strong ''
+			StaticText 'Page'
+		[1877] list 'Page'
+			[1878] listitem ''
+				[1879] strong ''
+					StaticText "You're currently reading page"
+			[1882] listitem ''
+				[1883] link 'Page 2'
+			[1886] listitem ''
+				[1887] link 'Page 3'
+			[1890] listitem ''
+				[1891] link 'Page 4'
+			[1894] listitem ''
+				[1895] link 'Page 5'
+			[1898] listitem ''
+				[1899] link '\ue608 Page Next'
+		[1903] LabelText ''
+			StaticText 'Show'
+		[1906] combobox 'Show' value='12', hasPopup='menu', expanded=False
+			[1907] menuitem '12', selected=True
+			[1908] menuitem '24', selected=False
+			[1909] menuitem '36', selected=False
+		StaticText 'per page'
+		[1914] strong ''
+			StaticText 'Shop By'
+		[1916] heading 'Shopping Options'
+		[1917] DescriptionList ''
+			[1918] heading 'Category'
+			[1919] DescriptionListDetail ''
+				[1920] list ''
+					[1921] listitem ''
+						[1922] link 'Home Audio( 1280 item )'
+					[1925] listitem ''
+						[1926] link 'Video Projectors( 484 item )'
+					[1929] listitem ''
+						[1930] link 'Accessories & Supplies( 2409 item )'
+					[1933] listitem ''
+						[1934] link 'Television & Video( 1083 item )'
+					[1937] listitem ''
+						[1938] link 'Camera & Photo( 3512 item )'
+					[1941] listitem ''
+						[1942] link 'Computers & Accessories( 2929 item )'
+					[1945] listitem ''
+						[1946] link 'Headphones( 631 item )'
+					[1949] listitem ''
+						[1950] link 'Portable Audio & Video( 824 item )'
+					[1953] listitem ''
+						[1954] link 'Security & Surveillance( 249 item )'
+					[1957] listitem ''
+						[1958] link 'Power Accessories( 243 item )'
+					[1961] listitem ''
+						[1962] link 'Car & Vehicle Electronics( 635 item )'
+					[1965] listitem ''
+						[1966] link 'Wearable Technology( 120 item )'
+					[1969] listitem ''
+						[1970] link 'GPS, Finders & Accessories( 102 item )'
+			[1973] heading 'Price'
+			[1974] DescriptionListDetail ''
+				[1975] list ''
+					[1976] listitem ''
+						[1977] link '$0.00 - $9,999.99( 14529 item )'
+					[1982] listitem ''
+						[1983] link '$10,000.00 - $19,999.99( 9 item )'
+					[1988] listitem ''
+						[1989] link '$20,000.00 and above( 1 item )'
+		[1996] heading 'Compare Products'
+		StaticText 'You have no items to compare.'
+		[2001] heading 'Recently Ordered'
+		[2003] Section ''
+			[2005] list ''
+				[2006] listitem ''
+					[2008] LabelText ''
+						StaticText 'Add to Cart'
+					[2011] checkbox 'Add to Cart', checked='false'
+					[2012] strong ''
+						[2013] link 'Plus Size Lingerie for Women Sexy for Sex Naughty Eyelash Lace Bodysuit Naughty Mesh One Piece Teddy Bodysuit Outfits'
+				[2015] listitem ''
+					[2017] LabelText ''
+						StaticText 'Add to Cart'
+					[2020] checkbox 'Add to Cart', checked='false'
+					[2021] strong ''
+						[2022] link 'NOZE Rustic Coat Rack Wall Mounted Shelf with 4 Hooks, Hanging Entryway Organizer for Mug Coffee Cup, Holding Solid Wooden Shelf with 2 Baskets for Kitchen Living Room, Bathroom and Bedroom'
+				[2024] listitem ''
+					[2026] LabelText ''
+						StaticText 'Add to Cart'
+					[2029] checkbox 'Add to Cart', checked='false'
+					[2030] strong ''
+						[2031] link 'Uttermost Volterra Crackled Taupe-Gray Ceramic Table Lamp'
+			[2036] button 'Add to Cart'
+			[2039] link 'View All'
+		[2044] heading 'My Wish List'
+		StaticText 'You have no items in your wish list.'
+	[2048] contentinfo ''
+		[2054] Section ''
+			StaticText '\ue61d'
+			[2057] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[2059] textbox 'Sign Up for Our Newsletter:'
+			[2061] button 'Subscribe'
+		[2063] list ''
+			[2064] listitem ''
+				[2065] link 'Privacy and Cookie Policy'
+			[2066] listitem ''
+				[2067] link 'Search Terms'
+			[2068] listitem ''
+				[2069] link 'Advanced Search'
+			[2070] listitem ''
+				[2071] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[2076] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

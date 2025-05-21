@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using JSON format, with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "click('1521')", 'action_description': "click the 'Add to Cart' button for the energy drink, which may have similar flavor to the drink in your image.", 'action_result': 'Based on the screenshot, the goal of finding mochi with the flavor of the drink and adding it to the shopping cart is not completed. The screenshot displays a page for a V8 +Energy drink, not mochi with the same flavor. There is no visible indication of mochi being present or added to the shopping cart. Further steps are needed to search for the flavored mochi and add it to the cart.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/v8-energy-healthy-energy-drink-steady-energy-from-black-and-green-tea-pomegranate-blueberry-8-ounce-can-pack-of-24.html'}, {'action': "click('1544')", 'action_description': "click the 'Add to Cart' button to add the V8 +Energy drink to your shopping cart.", 'action_result': 'Based on the screenshot provided, it appears that the action of adding the drink to the shopping cart was completed successfully, as indicated by the green confirmation message. However, the original goal was to find mochi with the flavor of this drink and add it to the shopping cart.\n\nThere is no indication in the screenshot that mochi with this specific flavor has been found or added to the cart. The page is displaying information related to the drink itself, not to mochi. Therefore, the goal is not finished.\n\nTo complete the goal, you would need to search for mochi with the same flavor and add it to the cart, ensuring any required options are selected.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/v8-energy-healthy-energy-drink-steady-energy-from-black-and-green-tea-pomegranate-blueberry-8-ounce-can-pack-of-24.html', 'post_action_url': 'http://xwebarena.pathonai.org:7770/v8-energy-healthy-energy-drink-steady-energy-from-black-and-green-tea-pomegranate-blueberry-8-ounce-can-pack-of-24.html'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            I really like this drink. Can you find me mochi that have flavor of this drink and add it to my shopping cart?, and here are the input images
+            

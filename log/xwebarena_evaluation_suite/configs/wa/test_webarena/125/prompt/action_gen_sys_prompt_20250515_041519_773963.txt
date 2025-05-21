@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "click('371')", 'action_description': 'click the search box to enter a query.', 'action_result': 'The screenshot provided does not show information about teeth grinding mouth guards. It features a selection of products like food and beverages but no related items or price information for mouth guards. The goal of finding the price range of teeth grinding mouth guards in the One Stop Market has not been achieved with this screenshot.\n\nTo continue pursuing the goal, you might want to navigate to the "Beauty & Personal Care" or "Health & Household" categories, or use the search function to specifically look for mouth guards.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            What is the price range of teeth grinding mouth guard in the One Stop Market?
+            

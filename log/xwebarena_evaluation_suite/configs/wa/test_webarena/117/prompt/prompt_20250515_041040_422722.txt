@@ -1,0 +1,318 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'My Account', focused
+	[215] banner ''
+		[218] list ''
+			[219] listitem ''
+				[220] link 'My Account'
+			[221] listitem ''
+				[222] link 'My Wish List'
+			[223] listitem ''
+				[224] link 'Sign Out'
+			[225] listitem ''
+			[228] listitem ''
+				StaticText 'Welcome, Emma Lopez!'
+		[230] link 'Skip to Content'
+		[235] link 'store logo'
+			[236] image 'one_stop_market_logo'
+		[238] link '\ue611 My Cart 3 3items'
+		[359] Section ''
+			[361] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[364] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[367] link 'Advanced Search'
+			[369] button 'Search', disabled=True
+	[372] tablist '', multiselectable=False, orientation='horizontal'
+		[375] tabpanel ''
+			[376] navigation ''
+				[377] menu '', orientation='vertical'
+					[379] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[596] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[634] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[686] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[813] menuitem '\ue622 Office Products', hasPopup='menu'
+					[845] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[864] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[888] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[907] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1116] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1167] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1216] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1444] main ''
+		[1452] heading 'My Account'
+		[1459] strong ''
+			StaticText 'Account Information'
+		[1462] strong ''
+			StaticText 'Contact Information'
+		[1465] paragraph ''
+			StaticText 'Emma Lopez'
+			StaticText 'emma.lopez@gmail.com'
+		[1469] link 'Edit'
+		[1471] link 'Change Password'
+		[1473] strong ''
+			StaticText 'Newsletters'
+		[1476] paragraph ''
+			StaticText "You aren't subscribed to our newsletter."
+		[1478] link 'Edit'
+		[1482] strong ''
+			StaticText 'Address Book'
+		[1483] link 'Manage Addresses'
+		[1487] strong ''
+			StaticText 'Default Billing Address'
+		[1490] group ''
+			StaticText 'Emma Lopez'
+			StaticText '101 S San Mateo Dr'
+			StaticText 'San Mateo, California, 94010'
+			StaticText 'United States'
+			StaticText 'T:'
+			[1495] link '6505551212'
+		[1497] link 'Edit Address'
+		[1500] strong ''
+			StaticText 'Default Shipping Address'
+		[1503] group ''
+			StaticText 'Emma Lopez'
+			StaticText '101 S San Mateo Dr'
+			StaticText 'San Mateo, California, 94010'
+			StaticText 'United States'
+			StaticText 'T:'
+			[1508] link '6505551212'
+		[1510] link 'Edit Address'
+		[1514] strong ''
+			StaticText 'Recent Orders'
+		[1515] link 'View All'
+		[1519] table 'Recent Orders'
+			[1520] caption ''
+			[1521] rowgroup ''
+				[1522] row ''
+					[1523] columnheader 'Order #'
+					[1524] columnheader 'Date'
+					[1525] columnheader 'Ship To'
+					[1526] columnheader 'Order Total'
+					[1527] columnheader 'Status'
+					[1528] columnheader 'Action'
+			[1529] rowgroup ''
+				[1530] row ''
+					[1531] gridcell '000000170'
+					[1532] gridcell '5/17/23'
+					[1533] gridcell 'Emma Lopez'
+					[1534] gridcell '$365.42'
+					[1536] gridcell 'Canceled'
+					[1537] gridcell 'View OrderReorder'
+						[1538] link 'View Order'
+						[1540] link 'Reorder'
+				[1542] row ''
+					[1543] gridcell '000000189'
+					[1544] gridcell '5/2/23'
+					[1545] gridcell 'Emma Lopez'
+					[1546] gridcell '$754.99'
+					[1548] gridcell 'Pending'
+					[1549] gridcell 'View OrderReorder'
+						[1550] link 'View Order'
+						[1552] link 'Reorder'
+				[1554] row ''
+					[1555] gridcell '000000188'
+					[1556] gridcell '5/2/23'
+					[1557] gridcell 'Emma Lopez'
+					[1558] gridcell '$2,004.99'
+					[1560] gridcell 'Pending'
+					[1561] gridcell 'View OrderReorder'
+						[1562] link 'View Order'
+						[1564] link 'Reorder'
+				[1566] row ''
+					[1567] gridcell '000000187'
+					[1568] gridcell '5/2/23'
+					[1569] gridcell 'Emma Lopez'
+					[1570] gridcell '$1,004.99'
+					[1572] gridcell 'Pending'
+					[1573] gridcell 'View OrderReorder'
+						[1574] link 'View Order'
+						[1576] link 'Reorder'
+				[1578] row ''
+					[1579] gridcell '000000180'
+					[1580] gridcell '3/11/23'
+					[1581] gridcell 'Emma Lopez'
+					[1582] gridcell '$65.32'
+					[1584] gridcell 'Complete'
+					[1585] gridcell 'View OrderReorder'
+						[1586] link 'View Order'
+						[1588] link 'Reorder'
+		[1593] strong ''
+			StaticText 'My Account'
+		[1595] list ''
+			[1596] listitem ''
+				[1597] strong ''
+					StaticText 'My Account'
+			[1598] listitem ''
+				[1599] link 'My Orders'
+			[1600] listitem ''
+				[1601] link 'My Downloadable Products'
+			[1602] listitem ''
+				[1603] link 'My Wish List'
+			[1604] listitem ''
+			[1606] listitem ''
+				[1607] link 'Address Book'
+			[1608] listitem ''
+				[1609] link 'Account Information'
+			[1610] listitem ''
+				[1611] link 'Stored Payment Methods'
+			[1612] listitem ''
+			[1614] listitem ''
+				[1615] link 'My Product Reviews'
+			[1616] listitem ''
+				[1617] link 'Newsletter Subscriptions'
+		[1621] heading 'Compare Products'
+		StaticText 'You have no items to compare.'
+		[1626] heading 'Recently Ordered'
+		[1628] Section ''
+			[1630] list ''
+				[1631] listitem ''
+					[1633] LabelText ''
+						StaticText 'Add to Cart'
+					[1636] checkbox 'Add to Cart', checked='false'
+					[1637] strong ''
+						[1638] link 'Uttermost Volterra Crackled Taupe-Gray Ceramic Table Lamp'
+				[1640] listitem ''
+					[1642] LabelText ''
+						StaticText 'Add to Cart'
+					[1645] checkbox 'Add to Cart', checked='false'
+					[1646] strong ''
+						[1647] link 'Plus Size Lingerie for Women Sexy for Sex Naughty Eyelash Lace Bodysuit Naughty Mesh One Piece Teddy Bodysuit Outfits'
+				[1649] listitem ''
+					[1651] LabelText ''
+						StaticText 'Add to Cart'
+					[1654] checkbox 'Add to Cart', checked='false'
+					[1655] strong ''
+						[1656] link 'NOZE Rustic Coat Rack Wall Mounted Shelf with 4 Hooks, Hanging Entryway Organizer for Mug Coffee Cup, Holding Solid Wooden Shelf with 2 Baskets for Kitchen Living Room, Bathroom and Bedroom'
+			[1661] button 'Add to Cart'
+			[1664] link 'View All'
+		[1669] heading 'My Wish List'
+		StaticText 'You have no items in your wish list.'
+	[1673] contentinfo ''
+		[1679] Section ''
+			StaticText '\ue61d'
+			[1682] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[1684] textbox 'Sign Up for Our Newsletter:'
+			[1686] button 'Subscribe'
+		[1688] list ''
+			[1689] listitem ''
+				[1690] link 'Privacy and Cookie Policy'
+			[1691] listitem ''
+				[1692] link 'Search Terms'
+			[1693] listitem ''
+				[1694] link 'Advanced Search'
+			[1695] listitem ''
+				[1696] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[1701] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

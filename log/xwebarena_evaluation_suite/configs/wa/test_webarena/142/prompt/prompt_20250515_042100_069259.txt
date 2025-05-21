@@ -1,0 +1,355 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'One Stop Market', focused
+	[222] banner ''
+		[225] list ''
+			[226] listitem ''
+				[227] link 'My Account'
+			[228] listitem ''
+				[229] link 'My Wish List'
+			[230] listitem ''
+				[231] link 'Sign In'
+			[232] listitem ''
+			[235] listitem ''
+				StaticText 'Welcome to One Stop Market'
+			[237] listitem ''
+				[238] link 'Create an Account'
+		[239] link 'Skip to Content'
+		[244] link 'store logo'
+			[245] image 'one_stop_market_logo'
+		[247] link '\ue611 My Cart'
+		[269] Section ''
+			[271] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[274] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[277] link 'Advanced Search'
+			[279] button 'Search', disabled=True
+	[282] tablist '', multiselectable=False, orientation='horizontal'
+		[285] tabpanel ''
+			[286] navigation ''
+				[287] menu '', orientation='vertical'
+					[289] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[506] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[544] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[596] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[723] menuitem '\ue622 Office Products', hasPopup='menu'
+					[755] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[774] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[798] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[817] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1026] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1077] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1126] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1356] main ''
+		[1359] heading 'One Stop Market'
+		[1372] strong ''
+			StaticText 'Product Showcases'
+		[1375] list ''
+			[1376] listitem ''
+				[1378] link 'Image'
+					[1381] image 'Image'
+				[1385] strong ''
+					[1386] link 'Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.'
+				[1387] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '20%'
+					[1396] link '1 \xa0Review'
+				StaticText '$19.99'
+				[1405] Section ''
+					[1409] button 'Add to Cart'
+				[1412] link '\ue601 Add to Wish List'
+				[1414] link '\ue61f Add to Compare'
+			[1416] listitem ''
+				[1418] link 'Image'
+					[1421] image 'Image'
+				[1425] strong ''
+					[1426] link 'V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24'
+				[1427] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '57%'
+					[1436] link '12 \xa0Reviews'
+				StaticText '$14.47'
+				[1445] Section ''
+					[1449] button 'Add to Cart'
+				[1452] link '\ue601 Add to Wish List'
+				[1454] link '\ue61f Add to Compare'
+			[1456] listitem ''
+				[1458] link 'Image'
+					[1461] image 'Image'
+				[1465] strong ''
+					[1466] link 'Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion, 16-Ounce Pouch'
+				[1467] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '95%'
+					[1476] link '4 \xa0Reviews'
+				StaticText '$19.36'
+				[1485] Section ''
+					[1489] button 'Add to Cart'
+				[1492] link '\ue601 Add to Wish List'
+				[1494] link '\ue61f Add to Compare'
+			[1496] listitem ''
+				[1498] link 'Image'
+					[1501] image 'Image'
+				[1505] strong ''
+					[1506] link 'Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ'
+				[1507] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '63%'
+					[1516] link '12 \xa0Reviews'
+				StaticText '$23.50'
+				[1525] Section ''
+					[1529] button 'Add to Cart'
+				[1532] link '\ue601 Add to Wish List'
+				[1534] link '\ue61f Add to Compare'
+			[1536] listitem ''
+				[1538] link 'Image'
+					[1541] image 'Image'
+				[1545] strong ''
+					[1546] link 'So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub'
+				[1547] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '78%'
+					[1556] link '12 \xa0Reviews'
+				StaticText '$15.62'
+				[1565] Section ''
+					[1569] button 'Add to Cart'
+				[1572] link '\ue601 Add to Wish List'
+				[1574] link '\ue61f Add to Compare'
+			[1576] listitem ''
+				[1578] link 'Image'
+					[1581] image 'Image'
+				[1585] strong ''
+					[1586] link 'Cheongeun Sweet Potato Starch Powder 500g, 2ea(Sweet Potato 55%, Corn 45%)'
+				StaticText '$34.00'
+				[1594] Section ''
+					[1598] button 'Add to Cart'
+				[1601] link '\ue601 Add to Wish List'
+				[1603] link '\ue61f Add to Compare'
+			[1605] listitem ''
+				[1607] link 'Image'
+					[1610] image 'Image'
+				[1614] strong ''
+					[1615] link 'Q Mixers Premium Ginger Ale: Real Ingredients & Less Sweet, 6.7 Fl Oz (24 Bottles)'
+				[1616] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '88%'
+					[1625] link '12 \xa0Reviews'
+				StaticText '$68.50'
+				[1634] Section ''
+					[1638] button 'Add to Cart'
+				[1641] link '\ue601 Add to Wish List'
+				[1643] link '\ue61f Add to Compare'
+			[1645] listitem ''
+				[1647] link 'Image'
+					[1650] image 'Image'
+				[1654] strong ''
+					[1655] link 'Stove Top Turkey Stuffing Mix (12 oz Boxes, Pack of 2)'
+				[1656] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '85%'
+					[1665] link '12 \xa0Reviews'
+				StaticText '$8.49'
+				[1674] Section ''
+					[1678] button 'Add to Cart'
+				[1681] link '\ue601 Add to Wish List'
+				[1683] link '\ue61f Add to Compare'
+			[1685] listitem ''
+				[1687] link 'Image'
+					[1690] image 'Image'
+				[1694] strong ''
+					[1695] link 'Briess DME - Pilsen Light - 1 lb Bag'
+				StaticText '$12.99'
+				[1703] Section ''
+					[1707] button 'Add to Cart'
+				[1710] link '\ue601 Add to Wish List'
+				[1712] link '\ue61f Add to Compare'
+			[1714] listitem ''
+				[1716] link 'Image'
+					[1719] image 'Image'
+				[1723] strong ''
+					[1724] link "Tony Chachere's More Spice Creole Seasoning - 14 oz"
+				[1725] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '75%'
+					[1734] link '12 \xa0Reviews'
+				StaticText '$7.92'
+				[1743] Section ''
+					[1747] button 'Add to Cart'
+				[1750] link '\ue601 Add to Wish List'
+				[1752] link '\ue61f Add to Compare'
+			[1754] listitem ''
+				[1756] link 'Image'
+					[1759] image 'Image'
+				[1763] strong ''
+					[1764] link 'Lobster Cobbler Pot Pie - Gourmet Frozen Seafood Appetizers (Set of 8 Trays)'
+				StaticText '$411.76'
+				[1772] Section ''
+					[1776] button 'Add to Cart'
+				[1779] link '\ue601 Add to Wish List'
+				[1781] link '\ue61f Add to Compare'
+			[1783] listitem ''
+				[1785] link 'Image'
+					[1788] image 'Image'
+				[1792] strong ''
+					[1793] link 'Crunchy Rice Rollers - Gluten Free - Vegan - 3.5 oz Individual Packs (4 Packs of 8 Rollers)'
+				[1794] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '83%'
+					[1803] link '12 \xa0Reviews'
+				StaticText '$11.50'
+				[1812] Section ''
+					[1816] button 'Add to Cart'
+				[1819] link '\ue601 Add to Wish List'
+				[1821] link '\ue61f Add to Compare'
+		[1824] paragraph ''
+			StaticText 'Items 1 to 12 of 24 total'
+		[1827] strong ''
+			StaticText 'Page'
+		[1828] list 'Page'
+			[1829] listitem ''
+				[1830] strong ''
+					StaticText "You're currently reading page"
+			[1833] listitem ''
+				[1834] link 'Page 2'
+			[1837] listitem ''
+				[1838] link '\ue608 Page Next'
+	[1841] contentinfo ''
+		[1847] Section ''
+			StaticText '\ue61d'
+			[1850] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[1852] textbox 'Sign Up for Our Newsletter:'
+			[1854] button 'Subscribe'
+		[1856] list ''
+			[1857] listitem ''
+				[1858] link 'Privacy and Cookie Policy'
+			[1859] listitem ''
+				[1860] link 'Search Terms'
+			[1861] listitem ''
+				[1862] link 'Advanced Search'
+			[1863] listitem ''
+				[1864] link 'Orders and Returns'
+			[1865] listitem ''
+				[1866] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[1871] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

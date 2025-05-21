@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "click('1481')", 'action_description': 'click on the link to add the Pre-baked Gingerbread House Kit to the cart', 'action_result': 'The screenshot provided shows a product page for a "Pre-baked Gingerbread House Kit Value Pack" from an online store. It does not contain any information or visual elements related to the color configuration of a picture frame purchased in September 2022. Therefore, based on this screenshot, the original goal has not been met. You would need additional information or data specifically related to the picture frame to determine its color configuration.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html'}, {'action': "click('1544')", 'action_description': "click the 'Add to Cart' button to add the Pre-baked Gingerbread House Kit to the cart", 'action_result': 'Based on the screenshot provided, the original goal of finding out the color configuration of the picture frame you bought in September 2022 is not achieved. \n\nThe content of the screenshot is centered around a product page for a "Pre-baked Gingerbread House Kit Value Pack" with details about adding it to the shopping cart. There is no information or visual clue related to the color or any details of a picture frame from September 2022.\n\nTo accomplish your original goal, you may need to navigate to your purchase history or order details section of the account where you bought the frame.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html', 'post_action_url': 'http://xwebarena.pathonai.org:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            What is the color configuration of the picture frame I bought Sep 2022
+            

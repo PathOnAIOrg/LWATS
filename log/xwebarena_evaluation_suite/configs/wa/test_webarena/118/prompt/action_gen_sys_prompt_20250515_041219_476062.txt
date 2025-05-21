@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "click('1473')", 'action_description': 'click on the link for the Pre-baked Gingerbread House Kit to view more details about the product.', 'action_result': 'Based on the screenshot, the goal of finding something to alleviate jaw bruxism does not seem to be completed. The screenshot shows a product page for a "Pre-baked Gingerbread House Kit," which is not related to bruxism relief.\n\nFor alleviating bruxism, you might consider products like mouthguards, stress relief items, or consult resources related to dental health. The current screenshot and application state do not appear to align with these needs.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/', 'post_action_url': 'http://xwebarena.pathonai.org:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html'}, {'action': "click('904')", 'action_description': 'click the link for Health & Household to find products that could help alleviate jaw bruxism.', 'action_result': 'Based on the screenshot, it seems the current section is "Health & Household," showing products like batteries and hemp seed oil. However, for addressing jaw bruxism, you would ideally look for items like mouth guards, splints, or stress relief products.\n\nThe current visible products don\'t directly relate to alleviating bruxism, so the goal is likely not finished. You may want to navigate further into relevant categories or search for specific products related to bruxism relief.', 'pre_action_url': 'http://xwebarena.pathonai.org:7770/pre-baked-gingerbread-house-kit-value-pack-17-oz-pack-of-2-total-34-oz.html', 'post_action_url': 'http://xwebarena.pathonai.org:7770/health-household.html'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            I have jaw bruxism problem, show me something that could alleviate the problem.
+            

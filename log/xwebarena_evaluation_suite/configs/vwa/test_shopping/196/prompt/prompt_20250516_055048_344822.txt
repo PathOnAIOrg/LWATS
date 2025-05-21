@@ -1,0 +1,346 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'Castle Foods Everything Bagel Seasoning, 11 oz', focused
+	[257] banner ''
+		[260] list ''
+			[261] listitem ''
+				[262] link 'My Account'
+			[263] listitem ''
+				[264] link 'My Wish List'
+			[265] listitem ''
+				[266] link 'Sign Out'
+			[267] listitem ''
+			[270] listitem ''
+				StaticText 'Welcome, Emma Lopez!'
+		[272] link 'Skip to Content'
+		[277] link 'store logo'
+			[278] image 'one_stop_market_logo'
+		[280] link '\ue611 My Cart 3 3items'
+		[401] Section ''
+			[403] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[406] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[409] link 'Advanced Search'
+			[411] button 'Search', disabled=True
+	[414] tablist '', multiselectable=False, orientation='horizontal'
+		[417] tabpanel ''
+			[418] navigation ''
+				[419] menu '', orientation='vertical'
+					[421] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[638] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[676] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[728] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[855] menuitem '\ue622 Office Products', hasPopup='menu'
+					[887] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[906] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[930] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[949] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1158] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1209] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1258] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1487] list ''
+		[1488] listitem ''
+			[1489] link 'Home'
+			StaticText '\ue608'
+		[1490] listitem ''
+			[1491] link 'Grocery & Gourmet Food'
+		[1492] listitem ''
+			[1493] link 'Food & Beverage Gifts'
+			StaticText '\ue608'
+		[1494] listitem ''
+			[1495] link 'Herb, Spice & Seasoning Gifts'
+		[1496] listitem ''
+			[1497] strong ''
+				StaticText 'Castle Foods Everything Bagel Seasoning, 11 oz'
+	[1498] main ''
+		[1501] heading 'Castle Foods Everything Bagel Seasoning, 11 oz'
+		[1506] alert '', live='assertive', atomic, relevant='additions text'
+			StaticText '\ue602'
+			StaticText "The product's required option(s) weren't entered. Make sure the options are entered and try again."
+		StaticText 'IN STOCK'
+		[1517] strong ''
+			StaticText 'SKU'
+		StaticText 'B07QN17NXY'
+		[1519] LayoutTable ''
+			StaticText 'Rating:'
+			StaticText '\ue605\ue605\ue605\ue605\ue605'
+			StaticText '90'
+			StaticText '% of'
+			StaticText '100'
+			[1530] link '118\xa0 Reviews'
+			[1533] link 'Add Your Review'
+		StaticText '$10.79'
+		[1541] Section ''
+			[1551] LabelText ''
+				StaticText 'Flavor Name'
+				StaticText '*'
+			[1556] radio '5 Alarm Hot & Spicy Everything Bagel Sea...', checked='false'
+			[1557] LabelText ''
+			[1560] radio 'Dill Pickle Everything Bagel Seasoning', checked='false'
+			[1561] LabelText ''
+			[1564] radio 'Everything Bagel Seasoning', checked='false'
+			[1565] LabelText ''
+			[1568] radio 'Spicy Everything Bagel Seasoning', checked='false'
+			[1569] LabelText ''
+			[1573] LabelText ''
+				StaticText 'Size'
+				StaticText '*'
+			[1578] radio '11 Ounce (Pack of 1)', checked='false'
+			[1579] LabelText ''
+			[1582] radio '11.5 Ounce (Pack of 1)', checked='false'
+			[1583] LabelText ''
+			[1586] radio '4 Ounce (Pack of 1)', checked='false'
+			[1587] LabelText ''
+			[1591] LayoutTable ''
+				[1594] LabelText ''
+					StaticText 'Qty'
+				[1597] spinbutton 'Qty' value=1, valuemin=0, valuemax=0, valuetext=''
+				[1599] button 'Add to Cart'
+		[1604] link 'Add to Wish List'
+		[1606] link 'Add to Compare'
+		[1611] link 'Skip to the end of the images gallery'
+		[1621] button 'Previous'
+		[1627] image 'Image'
+		[1628] button 'Next'
+		[1636] button 'Previous'
+		[1640] button 'Image'
+			[1642] image 'Image'
+		[1643] button 'Image'
+			[1645] image 'Image'
+		[1646] button 'Next'
+		[1651] link 'Skip to the beginning of the images gallery'
+		[1655] tablist '', multiselectable=False, orientation='horizontal'
+			[1656] tab 'Details', expanded=True, selected=False, controls='description'
+				[1657] link 'Details'
+			[1658] tabpanel 'Details'
+				[1665] separator '', orientation='horizontal'
+				[1666] heading 'Product Description'
+				[1676] image 'castle foods'
+				[1690] image 'Everything Bagel Seasoning'
+				[1693] heading 'Everything Bagel Seasoning'
+				[1694] paragraph ''
+					StaticText 'A blend of sesame seeds, onion, garlic, and poppy seeds. Everything Bagel Seasoning can be used in countless dishes such as breakfast sandwiches and salads. You can also use this seasoning on roast veggies and meats, in dips, bloody marys, soups, trail mixes, to zest up your popcorn, chips and fries and mac and cheese.'
+				[1707] heading 'Everything Bagel Seasoning'
+				[1709] table ''
+					[1710] rowgroup ''
+						[1711] row ''
+							[1712] columnheader 'Everything Bagel Seasoning'
+								[1714] paragraph ''
+									[1715] image 'Everything Bagel Seasoning'
+							[1717] columnheader 'Breakfast sandwich'
+								[1719] paragraph ''
+									[1720] image 'Breakfast sandwich'
+							[1722] columnheader 'Avocado toast'
+								[1724] paragraph ''
+									[1725] image 'Avocado toast'
+							[1727] columnheader 'season meat'
+								[1729] paragraph ''
+									[1730] image 'season meat'
+						[1732] row ''
+							[1733] gridcell 'Everything Bagel Seasoning A bittersweet medley of flavors that can be used on a variety of foods. Garlic and onion give it a healthy earthy depth. Sesame and poppy seeds add a nutty fruity crunch.'
+								[1735] heading 'Everything Bagel Seasoning'
+								[1736] paragraph ''
+							[1737] gridcell 'Everything Bagel Seasoned Egg Sandwich Add everything bagel seasoning to your eggs and breakfast sandwiches.'
+								[1739] heading 'Everything Bagel Seasoned Egg Sandwich'
+								[1740] paragraph ''
+							[1741] gridcell 'Everything Bagel Seasoned Vegetables Season your vegetables with this everything bagel seasoning for a healthy and delicious meal.'
+								[1743] heading 'Everything Bagel Seasoned Vegetables'
+								[1744] paragraph ''
+							[1745] gridcell 'Everything Bagel Seasoned Meat You can add everything bagel seasoning to savory dishes as well. Add the seasoning to different meats for a salty and savory flavor.'
+								[1747] heading 'Everything Bagel Seasoned Meat'
+								[1748] paragraph ''
+				[1758] LayoutTable ''
+					[1759] table ''
+						[1760] rowgroup ''
+							[1761] row ''
+								[1762] columnheader ''
+								[1763] columnheader 'Everything seasoning'
+									[1764] link 'Everything seasoning'
+										[1765] image 'Everything seasoning'
+								[1766] columnheader 'spicy everything seasoning'
+									[1767] link 'spicy everything seasoning'
+										[1768] image 'spicy everything seasoning'
+							[1769] row ''
+								[1770] columnheader ''
+								[1771] columnheader 'Everything Bagel Seasoning, 11 Ounce'
+									[1772] link 'Everything Bagel Seasoning, 11 Ounce'
+								[1773] columnheader 'Spicy Everything Bagel Seasoning, 11.5 Ounce'
+									[1774] link 'Spicy Everything Bagel Seasoning, 11.5 Ounce'
+							[1775] row ''
+								[1776] rowheader 'Size'
+								[1778] gridcell '11 oz'
+								[1780] gridcell '11.5 oz'
+							[1782] row ''
+								[1783] rowheader 'Ingredients'
+								[1785] gridcell 'Mixture of sesame and poppy seeds with garlic and onion'
+								[1787] gridcell 'Mixture of sesame and poppy seeds with garlic, onion and red pepper'
+							[1789] row ''
+								[1790] rowheader 'Best Used For'
+								[1792] gridcell 'Works for everything! You could rub it on meats, sprinkle it on soups or pair it with your favorite sandwich for a delicious snack or main dish.'
+								[1794] gridcell 'Works for everything! You could rub it on meats, sprinkle it on soups or pair it with your favorite sandwich for a delicious snack or main dish.'
+				[1803] image 'castle foods'
+				[1813] heading 'Product Quick Look'
+				[1816] list ''
+					[1817] listitem ''
+						ListMarker '•'
+						StaticText 'FLAVORFUL AND AROMATIC: Everything bagel seasoning is the ideal seasoning blend for your meal with its slightly pungent scent and wholesome taste'
+					[1819] listitem ''
+						ListMarker '•'
+						StaticText 'SEASONING BLENDS FOR ALL OCCASIONS: Everything Bagel Seasoning is a brilliant blend that works for everything, from healthy snacks to main dishes.; You could rub it on meats, sprinkle it on soups or pair it with sandwiches for smiles around the dinner table'
+					[1821] listitem ''
+						ListMarker '•'
+						StaticText 'A HEALTHY CHOICE: For tantalizing flavors that last a lifetime, this mixture of sesame and poppy seeds with garlic, onion and red pepper, these spice blends are bound to make your food nutritious'
+					[1823] listitem ''
+						ListMarker '•'
+						StaticText 'PACKED SPICES AND SEASONING: Castle provides sustainable products; Coming in a 11 ounce bottle, it is filled by weight and maintains a standard quality at every stage'
+					[1825] listitem ''
+						ListMarker '•'
+						StaticText 'FAMILY KITCHEN: Providing flavourful punch to all your dishes since 1948, Castle products come from organic herb and spice farms, and are a mainstay in kitchens for many generations'
+				[1828] table ''
+					[1829] rowgroup ''
+						[1830] row ''
+							[1831] rowheader 'Package Dimensions \u200f'
+							[1832] gridcell '\u200e 6.3 x 3 x 2.1 inches; 13.12 Ounces'
+						[1833] row ''
+							[1834] rowheader 'UPC \u200f'
+							[1835] gridcell '\u200e 812600032868'
+						[1836] row ''
+							[1837] rowheader 'Manufacturer \u200f'
+							[1838] gridcell '\u200e Kalustyan'
+						[1839] row ''
+							[1840] rowheader 'ASIN \u200f'
+							[1841] gridcell '\u200e B07QN17NXY'
+						[1842] row ''
+							[1843] rowheader '#49 in Herb, Spice & Seasoning Gifts'
+							[1844] gridcell ''
+			[1845] tab 'Reviews (118)', expanded=False, selected=False, controls='reviews'
+				[1846] link 'Reviews (118)'
+	[1911] contentinfo ''
+		[1917] Section ''
+			StaticText '\ue61d'
+			[1920] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[1922] textbox 'Sign Up for Our Newsletter:'
+			[1924] button 'Subscribe'
+		[1926] list ''
+			[1927] listitem ''
+				[1928] link 'Privacy and Cookie Policy'
+			[1929] listitem ''
+				[1930] link 'Search Terms'
+			[1931] listitem ''
+				[1932] link 'Advanced Search'
+			[1933] listitem ''
+				[1934] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[1939] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

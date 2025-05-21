@@ -1,0 +1,443 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'Beauty & Personal Care', focused
+	[224] banner ''
+		[227] list ''
+			[228] listitem ''
+				[229] link 'My Account'
+			[230] listitem ''
+				[231] link 'My Wish List'
+			[232] listitem ''
+				[233] link 'Sign Out'
+			[234] listitem ''
+			[237] listitem ''
+				StaticText 'Welcome, Emma Lopez!'
+		[239] link 'Skip to Content'
+		[244] link 'store logo'
+			[245] image 'one_stop_market_logo'
+		[247] link '\ue611 My Cart 3 3items'
+		[368] Section ''
+			[370] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[373] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[376] link 'Advanced Search'
+			[378] button 'Search', disabled=True
+	[381] tablist '', multiselectable=False, orientation='horizontal'
+		[384] tabpanel ''
+			[385] navigation ''
+				[386] menu '', orientation='vertical'
+					[388] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[605] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[643] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[695] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[822] menuitem '\ue622 Office Products', hasPopup='menu'
+					[854] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[873] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[897] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[916] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1125] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1176] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1225] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1454] list ''
+		[1455] listitem ''
+			[1456] link 'Home'
+			StaticText '\ue608'
+		[1457] listitem ''
+			[1458] strong ''
+				StaticText 'Beauty & Personal Care'
+	[1459] main ''
+		[1462] heading 'Beauty & Personal Care Items 1-12 of 21796'
+		[1474] strong ''
+			StaticText 'View as'
+		[1475] strong 'Grid'
+			StaticText '\ue60d'
+		[1477] link 'View as \ue60b List'
+		[1479] paragraph ''
+			StaticText 'Items'
+			StaticText '-'
+			StaticText '12'
+			StaticText 'of'
+			StaticText '21796'
+		[1484] LabelText ''
+			StaticText 'Sort By'
+		[1485] combobox 'Sort By' value='Position', hasPopup='menu', expanded=False
+			[1486] menuitem 'Position', selected=True
+			[1487] menuitem 'Product Name', selected=False
+			[1488] menuitem 'Price', selected=False
+		[1489] link '\ue613 Set Descending Direction'
+		[1492] list ''
+			[1493] listitem ''
+				[1495] link 'Image'
+					[1498] image 'Image'
+				[1502] strong ''
+					[1503] link 'Tweezers For Succulents Duo'
+				StaticText '$19.99'
+				[1511] Section ''
+					[1515] button 'Add to Cart'
+				[1518] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1520] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1522] listitem ''
+				[1524] link 'Image'
+					[1527] image 'Image'
+				[1531] strong ''
+					[1532] link 'JSY Foldable Bath Body Brush Portable Massager Brush with Long Handle for Wet Dry Brush Bath & Body Brushes (Color : Green)'
+				StaticText '$17.19'
+				[1540] Section ''
+					[1544] button 'Add to Cart'
+				[1547] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1549] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1551] listitem ''
+				[1553] link 'Image'
+					[1556] image 'Image'
+				[1560] strong ''
+					[1561] link 'BODY Exfoliating Washcloth Mitt, Soft Dual-Sided Wet & Dry Face & Body Exfoliator - Body Scrubber Exfoliating Cloth Pad'
+				StaticText '$22.00'
+				[1569] Section ''
+					[1573] button 'Add to Cart'
+				[1576] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1578] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1580] listitem ''
+				[1582] link 'Image'
+					[1585] image 'Image'
+				[1589] strong ''
+					[1590] link 'Lip Balm Containers, Refillable Transparent Cosmetic Containers Empty with Lids for Earrings for Travel Use for Cosmetics'
+				StaticText '$14.59'
+				[1598] Section ''
+					[1602] button 'Add to Cart'
+				[1605] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1607] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1609] listitem ''
+				[1611] link 'Image'
+					[1614] image 'Image'
+				[1618] strong ''
+					[1619] link 'SureThik 15g Hair Thickening Fiber (Black) and Holding Spray (3oz) Bundle'
+				StaticText '$32.00'
+				[1627] Section ''
+					[1631] button 'Add to Cart'
+				[1634] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1636] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1638] listitem ''
+				[1640] link 'Image'
+					[1643] image 'Image'
+				[1647] strong ''
+					[1648] link 'VeSunny Tape in Hair Extensions Ombre Blonde Silky Straight Tape on Hair Extensions Brown to Blonde Ombre Double Sided Tape in Human Hair Extensions Platinum Blonde Ombre 16inch 20pcs 50g'
+				StaticText '$51.99'
+				[1656] Section ''
+					[1660] button 'Add to Cart'
+				[1663] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1665] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1667] listitem ''
+				[1669] link 'Image'
+					[1672] image 'Image'
+				[1676] strong ''
+					[1677] link 'Mineralogie All Natural Lip Gloss, Ruby Rose'
+				[1678] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '73%'
+					[1687] link '3 \xa0Reviews'
+				StaticText '$20.00'
+				[1696] Section ''
+					[1700] button 'Add to Cart'
+				[1703] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1705] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1707] listitem ''
+				[1709] link 'Image'
+					[1712] image 'Image'
+				[1716] strong ''
+					[1717] link 'SRURLLUG Tabletop Vanity Mirror Brightness Adjustable Portable Mirrors for Travel with 3 Color Lighting Modes and USB Rechargeable Makeup Mirror Smart Touch Control 360°Rotation,White'
+				StaticText '$61.18'
+				[1725] Section ''
+					[1729] button 'Add to Cart'
+				[1732] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1734] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1736] listitem ''
+				[1738] link 'Image'
+					[1741] image 'Image'
+				[1745] strong ''
+					[1746] link 'Petansy 3 Packs Aloe Vera Lipstick , Lips Moisturizer Long Lasting Nutritious Lip Balm Magic Temperature Color Change Lip Gloss-Set(A)'
+				[1747] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '68%'
+					[1756] link '12 \xa0Reviews'
+				StaticText '$13.89'
+				[1765] Section ''
+					[1769] button 'Add to Cart'
+				[1772] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1774] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1776] listitem ''
+				[1778] link 'Image'
+					[1781] image 'Image'
+				[1785] strong ''
+					[1786] link 'Soft Clean Between Interdental Floss Brushes Random Color Oral Care Tool 20 PCS/ 2 Pack Elastic Massage Gums Toothpick (2 box)'
+				StaticText '$8.90'
+				[1794] Section ''
+					[1798] button 'Add to Cart'
+				[1801] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1803] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1805] listitem ''
+				[1807] link 'Image'
+					[1810] image 'Image'
+				[1814] strong ''
+					[1815] link 'XZP 4 Pack Larger Thicker Rapid Hair Wrap Towels Drying Women Long Thick Curly Hair Magic Instant Dry Hair Towel Caps Anti Frizz Fast Drying Microfiber Turban Wet Hair Wrap Towels Quick Drying'
+				StaticText '$19.99'
+				[1823] Section ''
+					[1827] button 'Add to Cart'
+				[1830] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1832] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1834] listitem ''
+				[1836] link 'Image'
+					[1839] image 'Image'
+				[1843] strong ''
+					[1844] link 'The Super Dentists Electric Toothbrush, Electric Toothbrush with Rotating Head for Children, Tweens, & Teens (Dr. HaveOneSuperSmile)'
+				StaticText '$16.99'
+				[1852] Section ''
+					[1856] button 'Add to Cart'
+				[1859] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1861] button 'Add to Compare'
+					StaticText '\ue61f'
+		[1865] strong ''
+			StaticText 'Page'
+		[1866] list 'Page'
+			[1867] listitem ''
+				[1868] strong ''
+					StaticText "You're currently reading page"
+			[1871] listitem ''
+				[1872] link 'Page 2'
+			[1875] listitem ''
+				[1876] link 'Page 3'
+			[1879] listitem ''
+				[1880] link 'Page 4'
+			[1883] listitem ''
+				[1884] link 'Page 5'
+			[1887] listitem ''
+				[1888] link '\ue608 Page Next'
+		[1892] LabelText ''
+			StaticText 'Show'
+		[1895] combobox 'Show' value='12', hasPopup='menu', expanded=False
+			[1896] menuitem '12', selected=True
+			[1897] menuitem '24', selected=False
+			[1898] menuitem '36', selected=False
+		StaticText 'per page'
+		[1903] strong ''
+			StaticText 'Shop By'
+		[1905] heading 'Shopping Options'
+		[1906] DescriptionList ''
+			[1907] heading 'Category'
+			[1908] DescriptionListDetail ''
+				[1909] list ''
+					[1910] listitem ''
+						[1911] link 'Oral Care( 3125 item )'
+					[1914] listitem ''
+						[1915] link 'Skin Care( 3074 item )'
+					[1918] listitem ''
+						[1919] link 'Makeup( 1883 item )'
+					[1922] listitem ''
+						[1923] link 'Foot, Hand & Nail Care( 794 item )'
+					[1926] listitem ''
+						[1927] link 'Hair Care( 4912 item )'
+					[1930] listitem ''
+						[1931] link 'Tools & Accessories( 3451 item )'
+					[1934] listitem ''
+						[1935] link 'Fragrance( 1311 item )'
+					[1938] listitem ''
+						[1939] link 'Personal Care( 1838 item )'
+					[1942] listitem ''
+						[1943] link 'Shave & Hair Removal( 799 item )'
+					[1946] listitem ''
+						[1947] link 'Salon & Spa Equipment( 609 item )'
+			[1950] heading 'Price'
+			[1951] DescriptionListDetail ''
+				[1952] list ''
+					[1953] listitem ''
+						[1954] link '$0.00 - $999.99( 21743 item )'
+					[1959] listitem ''
+						[1960] link '$1,000.00 - $1,999.99( 41 item )'
+					[1965] listitem ''
+						[1966] link '$2,000.00 - $2,999.99( 8 item )'
+					[1971] listitem ''
+						[1972] link '$3,000.00 - $3,999.99( 2 item )'
+					[1977] listitem ''
+						[1978] link '$4,000.00 - $4,999.99( 1 item )'
+					[1983] listitem ''
+						[1984] link '$9,000.00 and above( 1 item )'
+		[1991] heading 'Compare Products'
+		StaticText 'You have no items to compare.'
+		[1996] heading 'Recently Ordered'
+		[1998] Section ''
+			[2000] list ''
+				[2001] listitem ''
+					[2003] LabelText ''
+						StaticText 'Add to Cart'
+					[2006] checkbox 'Add to Cart', checked='false'
+					[2007] strong ''
+						[2008] link 'Plus Size Lingerie for Women Sexy for Sex Naughty Eyelash Lace Bodysuit Naughty Mesh One Piece Teddy Bodysuit Outfits'
+				[2010] listitem ''
+					[2012] LabelText ''
+						StaticText 'Add to Cart'
+					[2015] checkbox 'Add to Cart', checked='false'
+					[2016] strong ''
+						[2017] link 'NOZE Rustic Coat Rack Wall Mounted Shelf with 4 Hooks, Hanging Entryway Organizer for Mug Coffee Cup, Holding Solid Wooden Shelf with 2 Baskets for Kitchen Living Room, Bathroom and Bedroom'
+				[2019] listitem ''
+					[2021] LabelText ''
+						StaticText 'Add to Cart'
+					[2024] checkbox 'Add to Cart', checked='false'
+					[2025] strong ''
+						[2026] link 'Uttermost Volterra Crackled Taupe-Gray Ceramic Table Lamp'
+			[2031] button 'Add to Cart'
+			[2034] link 'View All'
+		[2039] heading 'My Wish List'
+		StaticText 'You have no items in your wish list.'
+	[2043] contentinfo ''
+		[2049] Section ''
+			StaticText '\ue61d'
+			[2052] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[2054] textbox 'Sign Up for Our Newsletter:'
+			[2056] button 'Subscribe'
+		[2058] list ''
+			[2059] listitem ''
+				[2060] link 'Privacy and Cookie Policy'
+			[2061] listitem ''
+				[2062] link 'Search Terms'
+			[2063] listitem ''
+				[2064] link 'Advanced Search'
+			[2065] listitem ''
+				[2066] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[2071] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

@@ -1,0 +1,428 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea 'Basic Cases - Cases, Holsters & Sleeves - Cell Phones & Accessories'
+	[224] banner ''
+		[227] list ''
+			[228] listitem ''
+				[229] link 'My Account'
+			[230] listitem ''
+				[231] link 'My Wish List'
+			[232] listitem ''
+				[233] link 'Sign Out'
+			[234] listitem ''
+			[237] listitem ''
+				StaticText 'Welcome, Emma Lopez!'
+		[239] link 'Skip to Content'
+		[244] link 'store logo'
+			[245] image 'one_stop_market_logo'
+		[247] link '\ue611 My Cart 3 3items'
+		[368] Section ''
+			[370] LabelText ''
+				StaticText '\ue615'
+				StaticText 'Search'
+			[373] combobox '\ue615 Search', autocomplete='both', hasPopup='listbox', expanded=False
+			[376] link 'Advanced Search'
+			[378] button 'Search', disabled=True
+	[381] tablist '', multiselectable=False, orientation='horizontal'
+		[384] tabpanel ''
+			[385] navigation ''
+				[386] menu '', orientation='vertical'
+					[388] menuitem '\ue622 Beauty & Personal Care', hasPopup='menu'
+					[605] menuitem '\ue622 Sports & Outdoors', hasPopup='menu'
+					[643] menuitem '\ue622 Clothing, Shoes & Jewelry', hasPopup='menu'
+					[695] menuitem '\ue622 Home & Kitchen', hasPopup='menu'
+					[822] menuitem '\ue622 Office Products', hasPopup='menu'
+					[854] menuitem '\ue622 Tools & Home Improvement', hasPopup='menu'
+					[873] menuitem '\ue622 Health & Household', hasPopup='menu'
+					[897] menuitem '\ue622 Patio, Lawn & Garden', hasPopup='menu'
+					[916] menuitem '\ue622 Electronics', hasPopup='menu'
+					[1125] menuitem '\ue622 Cell Phones & Accessories', hasPopup='menu'
+					[1176] menuitem '\ue622 Video Games', hasPopup='menu'
+					[1225] menuitem '\ue622 Grocery & Gourmet Food', hasPopup='menu'
+	[1454] list ''
+		[1455] listitem ''
+			[1456] link 'Home'
+			StaticText '\ue608'
+		[1457] listitem ''
+			[1458] link 'Cell Phones & Accessories'
+		[1459] listitem ''
+			[1460] link 'Cases, Holsters & Sleeves'
+			StaticText '\ue608'
+		[1461] listitem ''
+			[1462] strong ''
+				StaticText 'Basic Cases'
+	[1463] main ''
+		[1466] heading 'Basic Cases Items 13-24 of 350'
+		[1478] strong ''
+			StaticText 'View as'
+		[1479] strong 'Grid'
+			StaticText '\ue60d'
+		[1481] link 'View as \ue60b List'
+		[1483] paragraph ''
+			StaticText 'Items'
+			StaticText '13'
+			StaticText '-'
+			StaticText '24'
+			StaticText 'of'
+			StaticText '350'
+		[1488] LabelText ''
+			StaticText 'Sort By'
+		[1489] combobox 'Sort By' value='Position', hasPopup='menu', expanded=False
+			[1490] menuitem 'Position', selected=True
+			[1491] menuitem 'Product Name', selected=False
+			[1492] menuitem 'Price', selected=False
+		[1493] link '\ue613 Set Descending Direction'
+		[1496] list ''
+			[1497] listitem ''
+				[1499] link 'Image'
+					[1502] image 'Image'
+				[1506] strong ''
+					[1507] link "NIAFEYA Defender Case for iPhone 11 with Stand, Heavy Duty 3 in 1 Protection Cover for Women Men Shockproof Bumper Soft Hard Rubber Phone Case with Kickstand 6.1'' Inches (Wine Red/Rose Red)"
+				[1508] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '90%'
+					[1517] link '12 \xa0Reviews'
+				StaticText '$10.99'
+				[1526] Section ''
+					[1530] button 'Add to Cart'
+				[1533] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1535] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1537] listitem ''
+				[1539] link 'Image'
+					[1542] image 'Image'
+				[1546] strong ''
+					[1547] link 'Generic Phone Case Compatible with iPhone Sebastian Scratch Stan Accessories The Shock Winter Waterproof Soldier 6 7 8 Plus Se 2020 X Xr 11 Pro Max 12 Mini, Transparent'
+				StaticText '$9.95'
+				[1555] Section ''
+					[1559] button 'Add to Cart'
+				[1562] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1564] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1566] listitem ''
+				[1568] link 'Image'
+					[1571] image 'Image'
+				[1575] strong ''
+					[1576] link 'Anuck Designed for iPhone 13 Case, Soft Silicone Gel Rubber Bumper Phone Case with [Anti-Scratch Microfiber Lining], Hard Shell Shockproof Full-Body Protective Case Cover for iPhone 13 6.1 inch Black'
+				StaticText '$9.99'
+				[1584] Section ''
+					[1588] button 'Add to Cart'
+				[1591] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1593] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1595] listitem ''
+				[1597] link 'Image'
+					[1600] image 'Image'
+				[1604] strong ''
+					[1605] link 'JAME for Moto G Stylus 5G Case,Protective Case with Built-in Metal 360° Rotating Kickstand Non-Slip and Shock-Proof for Moto G Stylus 5G,Silver'
+				StaticText '$14.99'
+				[1613] Section ''
+					[1617] button 'Add to Cart'
+				[1620] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1622] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1624] listitem ''
+				[1626] link 'Image'
+					[1629] image 'Image'
+				[1633] strong ''
+					[1634] link 'Cold Gray INS Leopard Print Soft Case for Apple iPhone 11 Pro Max 6.5 inch with Fashion Frame Cute Design Skin Cellphone Protective Cover for iPhone 11 Pro Max Cases'
+				StaticText '$14.99'
+				[1642] Section ''
+					[1646] button 'Add to Cart'
+				[1649] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1651] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1653] listitem ''
+				[1655] link 'Image'
+					[1658] image 'Image'
+				[1662] strong ''
+					[1663] link 'Compatible with Samsung Galaxy A51 4G Wallet Case and Tempered Glass Screen Protector Flip Card Holder Cell Accessories Folio Purse Phone Cover for Glaxay A 51 Gaxaly M40S 51A A515F S51 Blue'
+				StaticText '$14.99'
+				[1671] Section ''
+					[1675] button 'Add to Cart'
+				[1678] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1680] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1682] listitem ''
+				[1684] link 'Image'
+					[1687] image 'Image'
+				[1691] strong ''
+					[1692] link 'LOHASIC for Galaxy S21 Ultra Case, Premium Leather Luxury Business PU Non-Slip Grip Shockproof Bumper Full Body Protective Cover Phone Cases for Samsung Galaxy S21 Ultra 5G 6.8 inch - Brown'
+				StaticText '$16.99'
+				[1700] Section ''
+					[1704] button 'Add to Cart'
+				[1707] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1709] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1711] listitem ''
+				[1713] link 'Image'
+					[1716] image 'Image'
+				[1720] strong ''
+					[1721] link 'Ferilinso for Samsung Galaxy S21 Case, [NOT Fit S21+ Plus], with 2 Pack Tempered Glass Screen Protector [Hard PC Back TPU Flexible Frame] [Military Grade Protection] [10X Anti-Yellowing]-Black Cover'
+				StaticText '$9.96'
+				[1729] Section ''
+					[1733] button 'Add to Cart'
+				[1736] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1738] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1740] listitem ''
+				[1742] link 'Image'
+					[1745] image 'Image'
+				[1749] strong ''
+					[1750] link 'HATOSHI Motorola Moto One 5G Ace Case with Built in Screen Protector and 2 Pack Camera Lens Protector, Military-Grade Shockproof Rubber Full-Body Protective Phone Case Cover for Moto One 5G Ace, Black'
+				StaticText '$13.99'
+				[1758] Section ''
+					[1762] button 'Add to Cart'
+				[1765] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1767] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1769] listitem ''
+				[1771] link 'Image'
+					[1774] image 'Image'
+				[1778] strong ''
+					[1779] link 'KSELF for iPhone 11 Case with [2 Pack] Tempered Glass Screen Protector, Hard PC Slim Cover with Ring Kickstand, Full Protective Shockproof Dual Layer Hybrid Bumper Case for iPhone 11 6.1 inch (Blue)'
+				StaticText '$9.99'
+				[1787] Section ''
+					[1791] button 'Add to Cart'
+				[1794] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1796] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1798] listitem ''
+				[1800] link 'Image'
+					[1803] image 'Image'
+				[1807] strong ''
+					[1808] link 'iPhone Xs Max Case, Anuck Soft Silicone Gel Rubber Bumper Case Anti-Scratch Microfiber Lining Hard Shell Shockproof Full-Body Protective Case Cover for Apple iPhone Xs Max 6.5" 2018 - Black'
+				[1809] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '80%'
+					[1818] link '12 \xa0Reviews'
+				StaticText '$12.99'
+				[1827] Section ''
+					[1831] button 'Add to Cart'
+				[1834] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1836] button 'Add to Compare'
+					StaticText '\ue61f'
+			[1838] listitem ''
+				[1840] link 'Image'
+					[1843] image 'Image'
+				[1847] strong ''
+					[1848] link 'TORRO Cell Phone Case Compatible with iPhone 13 - Quality, Genuine Leather Cover with Card Slots and Horizontal Viewing Stand (Black)'
+				[1849] LayoutTable ''
+					StaticText 'Rating:'
+					StaticText '\ue605\ue605\ue605\ue605\ue605'
+					StaticText '80%'
+					[1858] link '12 \xa0Reviews'
+				StaticText '$37.99'
+				[1867] Section ''
+					[1871] button 'Add to Cart'
+				[1874] button 'Add to Wish List'
+					StaticText '\ue601'
+				[1876] button 'Add to Compare'
+					StaticText '\ue61f'
+		[1880] strong ''
+			StaticText 'Page'
+		[1881] list 'Page'
+			[1882] listitem ''
+				[1883] link '\ue617 Page Previous'
+			[1886] listitem ''
+				[1887] link 'Page 1'
+			[1890] listitem ''
+				[1891] strong ''
+					StaticText "You're currently reading page"
+					StaticText '2'
+			[1894] listitem ''
+				[1895] link 'Page 3'
+			[1898] listitem ''
+				[1899] link 'Page 4'
+			[1902] listitem ''
+				[1903] link 'Page 5'
+			[1906] listitem ''
+				[1907] link '\ue608 Page Next'
+		[1911] LabelText ''
+			StaticText 'Show'
+		[1914] combobox 'Show' value='12', hasPopup='menu', expanded=False
+			[1915] menuitem '12', selected=True
+			[1916] menuitem '24', selected=False
+			[1917] menuitem '36', selected=False
+		StaticText 'per page'
+		[1922] strong ''
+			StaticText 'Shop By'
+		[1924] heading 'Shopping Options'
+		[1925] DescriptionList ''
+			[1926] heading 'Price'
+			[1927] DescriptionListDetail ''
+				[1928] list ''
+					[1929] listitem ''
+						[1930] link '$0.00 - $99.99( 348 item )'
+					[1935] listitem ''
+						[1936] link '$100.00 - $199.99( 1 item )'
+					[1941] listitem ''
+						[1942] link '$800.00 and above( 1 item )'
+		[1949] heading 'Compare Products'
+		StaticText 'You have no items to compare.'
+		[1954] heading 'Recently Ordered'
+		[1956] Section ''
+			[1958] list ''
+				[1959] listitem ''
+					[1961] LabelText ''
+						StaticText 'Add to Cart'
+					[1964] checkbox 'Add to Cart', checked='false'
+					[1965] strong ''
+						[1966] link 'NOZE Rustic Coat Rack Wall Mounted Shelf with 4 Hooks, Hanging Entryway Organizer for Mug Coffee Cup, Holding Solid Wooden Shelf with 2 Baskets for Kitchen Living Room, Bathroom and Bedroom'
+				[1968] listitem ''
+					[1970] LabelText ''
+						StaticText 'Add to Cart'
+					[1973] checkbox 'Add to Cart', checked='false'
+					[1974] strong ''
+						[1975] link 'Uttermost Volterra Crackled Taupe-Gray Ceramic Table Lamp'
+				[1977] listitem ''
+					[1979] LabelText ''
+						StaticText 'Add to Cart'
+					[1982] checkbox 'Add to Cart', checked='false'
+					[1983] strong ''
+						[1984] link 'Plus Size Lingerie for Women Sexy for Sex Naughty Eyelash Lace Bodysuit Naughty Mesh One Piece Teddy Bodysuit Outfits'
+			[1989] button 'Add to Cart'
+			[1992] link 'View All'
+		[1997] heading 'My Wish List'
+		StaticText 'You have no items in your wish list.'
+	[2001] contentinfo ''
+		[2007] Section ''
+			StaticText '\ue61d'
+			[2010] LabelText ''
+				StaticText 'Sign Up for Our Newsletter:'
+				[2012] textbox 'Sign Up for Our Newsletter:'
+			[2014] button 'Subscribe'
+		[2016] list ''
+			[2017] listitem ''
+				[2018] link 'Privacy and Cookie Policy'
+			[2019] listitem ''
+				[2020] link 'Search Terms'
+			[2021] listitem ''
+				[2022] link 'Advanced Search'
+			[2023] listitem ''
+				[2024] link 'Contact Us'
+		StaticText 'Copyright © 2013-present Magento, Inc. All rights reserved.'
+		StaticText 'Help Us Keep Magento Healthy'
+		[2029] link 'Report All Bugs'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        
