@@ -124,7 +124,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
             branching_factor=5,
             log_folder=log_folder if task_id else "log",
             fullpage=True,
-            reset_account=False
+            account_reset=False
         )
         
         agent, playwright_manager = await setup_prompting_web_agent(

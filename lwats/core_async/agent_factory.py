@@ -127,7 +127,7 @@ async def setup_prompting_web_agent(
         config = PromptingAgentConfig()
     
     # Reset account
-    if config.reset_account:
+    if config.account_reset:
         reset_url = os.environ["ACCOUNT_RESET_URL"]
         async with aiohttp.ClientSession() as session:
             headers = {'Connection': 'close'}
