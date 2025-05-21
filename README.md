@@ -8,7 +8,7 @@ pip3.11 install -e .
 ```
 
 
-## Get started
+## 1. Get started
 ```
 python run_demo_treesearch.py \
     --browser-mode chromium \
@@ -35,10 +35,14 @@ python run_demo_baseline.py \
     --eval-criteria "check if Yemeni Hawayij is in the cart"
 ```
 
+
+## 2. Run Evaluation on the xwebarena benchmark
 ```
 python run_xwebarena.py --browser-mode chromium --agent-type "PromptAgent" --action_generation_model "gpt-4o-mini" --config-file ./xwebarena_evaluation_suite/configs/wa/test_webarena/124.json
 ```
 
+
+## 3. Run Evaluation on the webshop benchmark
 ```
 # Prompt Agent on WebShop
 # run single task

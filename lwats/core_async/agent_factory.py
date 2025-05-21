@@ -9,7 +9,6 @@ from .config import AgentConfig
 from ..agents_async.SearchAgents.simple_search_agent import SimpleSearchAgent
 from ..agents_async.SearchAgents.lats_agent import LATSAgent
 from ..agents_async.SearchAgents.mcts_agent import MCTSAgent
-from ..agents_async.SearchAgents.webshop_tree_search_agent import WebShopTreeSearchAgent
 from ..agents_async.BaselineAgents.PromptAgent import PromptAgent
 from ..webagent_utils_async.utils.utils import setup_logger
 from ..webagent_utils_async.utils.playwright_manager import setup_playwright
@@ -79,7 +78,6 @@ async def setup_search_agent(
         "SimpleSearchAgent": SimpleSearchAgent,
         "LATSAgent": LATSAgent,
         "MCTSAgent": MCTSAgent,
-        "WebShopTreeSearchAgent": WebShopTreeSearchAgent
     }
 
     if agent_type in agent_classes:
