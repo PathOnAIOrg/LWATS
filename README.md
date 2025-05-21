@@ -78,7 +78,7 @@ python run_demo_treesearch.py \
 
 ## 2. Run Evaluation on the xwebarena benchmark
 ```
-python run_xwebarena.py --browser-mode chromium --agent-type "PromptAgent" --action_generation_model "gpt-4o-mini" --config-file ./xwebarena_evaluation_suite/configs/wa/test_webarena/124.json
+python run_xwebarena_eval.py --browser-mode chromium --agent-type "PromptAgent" --action_generation_model "gpt-4o-mini" --config-file ./xwebarena_evaluation_suite/configs/wa/test_webarena/124.json
 ```
 
 
@@ -93,8 +93,8 @@ python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --
 
 # TreeSearch Agent on WebShop
 # run single task
-python run_webshop_tree_search.py --headless
+python run_webshop_eval_tree_search.py --headless
 
 # run batch of tasks
-python run_webshop_tree_search.py --batch-start 0 --batch-end 5
+python run_webshop_eval_tree_search.py --batch-start 0 --batch-end 5
 ```
