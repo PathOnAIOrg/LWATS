@@ -8,10 +8,14 @@ import os
 import json
 import datetime
 import logging
+import time
+from lwats.core_async.config import AgentConfig, add_agent_config_arguments, filter_valid_config_args
+from lwats.replay_async import generate_feedback, playwright_step_execution, locate_element_from_action
+load_dotenv()
+from lwats.core_async.agent_factory import setup_search_agent
+from lwats.webagent_utils_async.utils.playwright_manager import setup_playwright
 
-## TODO: need to modified since current implementation of prompt agent doesn't allow adding system prompt
-
-SYSTEM_PROMPT = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
+WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
 
 IMPORTANT SEARCH QUERY GUIDANCE:
 1. When searching, use short, general terms (2-4 words) instead of copying the entire product description. For example:
@@ -81,7 +85,7 @@ def setup_logger(task_id, log_folder="log"):
     logger.addHandler(console_handler)
     return logger, log_fh, console_handler
 
-async def main(headless, browser_mode, starting_url, agent_type, 
+async def main(headless, browser_mode, starting_url, agent_type, goal, 
          action_generation_model, images, plan, task_id=None):
     """
     Main function to run the WebShop evaluation.
@@ -117,40 +121,107 @@ async def main(headless, browser_mode, starting_url, agent_type,
     
     try:
         # Create config
-        config = PromptingAgentConfig(
-            headless=headless,
-            browser_mode=browser_mode,
-            storage_state=None,  # No storage state for WebShop
-            action_generation_model=action_generation_model,
-            features=['axtree'],
-            branching_factor=5,
-            log_folder=log_folder if task_id else "log",
-            fullpage=True,
-            account_reset=False,
-            system_prompt=SYSTEM_PROMPT
+        agent_config = AgentConfig(**filter_valid_config_args(args.__dict__))
+        agent_config.storage_state = None
+        agent_config.max_depth = 2
+
+        agent, playwright_manager = await setup_search_agent(
+            agent_type=args.agent_type,
+            starting_url=args.starting_url,
+            goal=args.goal,
+            images=args.images,
+            agent_config=agent_config
         )
-        
-        agent, playwright_manager = await setup_prompting_web_agent(
-            starting_url=starting_url,
-            goal=None,
-            images=images_list,
-            agent_type=agent_type,
-            config=config
-        )
-        
-        # Run the search
-        trajectory, result = await agent.send_prompt(plan)
-        logger.info("Trajectory:")
-        logger.info(trajectory)
-        logger.info("Result:")
-        logger.info(result)
+        best_node = await agent.run()
+
+        path = agent.get_path_to_root(best_node)
+        print("execute path")
+        playwright_manager = await setup_playwright(
+        headless=agent_config.headless, 
+        mode=agent_config.browser_mode,
+        storage_state=agent_config.storage_state
+    )
+        page = await playwright_manager.get_page()
+        await page.goto(starting_url)
+        # Execute path
+
+
+        for n in path[1:]:  # Skip root node
+            success = await playwright_step_execution(
+                n,
+                goal,
+                playwright_manager,
+                is_replay=False,
+                log_folder=None
+            )
+            if not success:
+                print(f"Failed to execute action {n.action}")
+
+        def flatten_trajectory(nodes):
+            trajectory = []
+            for node in nodes:
+                node_dict = {
+                    "natural_language_description": getattr(node, 'natural_language_description', None),
+                    "action": getattr(node, 'action', None),
+                    "prob": getattr(node, 'prob', None),
+                    "element": getattr(node, 'element', None),
+                    "feedback": getattr(node, 'feedback', ''),
+                    "goal": getattr(node, 'goal', None),
+                    "visits": getattr(node, 'visits', 0),
+                    "value": getattr(node, 'value', 0.0),
+                    "depth": getattr(node, 'depth', 0),
+                    "is_terminal": getattr(node, 'is_terminal', False),
+                    "exhausted": getattr(node, 'exhausted', False)
+                }
+                trajectory.append(node_dict)
+            return trajectory
+
+        # Use it in your code
+        trajectory = flatten_trajectory(path)
+
+        webshop_completed = False
+        webshop_score = None
+        try:
+            content = await page.content()
+            if "fixed_" in page.url or ("webshop" in page.url.lower()) or ("Thank you for shopping with us!" in content):
+                thank_you_locator = page.locator("text=Thank you for shopping with us!")
+                score_locator = page.locator("#reward")
+                
+                thank_you_count = await thank_you_locator.count()
+                score_count = await score_locator.count()
+                
+                if thank_you_count > 0 and score_count > 0:
+                    webshop_completed = True
+                    score_text = await score_locator.text_content()
+                    webshop_score = score_text.strip()
+                    logger.info(f"WebShop completion detected with score: {webshop_score}")
+                    
+                    try:
+                        result_file = os.path.join(agent_config.log_folder, 'webshop_score.json')
+                        score_data = {
+                            "score": webshop_score,
+                            "url": page.url,
+                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                        }
+                        with open(result_file, 'w', encoding='utf-8') as f:
+                            json.dump(score_data, f, indent=4)
+                        logger.info(f"WebShop score saved to {result_file}")
+                    except Exception as e:
+                        logger.error(f"Error saving WebShop score: {str(e)}")
+        except Exception as e:
+            logger.error(f"Error checking WebShop completion: {str(e)}")
+
+        result = {
+            "webshop_completed": webshop_completed,
+            "webshop_score": webshop_score
+        }
         
         # Save results
         if task_id:
             result_file = os.path.join(log_folder, 'result.json')
             final_json = {
                 "task_id": task_id,
-                "goal": None,
+                "goal": goal,
                 "starting_url": starting_url,
                 "trajectory": trajectory,
                 "result": result,
@@ -194,10 +265,16 @@ if __name__ == "__main__":
                         help="Specify the browser mode (default: chromium)")
     parser.add_argument("--starting-url", type=str, default="http://54.224.220.64:3000/fixed_0",
                         help="Starting URL for the web agent (default: http://54.224.220.64:3000/fixed_0)")
-    parser.add_argument("--agent-type", type=str, default="PromptAgent",
+    parser.add_argument("--agent-type", type=str, default="SimpleSearchAgent",
                         help="Type of agent to use (default: PromptAgent)")
+    parser.add_argument("--storage-state", type=str, default=None,
+                        help="Storage state json file")
+    parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
+                        help="Goal for the web agent to accomplish")
     parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
                         help="Action generation model (default: gpt-4o)")
+    parser.add_argument("--account_reset", type=bool, default=False,
+                        help="Whether to reset the account (default: False)")
     parser.add_argument("--images", type=str, default="",
                         help="Comma-separated paths to image files (e.g., 'path1.jpg,path2.jpg')")
     parser.add_argument("--plan", type=str, default=None,
@@ -210,6 +287,7 @@ if __name__ == "__main__":
                         help="End task number for batch evaluation")
     
     args = parser.parse_args()
+    ## clean this up
 
     # Handle batch evaluation
     if args.batch_start is not None and args.batch_end is not None:
@@ -246,6 +324,7 @@ if __name__ == "__main__":
             args.browser_mode,
             args.starting_url,
             args.agent_type,
+            args.goal,
             args.action_generation_model,
             args.images,
             args.plan,

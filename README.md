@@ -102,3 +102,7 @@ python run_webshop_eval_tree_search.py --batch-start 0 --batch-end 5
 
 ### 3.2 Version 2 webshop
 python run_webshop_eval_new.py --starting-url "http://54.224.220.64:3000/fixed_0"  
+
+python run_webshop_eval_tree_search_new.py --starting-url "http://54.224.220.64:3000/fixed_0"  
+
+run batch of tasks the same as run_webshop_eval.py
