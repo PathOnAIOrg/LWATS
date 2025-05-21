@@ -15,6 +15,9 @@ class AgentConfig:
     planning_model: str = "gpt-4o"
     action_grounding_model: str = "gpt-4o"
     evaluation_model: str = "gpt-4o"
+
+    # Account settings
+    account_reset: bool = True
     
     # Search settings
     search_algorithm: str = "bfs"
@@ -23,7 +26,7 @@ class AgentConfig:
     iterations: int = 1
     max_depth: int = 3
     num_simulations: int = 1
-    account_reset: bool = True
+    
 
     # for LATS
     simulation_score: float = 0.75
@@ -46,7 +49,9 @@ class PromptingAgentConfig:
     headless: bool = False
     browser_mode: str = "browserbase"
     storage_state: str = 'state.json'
-    reset_account: bool = True
+
+    # Account settings
+    account_reset: bool = True
     
     # Model settings
     default_model: str = "gpt-4o-mini"
@@ -54,6 +59,7 @@ class PromptingAgentConfig:
     action_generation_model: str = "gpt-4o-mini"
     action_grounding_model: str = "gpt-4o"
     evaluation_model: str = "gpt-4o"
+    system_prompt: str = None
     
     # Features
     features: List[str] = field(default_factory=lambda: ['axtree'])
@@ -70,7 +76,7 @@ def add_agent_config_arguments(parser):
                         help="Specify the browser mode")
     parser.add_argument("--storage-state", type=str, required=False,
                         help="Storage state json file")
-    parser.add_argument("--reset_account", type=bool, required=False,
+    parser.add_argument("--account-reset", type=bool, required=False,
                         help="Reset account")
     # Model
     parser.add_argument("--action_generation_model", type=str, required=False,
@@ -129,6 +135,8 @@ def add_prompting_agent_config_arguments(parser):
                         help="Model for action grounding")
     parser.add_argument("--evaluation-model", type=str, required=False,
                         help="Model for evaluation tasks")
+    parser.add_argument("--system-prompt", type=str, required=False,
+                        help="System prompt")
     
     # Features
     parser.add_argument("--features", type=str, required=False,

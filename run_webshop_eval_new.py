@@ -9,7 +9,7 @@ import json
 import datetime
 import logging
 
-WEBSHOP_GOAL = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
+SYSTEM_PROMPT = """Figure out the task to be done in the first page instruction and then do the task accordingly. 
 
 IMPORTANT SEARCH QUERY GUIDANCE:
 1. When searching, use short, general terms (2-4 words) instead of copying the entire product description. For example:
@@ -79,7 +79,7 @@ def setup_logger(task_id, log_folder="log"):
     logger.addHandler(console_handler)
     return logger, log_fh, console_handler
 
-async def main(headless, browser_mode, starting_url, agent_type, goal, 
+async def main(headless, browser_mode, starting_url, agent_type, 
          action_generation_model, images, plan, task_id=None):
     """
     Main function to run the WebShop evaluation.
@@ -124,18 +124,20 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
             branching_factor=5,
             log_folder=log_folder if task_id else "log",
             fullpage=True,
-            account_reset=False
+            account_reset=False,
+            system_prompt=SYSTEM_PROMPT
         )
+        
         agent, playwright_manager = await setup_prompting_web_agent(
             starting_url=starting_url,
-            goal=goal,
+            goal=None,
             images=images_list,
             agent_type=agent_type,
             config=config
         )
         
         # Run the search
-        trajectory, result = await agent.send_prompt(plan if plan is not None else goal)
+        trajectory, result = await agent.send_prompt(plan)
         logger.info("Trajectory:")
         logger.info(trajectory)
         logger.info("Result:")
@@ -146,7 +148,7 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
             result_file = os.path.join(log_folder, 'result.json')
             final_json = {
                 "task_id": task_id,
-                "goal": goal,
+                "goal": None,
                 "starting_url": starting_url,
                 "trajectory": trajectory,
                 "result": result,
@@ -192,8 +194,6 @@ if __name__ == "__main__":
                         help="Starting URL for the web agent (default: http://54.224.220.64:3000/fixed_0)")
     parser.add_argument("--agent-type", type=str, default="PromptAgent",
                         help="Type of agent to use (default: PromptAgent)")
-    parser.add_argument("--goal", type=str, default=WEBSHOP_GOAL,
-                        help="Goal for the web agent to accomplish")
     parser.add_argument("--action_generation_model", type=str, default="gpt-4o",
                         help="Action generation model (default: gpt-4o)")
     parser.add_argument("--images", type=str, default="",
@@ -244,7 +244,6 @@ if __name__ == "__main__":
             args.browser_mode,
             args.starting_url,
             args.agent_type,
-            args.goal,
             args.action_generation_model,
             args.images,
             args.plan,
