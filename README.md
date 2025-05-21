@@ -8,20 +8,8 @@ pip3.11 install -e .
 ```
 
 
-## Get started
-```
-python run_demo_treesearch.py \
-    --browser-mode chromium \
-    --storage-state shopping.json \
-    --starting-url "http://xwebarena.pathonai.org:7770/grocery-gourmet-food/food-beverage-gifts/herb-spice-seasoning-gifts.html?product_list_mode=list" \
-    --agent-type "SimpleSearchAgent" \
-    --action_generation_model "gpt-4o-mini" \
-    --goal "Can you add the item Yemeni Hawayij on this page, to my cart?" \
-    --iterations 3 \
-    --max_depth 3 \
-    --search_algorithm bfs
-```
-
+## 1. Get started
+### 1.1 run baseline agent: the prompt agent
 ```
 python run_demo_baseline.py \
     --browser-mode chromium \
@@ -35,10 +23,66 @@ python run_demo_baseline.py \
     --eval-criteria "check if Yemeni Hawayij is in the cart"
 ```
 
+### 1.2 run tree search
+#### 1.2.1 BFS/ DFS
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/grocery-gourmet-food/food-beverage-gifts/herb-spice-seasoning-gifts.html?product_list_mode=list" \
+    --agent-type "SimpleSearchAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "Can you add the item Yemeni Hawayij on this page, to my cart?" \
+    --iterations 3 \
+    --max_depth 3 \
+    --search_algorithm bfs
+```
+
+#### 1.2.2 MCTS
+
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "MCTSAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
+```
+#### 1.2.3 older version of LATS/ MCTS agents in the visual tree search demo
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "LATSAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
+```
+
+```
+python run_demo_treesearch.py \
+    --browser-mode chromium \
+    --storage-state shopping.json \
+    --starting-url "http://xwebarena.pathonai.org:7770/" \
+    --agent-type "RMCTSAgent" \
+    --action_generation_model "gpt-4o-mini" \
+    --goal "search running shoes, click on the first result" \
+    --iterations 3 \
+    --max_depth 3
+```
+
+## 2. Run Evaluation on the xwebarena benchmark
 ```
 python run_xwebarena.py --browser-mode chromium --agent-type "PromptAgent" --action_generation_model "gpt-4o-mini" --config-file ./xwebarena_evaluation_suite/configs/wa/test_webarena/124.json
 ```
 
+
+## 3. Run Evaluation on the webshop benchmark
 ```
 # Prompt Agent on WebShop
 # run single task
