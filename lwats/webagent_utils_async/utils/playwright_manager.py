@@ -208,37 +208,40 @@ class AsyncPlaywrightManager:
                     print(f"Connected to Browserbase. {self.browser.browser_type.name} v{self.browser.version}")
                     await debug_browser_state(self.browser)
                     
-                    # Use the common setup method
-                    # First try to restore cookies
+                    # Setup context and page
                     self.context = self.browser.contexts[0]
                     self.page = self.context.pages[0]
-                    cookies_restored = await restore_cookies(self.page, self.storage_state)
                     
-                    if cookies_restored and await check_login_status(self.page):
-                        print("Using existing session cookies\n")
+                    # Only attempt authentication if storage_state is provided
+                    if self.storage_state is not None:
+                        cookies_restored = await restore_cookies(self.page, self.storage_state)
+                        if cookies_restored and await check_login_status(self.page):
+                            print("Using existing session cookies\n")
+                        else:
+                            print("Need to authenticate\n")
+                            success = await authenticate(self.page, self.storage_state)
+                            if not success:
+                                print("❌ Authentication didn't succeed fully.\n")
                     else:
-                        print("Need to authenticate\n")
-                        # TODO: implement the authenticate function for browserbase
-                        success = await authenticate(self.page, self.storage_state)
-                        if not success:
-                            print("❌ Authentication didn't succeed fully.\n")
-
-                    
-                    await debug_browser_state(self.browser)
+                        print("No storage state provided, skipping authentication\n")
                 
                 elif self.mode == "chromium":
                     self.browser = await self.playwright.chromium.launch(headless=self.headless)
                     self.context = await self.browser.new_context()
                     self.page = await self.context.new_page()
-                    cookies_restored = await restore_cookies(self.page, self.storage_state)
-
-                    if cookies_restored and await check_login_status(self.page):
-                        print("Using existing session cookies\n")
+                    
+                    # Only attempt authentication if storage_state is provided
+                    if self.storage_state is not None:
+                        cookies_restored = await restore_cookies(self.page, self.storage_state)
+                        if cookies_restored and await check_login_status(self.page):
+                            print("Using existing session cookies\n")
+                        else:
+                            print("Need to authenticate\n")
+                            success = await authenticate(self.page, self.storage_state)
+                            if not success:
+                                print("❌ Authentication didn't succeed fully.\n")
                     else:
-                        print("Need to authenticate\n")
-                        success = await authenticate(self.page, self.storage_state)
-                        if not success:
-                            print("❌ Authentication didn't succeed fully.\n")
+                        print("No storage state provided, skipping authentication\n")
                     
                 else:
                     raise ValueError(f"Invalid mode: {self.mode}. Expected 'cdp', 'browserbase', or 'chromium'")
@@ -284,7 +287,24 @@ class AsyncPlaywrightManager:
             self.playwright = None
 
 async def setup_playwright(storage_state=None, headless=False, mode="chromium", session_id=None):
-    playwright_manager = AsyncPlaywrightManager(storage_state=storage_state, headless=headless, mode=mode, session_id=session_id)
+    """
+    Setup a Playwright manager with optional authentication.
+    
+    Args:
+        storage_state: Path to storage state file. If None, no authentication will be attempted.
+        headless: Whether to run browser in headless mode
+        mode: Browser mode ("chromium" or "browserbase")
+        session_id: Optional session ID for browserbase mode
+    
+    Returns:
+        AsyncPlaywrightManager instance
+    """
+    playwright_manager = AsyncPlaywrightManager(
+        storage_state=storage_state, 
+        headless=headless, 
+        mode=mode, 
+        session_id=session_id
+    )
     browser = await playwright_manager.get_browser()
     context = await playwright_manager.get_context()
     page = await playwright_manager.get_page()
