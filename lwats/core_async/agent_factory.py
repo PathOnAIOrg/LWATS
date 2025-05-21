@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import aiohttp
 from typing import Any, Tuple, Optional
+import re
 
 from .config import AgentConfig, PromptingAgentConfig
 from ..agents_async.SearchAgents.simple_search_agent import SimpleSearchAgent
@@ -99,7 +100,6 @@ async def setup_search_agent(
         return {"error": error_message}
     return agent, playwright_manager
 
-
 async def setup_prompting_web_agent(
     starting_url: str,
     goal: str,
@@ -126,7 +126,7 @@ async def setup_prompting_web_agent(
     if config is None:
         config = PromptingAgentConfig()
     
-    # Reset account
+    # Reset account if configured
     if config.account_reset:
         reset_url = os.environ["ACCOUNT_RESET_URL"]
         async with aiohttp.ClientSession() as session:
@@ -146,12 +146,49 @@ async def setup_prompting_web_agent(
     # Setup messages
     messages = [{
         "role": "system",
-        "content": SEARCH_AGENT_SYSTEM_PROMPT
+        "content": config.system_prompt or SEARCH_AGENT_SYSTEM_PROMPT
     }]
 
-    # Setup page
+    # Setup page and extract goal if needed
     page = await playwright_manager.get_page()
     await page.goto(starting_url)
+
+    if goal is None:
+        instruction = await page.evaluate('''() => {
+            // Find all elements that might contain "Instruction:"
+            const elements = Array.from(document.querySelectorAll('*'));
+            
+            // Find the element with "Instruction:" text
+            const instructionLabel = elements.find(el => 
+                el.textContent && el.textContent.trim() === 'Instruction:');
+            
+            if (instructionLabel) {
+                // Check the parent element first
+                let container = instructionLabel.parentElement;
+                
+                // Get all text content, excluding the "Instruction:" label
+                let fullText = container.textContent.trim();
+                return fullText.replace('Instruction:', '').trim();
+            }
+            
+            // Fallback: look for any element containing the instruction box
+            const instructionBox = elements.find(el => 
+                el.textContent && el.textContent.includes('Instruction:') && 
+                el.tagName !== 'TITLE' && el.tagName !== 'SCRIPT' && 
+                el.tagName !== 'STYLE');
+            
+            if (instructionBox) {
+                let fullText = instructionBox.textContent.trim();
+                return fullText.replace('Instruction:', '').trim();
+            }
+            
+            return null;
+        }''')
+                
+
+        clean_instruction = instruction.replace("WebShop", "")
+        clean_instruction = re.sub(r'\s+', ' ', clean_instruction).strip()
+        goal = clean_instruction
 
     # Setup logging
     file_path = os.path.join(config.log_folder, 'flow', 'steps.json')
@@ -167,15 +204,7 @@ async def setup_prompting_web_agent(
             goal=goal,
             images=images,
             playwright_manager=playwright_manager,
-            features=config.features,
-            elements_filter=config.elements_filter,
-            branching_factor=config.branching_factor,
-            log_folder=config.log_folder,
-            default_model=config.default_model,
-            planning_model=config.planning_model,
-            action_generation_model=config.action_generation_model,
-            action_grounding_model=config.action_grounding_model,
-            evaluation_model=config.evaluation_model
+            config=config
         )
     else:
         supported_prompt_agents = ["PromptAgent"]

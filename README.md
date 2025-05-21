@@ -83,6 +83,7 @@ python run_xwebarena_eval.py --browser-mode chromium --agent-type "PromptAgent" 
 
 
 ## 3. Run Evaluation on the webshop benchmark
+### 3.1 Version 1 webshop
 ```
 # Prompt Agent on WebShop
 # run single task
@@ -98,3 +99,6 @@ python run_webshop_eval_tree_search.py --headless
 # run batch of tasks
 python run_webshop_eval_tree_search.py --batch-start 0 --batch-end 5
 ```
+
+### 3.2 Version 2 webshop
+python run_webshop_eval_new.py --starting-url "http://54.224.220.64:3000/fixed_0"  
