@@ -49,8 +49,8 @@ python run_webshop_eval.py --starting-url "http://54.224.220.64:3000/fixed_0" --
 
 # TreeSearch Agent on WebShop
 # run single task
-python run_webshop_tree_search.py --headless
+python run_webshop_tree_search.py --search-algorithm bfs --browser-mode chromium/browserbase
 
 # run batch of tasks
-python run_webshop_tree_search.py --batch-start 0 --batch-end 5
+python run_webshop_tree_search.py --search-algorithm dfs --batch-start 0 --batch-end 5
 ```
