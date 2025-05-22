@@ -2,6 +2,7 @@ import argparse
 from dotenv import load_dotenv
 load_dotenv()
 from lwats.core_async.agent_factory import setup_prompting_web_agent
+from lwats.core_async.config import PromptingAgentConfig
 from xwebarena_evaluation_suite import evaluator_router, image_utils
 import asyncio,json,requests
 from PIL import Image
@@ -38,25 +39,24 @@ async def main(headless, browser_mode, config_file, agent_type, action_generatio
         cfgfileContent += f"[Task id]: {task_id}" + "\n"
         cfgfileContent += f"[len(images_list)]: {len(images_list)}" + "\n"
 
-    # images_list is now a list of image paths (strings)
+    # Create config
+    config = PromptingAgentConfig(
+        headless=headless,
+        browser_mode=browser_mode,
+        storage_state=storage_state,
+        action_generation_model=action_generation_model,
+        features=['axtree'],
+        branching_factor=5,
+        log_folder=log_folder,
+        fullpage=True
+    )
     
     agent, playwright_manager = await setup_prompting_web_agent(
         starting_url=starting_url,
         goal=goal,
         images=images_list,
         agent_type=agent_type,
-        features=features,
-        branching_factor=5,
-        log_folder=log_folder,
-        storage_state=storage_state,
-        headless=headless,
-        browser_mode=browser_mode,
-        default_model="gpt-4o-mini",
-        planning_model="gpt-4o",
-        action_generation_model=action_generation_model,
-        action_grounding_model="gpt-4o",
-        evaluation_model="gpt-4o",
-        fullpage=True,
+        config=config
     )
     
     # Ensure the agent is of the specified type

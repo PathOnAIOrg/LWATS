@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field, fields
-from typing import List, Optional
+from typing import List, Optional, Any
 
 @dataclass
 class AgentConfig:
@@ -15,6 +15,9 @@ class AgentConfig:
     planning_model: str = "gpt-4o"
     action_grounding_model: str = "gpt-4o"
     evaluation_model: str = "gpt-4o"
+
+    # Account settings
+    account_reset: bool = True
     
     # Search settings
     search_algorithm: str = "bfs"
@@ -23,7 +26,7 @@ class AgentConfig:
     iterations: int = 1
     max_depth: int = 3
     num_simulations: int = 1
-    account_reset: bool = True
+    
 
     # for LATS
     simulation_score: float = 0.75
@@ -40,12 +43,41 @@ class AgentConfig:
     # Logging
     log_folder: str = "log"
 
+@dataclass
+class PromptingAgentConfig:
+    # Browser settings
+    headless: bool = False
+    browser_mode: str = "browserbase"
+    storage_state: str = 'state.json'
+
+    # Account settings
+    account_reset: bool = True
+    
+    # Model settings
+    default_model: str = "gpt-4o-mini"
+    planning_model: str = "gpt-4o"
+    action_generation_model: str = "gpt-4o-mini"
+    action_grounding_model: str = "gpt-4o"
+    evaluation_model: str = "gpt-4o"
+    system_prompt: str = None
+    
+    # Features
+    features: List[str] = field(default_factory=lambda: ['axtree'])
+    fullpage: bool = True
+    elements_filter: Optional[str] = None
+    branching_factor: Optional[int] = None
+    
+    # Logging
+    log_folder: str = "log"
+
 def add_agent_config_arguments(parser):
     # Environment
     parser.add_argument("--browser-mode", type=str, required=False,
                         help="Specify the browser mode")
     parser.add_argument("--storage-state", type=str, required=False,
                         help="Storage state json file")
+    parser.add_argument("--account-reset", type=bool, required=False,
+                        help="Reset account")
     # Model
     parser.add_argument("--action_generation_model", type=str, required=False,
                         help="action generation model, right now only supports openai models")
@@ -83,6 +115,43 @@ def add_agent_config_arguments(parser):
     parser.add_argument("--log_folder", type=str, required=False,
                         help="log folder")
     
-def filter_valid_config_args(args_dict):
-    valid_fields = {field.name for field in fields(AgentConfig)}
+def add_prompting_agent_config_arguments(parser):
+    # Browser settings
+    parser.add_argument("--browser-mode", type=str, required=False,
+                        help="Specify the browser mode")
+    parser.add_argument("--storage-state", type=str, required=False,
+                        help="Storage state json file")
+    parser.add_argument("--headless", type=bool, required=False,
+                        help="Run browser in headless mode")
+    
+    # Model settings
+    parser.add_argument("--default-model", type=str, required=False,
+                        help="Default model for general tasks")
+    parser.add_argument("--planning-model", type=str, required=False,
+                        help="Model for planning tasks")
+    parser.add_argument("--action-generation-model", type=str, required=False,
+                        help="Model for action generation")
+    parser.add_argument("--action-grounding-model", type=str, required=False,
+                        help="Model for action grounding")
+    parser.add_argument("--evaluation-model", type=str, required=False,
+                        help="Model for evaluation tasks")
+    parser.add_argument("--system-prompt", type=str, required=False,
+                        help="System prompt")
+    
+    # Features
+    parser.add_argument("--features", type=str, required=False,
+                        help="Features to use")
+    parser.add_argument("--fullpage", type=bool, required=False,
+                        help="Use full page capture")
+    parser.add_argument("--elements-filter", type=str, required=False,
+                        help="Elements filter type")
+    parser.add_argument("--branching-factor", type=int, required=False,
+                        help="Branching factor for actions")
+    
+    # Logging
+    parser.add_argument("--log-folder", type=str, required=False,
+                        help="Log folder path")
+
+def filter_valid_config_args(args_dict, config_class=AgentConfig):
+    valid_fields = {field.name for field in fields(config_class)}
     return {k: v for k, v in args_dict.items() if k in valid_fields and v is not None}

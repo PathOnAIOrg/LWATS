@@ -22,8 +22,29 @@ openai_client = OpenAI()
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-class MCTSAgent(BaseAgent):
+class RMCTSAgent(BaseAgent):
+    """
+    Monte Carlo Tree Search Agent for web navigation tasks.
+    This implementation uses reflection-based search to improve performance.
+    """
+    
     async def run(self, websocket=None) -> List[dict[str, Any]]:
+        """
+        Run the MCTS algorithm based on configuration.
+        
+        Args:
+            websocket: Optional WebSocket connection to send updates to
+            
+        Returns:
+            List[Dict[str, Any]]: List of actions in the best path found
+        """
+        # if websocket:
+        #     await websocket.send_json({
+        #         "type": "search_status",
+        #         "status": "started",
+        #         "message": "Starting MCTS search",
+        #         "timestamp": datetime.utcnow().isoformat()
+        #     })
         
         # Reset browser to initial state
         live_browser_url, session_id = await self._reset_browser(websocket)
@@ -245,6 +266,12 @@ class MCTSAgent(BaseAgent):
             print(f"{GREEN}Step 1: Node Selection{RESET}")
             await self.websocket_step_start(step=1, step_name="node_selection", websocket=websocket)
             selected_node = await self.node_selection(self.root_node, websocket)
+            # await self.websocket_node_selection(selected_node, websocket=websocket)
+            # tree_data = self._get_tree_data()
+            # if websocket:
+            #     await self.websocket_tree_update(type="tree_update_node_selection", websocket=websocket, tree_data=tree_data)
+            # else:
+            #     print_entire_tree(self.root_node)
             
             if selected_node is None:
                 logger.warning("All paths lead to terminal nodes. Ending search.")

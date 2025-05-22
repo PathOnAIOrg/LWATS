@@ -2,39 +2,34 @@ import argparse
 from dotenv import load_dotenv
 load_dotenv()
 from lwats.core_async.agent_factory import setup_prompting_web_agent
+from lwats.core_async.config import PromptingAgentConfig
 import asyncio
 
 
 
 async def main(headless, browser_mode, storage_state, starting_url, agent_type, goal, 
          action_generation_model, images, plan, evaluator_type, eval_url, eval_criteria):
-    log_folder = "log"
-    model = "gpt-4-mini"
-    features = "axtree"
-    num_simulations = 100
-    exploration_weight = 1.41
+    # Create config
+    config = PromptingAgentConfig(
+        headless=headless,
+        browser_mode=browser_mode,
+        storage_state=storage_state,
+        action_generation_model=action_generation_model,
+        features=['axtree'],
+        branching_factor=5,
+        log_folder="log",
+        fullpage=True
+    )
     
     # Split the comma-separated string into a list of images
     images_list = [img.strip() for img in images.split(',')] if images else []
-    
     
     agent, playwright_manager = await setup_prompting_web_agent(
         starting_url=starting_url,
         goal=goal,
         images=images_list,
         agent_type=agent_type,
-        features=features,
-        branching_factor=5,
-        log_folder=log_folder,
-        storage_state=storage_state,
-        headless=headless,
-        browser_mode=browser_mode,
-        default_model="gpt-4o-mini",
-        planning_model="gpt-4o",
-        action_generation_model=action_generation_model,
-        action_grounding_model="gpt-4o",
-        evaluation_model="gpt-4o",
-        fullpage=True,
+        config=config
     )
     
     # Ensure the agent is of the specified type

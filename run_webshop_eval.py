@@ -2,6 +2,7 @@ import argparse
 from dotenv import load_dotenv
 load_dotenv()
 from lwats.core_async.agent_factory import setup_prompting_web_agent
+from lwats.core_async.config import PromptingAgentConfig
 import asyncio
 import os
 import json
@@ -232,23 +233,24 @@ async def main(headless, browser_mode, starting_url, agent_type, goal,
     images_list = [img.strip() for img in images.split(',')] if images else []
     
     try:
+        # Create config
+        config = PromptingAgentConfig(
+            headless=headless,
+            browser_mode=browser_mode,
+            storage_state=None,  # No storage state for WebShop
+            action_generation_model=action_generation_model,
+            features=['axtree'],
+            branching_factor=5,
+            log_folder=log_folder if task_id else "log",
+            fullpage=True,
+            account_reset=False
+        )
         agent, playwright_manager = await setup_prompting_web_agent(
             starting_url=starting_url,
             goal=goal,
             images=images_list,
             agent_type=agent_type,
-            features="axtree",
-            branching_factor=5,
-            log_folder=log_folder if task_id else "log",
-            storage_state=None,  # No storage state for WebShop
-            headless=headless,
-            browser_mode=browser_mode,
-            default_model="gpt-4o",
-            planning_model="gpt-4o",
-            action_generation_model=action_generation_model,
-            action_grounding_model="gpt-4o",
-            evaluation_model="gpt-4o",
-            fullpage=True,
+            config=config
         )
         
         # Run the search
