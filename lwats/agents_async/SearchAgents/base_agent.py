@@ -1,6 +1,8 @@
 import time
 from typing import Any, Optional, Tuple, List
 import os
+import json
+import logging
 from openai import OpenAI
 from datetime import datetime
 import aiohttp
@@ -559,6 +561,55 @@ class BaseAgent:
                 node.value += (value - node.value) / node.visits
             node = node.parent
 
+    async def check_webshop_completion(self, page, log_folder: str) -> tuple[bool, str]:
+        """
+        Check if WebShop task is completed and extract score.
+        
+        Args:
+            page: Playwright page object
+            log_folder: Path to log folder for saving score
+            
+        Returns:
+            Tuple of (webshop_completed, webshop_score)
+        """
+        webshop_completed = False
+        webshop_score = None
+        
+        try:
+            content = await page.content()
+            if "fixed_" in page.url or ("webshop" in page.url.lower()) or ("Thank you for shopping with us!" in content):
+                thank_you_locator = page.locator("text=Thank you for shopping with us!")
+                score_locator = page.locator("#reward")
+                
+                thank_you_count = await thank_you_locator.count()
+                score_count = await score_locator.count()
+                
+                if thank_you_count > 0 and score_count > 0:
+                    webshop_completed = True
+                    score_text = await score_locator.text_content()
+                    webshop_score = score_text.strip()
+                    
+                    logger = logging.getLogger(__name__)
+                    logger.info(f"WebShop completion detected with score: {webshop_score}")
+                    
+                    try:
+                        result_file = os.path.join(log_folder, 'webshop_score.json')
+                        score_data = {
+                            "score": webshop_score,
+                            "url": page.url,
+                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                        }
+                        with open(result_file, 'w', encoding='utf-8') as f:
+                            json.dump(score_data, f, indent=4)
+                        logger.info(f"WebShop score saved to {result_file}")
+                    except Exception as e:
+                        logger.error(f"Error saving WebShop score: {str(e)}")
+        except Exception as e:
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error checking WebShop completion: {str(e)}")
+        
+        return webshop_completed, webshop_score
+
     # shared
     async def simulation(self, node: LATSNode, websocket=None) -> tuple[float, LATSNode]:
         depth = node.depth
@@ -693,6 +744,9 @@ class BaseAgent:
 
                 goal_finished = await is_goal_finished(messages, openai_client)
 
+                # Check for WebShop completion
+                webshop_completed, webshop_score = await self.check_webshop_completion(page, self.config.log_folder)
+
                 new_node = LATSNode(
                     natural_language_description=next_action["natural_language_description"],
                     action=next_action["action"],
@@ -707,7 +761,9 @@ class BaseAgent:
                 ## new node simulated
                 await self.websocket_node_simulated(new_node, node, websocket=websocket)
 
-                if goal_finished:
+                if webshop_completed or goal_finished:
+                    if webshop_completed and webshop_score:
+                        new_node.feedback = f"WebShop task complete! {webshop_score}"
                     return trajectory, new_node
 
                 return await self.send_completion_request(plan, depth + 1, new_node, trajectory, websocket)
