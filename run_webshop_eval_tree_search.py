@@ -10,11 +10,13 @@ from playwright.async_api import async_playwright
 
 from lwats.core_async.config import AgentConfig, add_agent_config_arguments, filter_valid_config_args
 from lwats.core_async.agent_factory import setup_search_agent, setup_prompting_web_agent
+from lwats.webagent_utils_async.utils.playwright_manager import setup_playwright
+from lwats.replay_async import playwright_step_execution
 
-# Reuse instruction extraction function from run_webshop_eval.py
+# Simplified instruction extraction function
 async def extract_instructions_from_webpage(url, browser_mode="chromium"):
     """
-    Extract task instructions from the WebShop page.
+    Extract task instructions from the WebShop page with simplified logic.
     
     Args:
         url (str): URL of the WebShop task page
@@ -30,8 +32,6 @@ async def extract_instructions_from_webpage(url, browser_mode="chromium"):
     async with async_playwright() as p:
         # Choose browser engine based on browser_mode parameter
         if browser_mode.lower() == "browserbase":
-            # For browserbase we'll still use chromium in playwright
-            # since browserbase is handled at the agent level
             browser = await p.chromium.launch(headless=True)
         else:  # Default to chromium
             browser = await p.chromium.launch(headless=True)
@@ -40,117 +40,33 @@ async def extract_instructions_from_webpage(url, browser_mode="chromium"):
         try:
             await page.goto(url, wait_until="networkidle")
             
-            # Try multiple different selectors that might contain the instruction
-            # Since we don't know the exact structure, we'll try several common patterns
+            # Try common instruction selectors
             possible_selectors = [
-                "div.instruction-text", 
-                "div.instruction", 
-                "div.task-instruction",
-                "div.description",
-                "div:has-text('Instruction:')",
-                "div:has-text('Task:')",
-                "div.container div h3:has-text('Instruction') + div",
-                "div.container div h4:has-text('Instruction') + div",
-                "p.instruction"
+                "div.instruction-text", "div.instruction", "div.task-instruction",
+                "div:has-text('Instruction:')", "div:has-text('Task:')"
             ]
             
             instruction_text = None
             for selector in possible_selectors:
                 try:
-                    # Use a shorter timeout for each individual selector attempt
-                    element = await page.wait_for_selector(selector, timeout=1000, state="visible")
+                    element = await page.wait_for_selector(selector, timeout=1000)
                     if element:
                         instruction_text = await element.inner_text()
-                        if instruction_text and len(instruction_text.strip()) > 10:  # Ensure we got meaningful text
+                        if instruction_text and len(instruction_text.strip()) > 10:
                             instruction_text = instruction_text.strip()
-                            break
+                            # Clean up text
+                            for prefix in ["WebShop\nInstruction:", "Instruction:", "Task:"]:
+                                if instruction_text.startswith(prefix):
+                                    instruction_text = instruction_text[len(prefix):].strip()
+                                    break
+                            return instruction_text
                 except Exception:
                     continue
             
-            # If we found text using selectors, return it
-            if instruction_text:
-                # Clean up the text
-                instruction_text = clean_instruction_text(instruction_text)
-                return instruction_text
-            
-            # Fallback: Look for text on the page containing common instruction indicators
-            content = await page.content()
-            
-            # Try to find common instruction markers in the page content
-            instruction_markers = ["Instruction:", "Task:", "Your task is", "You need to", "Please find"]
-            
-            for marker in instruction_markers:
-                if marker in content:
-                    # Get the page text rather than HTML - more reliable for extraction
-                    all_text = await page.evaluate("() => document.body.innerText")
-                    
-                    # Find the marker in the text
-                    start_idx = all_text.find(marker)
-                    if start_idx >= 0:
-                        # Extract from marker to the next double newline (paragraph break)
-                        # or up to 500 chars max
-                        start_idx += len(marker)
-                        end_idx = all_text.find("\n\n", start_idx)
-                        if end_idx == -1 or end_idx - start_idx > 500:
-                            end_idx = start_idx + 500
-                        
-                        extracted_text = all_text[start_idx:end_idx].strip()
-                        if len(extracted_text) > 10:  # Ensure we got meaningful text
-                            # Clean up the text
-                            extracted_text = clean_instruction_text(extracted_text)
-                            return extracted_text
-                        
-            # Final fallback: Take a screenshot for debugging and return a generic message
-            await page.screenshot(path="webshop_page.png")
-            
-            # Check if there's a search interface, which likely means it's the WebShop
-            search_box = await page.query_selector("input[type='search'], input[placeholder*='search']")
-            if search_box:
-                return "Explore the WebShop interface and complete the shopping task based on the product requirements shown on the page. Search for appropriate items, navigate through results, select the correct product with matching requirements, and complete the purchase to get your score."
-            
-            return "Could not extract specific instructions from the page. Please proceed with the task as displayed in the browser."
+            # If we couldn't find instructions, return a generic message
+            return "Explore the WebShop interface and complete the shopping task based on the product requirements shown on the page."
         finally:
             await browser.close()
-
-def clean_instruction_text(text):
-    """
-    Clean up the extracted instruction text by removing common prefixes and suffixes.
-    
-    Args:
-        text (str): Raw instruction text
-        
-    Returns:
-        str: Cleaned instruction text
-    """
-    # Remove common prefixes
-    prefixes_to_remove = [
-        "WebShop\nInstruction:\n",
-        "WebShop\nInstruction:",
-        "Instruction:\n",
-        "Instruction:",
-        "Task:\n",
-        "Task:"
-    ]
-    
-    for prefix in prefixes_to_remove:
-        if text.startswith(prefix):
-            text = text[len(prefix):].strip()
-            break
-    
-    # Remove common suffixes
-    suffixes_to_remove = [
-        "\nSearch",
-        "\nSearch:",
-        "\nFind:",
-        "\nClick"
-    ]
-    
-    for suffix in suffixes_to_remove:
-        if text.endswith(suffix):
-            text = text[:-len(suffix)].strip()
-            break
-    
-    return text.strip()
 
 def get_webshop_score(log_folder):
     """
@@ -222,6 +138,7 @@ async def run_tree_search(headless, browser_mode, starting_url, agent_type, goal
     logger = logging.getLogger(f"{task_id}")
     logger.info(f"Starting tree search with algorithm: {search_algorithm}")
     logger.info(f"Using browser mode: {browser_mode}")
+    logger.info(f"Max depth: {agent_config.max_depth}")
     
     # Configure search algorithm and browser
     agent_config.search_algorithm = search_algorithm
@@ -332,44 +249,19 @@ async def execute_trajectory(headless, browser_mode, starting_url, agent_type, g
     logger = logging.getLogger(f"{task_id}")
     logger.info(f"Executing best trajectory with {len(trajectory)} steps")
     
-    # Setup the prompting agent for execution
-    # We use PromptAgent for execution because it can better follow a predefined trajectory
-    result = await setup_prompting_web_agent(
-        starting_url=starting_url,
-        goal=goal,
-        images=images,
-        agent_type="PromptAgent",  # Use PromptAgent for execution
-        features="axtree",
-        branching_factor=5,
-        log_folder=log_folder,
-        storage_state=None,  # No storage state for WebShop
+    # Setup playwright
+    playwright_manager = await setup_playwright(
         headless=headless,
-        browser_mode=browser_mode,
-        default_model="gpt-4o",
-        planning_model="gpt-4o",
-        action_generation_model=action_generation_model,
-        action_grounding_model="gpt-4o",
-        evaluation_model="gpt-4o",
-        fullpage=True,
+        mode=browser_mode,
+        storage_state=None  # No storage state for WebShop
     )
     
-    # Handle the return value based on whether it's a tuple or just an agent
-    if isinstance(result, tuple) and len(result) == 2:
-        agent, playwright_manager = result
-    else:
-        agent = result
-        playwright_manager = getattr(agent, 'playwright_manager', None)
-    
     try:
-        # Execute the trajectory directly instead of calling execute_trajectory method
-        logger.info(f"Executing trajectory with agent of type: {type(agent).__name__}")
-        
-        # Since PromptAgent doesn't have execute_trajectory method, we need to implement it here
-        exec_result = []
-        context = await playwright_manager.get_context()
         page = await playwright_manager.get_page()
+        await page.goto(starting_url)
         
-        # For each step in the trajectory
+        # Execute each step in the trajectory
+        exec_result = []
         for i, step in enumerate(trajectory):
             logger.info(f"Executing step {i+1}/{len(trajectory)}")
             
@@ -386,24 +278,29 @@ async def execute_trajectory(headless, browser_mode, starting_url, agent_type, g
             # Record pre-action URL
             pre_action_url = page.url
             
-            # Execute the action
+            # Execute the action using playwright_step_execution
             try:
-                # Extract page information first
-                page_info = await extract_page_info(page, fullpage=True, log_folder=log_folder)
+                # Create a simplified node object with the minimum required attributes
+                node = type('Node', (), {
+                    'action': action,
+                    'natural_language_description': description,
+                    'element': None,  # Will be located by playwright_step_execution
+                })
                 
-                # Execute the action
-                await execute_action(action, agent.action_set, page, context, goal, 
-                                    page_info['interactive_elements'], log_folder)
+                success = await playwright_step_execution(
+                    node,
+                    goal,
+                    playwright_manager,
+                    is_replay=False,
+                    log_folder=log_folder
+                )
                 
-                # Capture feedback after action
-                feedback = await capture_post_action_feedback(page, action, goal, log_folder)
-                
-                # Record result
+                # Capture result
                 post_action_url = page.url
                 step_result = {
                     'action': action,
                     'action_description': description,
-                    'action_result': feedback,
+                    'action_result': 'Success' if success else 'Failed',
                     'pre_action_url': pre_action_url,
                     'post_action_url': post_action_url
                 }
@@ -461,14 +358,11 @@ async def execute_trajectory(headless, browser_mode, starting_url, agent_type, g
         
         return trajectory, exec_result, score
     finally:
-        # Close the playwright_manager when done, if it exists
-        if playwright_manager:
-            await playwright_manager.close()
-        elif hasattr(agent, 'close') and callable(agent.close):
-            await agent.close()
+        # Close the playwright_manager when done
+        await playwright_manager.close()
 
 async def main(headless=False, browser_mode="chromium", starting_url=None, agent_type="SimpleSearchAgent", goal=None, 
-         search_algorithm="bfs", action_generation_model="gpt-4o", images=None, task_id=None, **kwargs):
+         search_algorithm="bfs", action_generation_model="gpt-4o", images=None, task_id=None, max_depth=2, **kwargs):
     """
     Main function to run WebShop tree search and evaluation.
     
@@ -482,15 +376,18 @@ async def main(headless=False, browser_mode="chromium", starting_url=None, agent
         action_generation_model (str): Model to use for action generation
         images (list): List of image paths
         task_id (str): Optional task ID for logging
+        max_depth (int): Maximum depth for tree search (default: 2)
         **kwargs: Additional arguments for agent configuration
     """
     # Ensure default values for parameters that might be None
     if starting_url is None:
-        starting_url = "http://54.224.220.64:3000/fixed_0"
+        starting_url = "http://128.105.144.173:3000/fixed_0"
     if images is None:
         images = []
     if browser_mode is None:
         browser_mode = "chromium"
+    if max_depth is None:
+        max_depth = 2
 
     # Setup logging
     if task_id:
@@ -501,6 +398,7 @@ async def main(headless=False, browser_mode="chromium", starting_url=None, agent
         logger.info(f"Starting URL: {starting_url}")
         logger.info(f"Search algorithm: {search_algorithm}")
         logger.info(f"Browser mode: {browser_mode}")
+        logger.info(f"Max depth: {max_depth}")
     else:
         log_folder = "log"
         logger = logging.getLogger("default")
@@ -520,6 +418,8 @@ async def main(headless=False, browser_mode="chromium", starting_url=None, agent
     # Create agent configuration
     config_dict = filter_valid_config_args(kwargs)
     agent_config = AgentConfig(**config_dict)
+    # Explicitly set max_depth to ensure it's not None
+    agent_config.max_depth = max_depth
     
     try:
         # Phase 1: Run tree search to find best trajectory
@@ -618,8 +518,8 @@ if __name__ == "__main__":
     if not any(action.dest == 'browser_mode' for action in parser._actions):
         parser.add_argument("--browser-mode", type=str, default="chromium", choices=["chromium", "browserbase"],
                             help="Specify the browser mode: chromium or browserbase (default: chromium)")
-    parser.add_argument("--starting-url", type=str, default="http://54.224.220.64:3000/fixed_0",
-                        help="Starting URL for the web agent (default: http://54.224.220.64:3000/fixed_0)")
+    parser.add_argument("--starting-url", type=str, default="http://128.105.144.173:3000/fixed_0",
+                        help="Starting URL for the web agent (default: http://128.105.144.173:3000/fixed_0)")
     parser.add_argument("--agent-type", type=str, default="SimpleSearchAgent",
                         help="Type of agent to use (default: SimpleSearchAgent)")
     parser.add_argument("--goal", type=str, default=None,
@@ -632,6 +532,8 @@ if __name__ == "__main__":
                         help="Comma-separated paths to image files (e.g., 'path1.jpg,path2.jpg')")
     parser.add_argument("--task-id", type=str, default=None,
                         help="Task ID for this evaluation run")
+    parser.add_argument("--max-depth", type=int, default=2,
+                        help="Maximum depth for tree search (default: 2)")
     parser.add_argument("--batch-start", type=int, default=None,
                         help="Start task number for batch evaluation")
     parser.add_argument("--batch-end", type=int, default=None,
