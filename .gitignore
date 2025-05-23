@@ -15,4 +15,5 @@ test_configs/*
 .vscode/
 temp/
 WebShop*
+backups/*
 
