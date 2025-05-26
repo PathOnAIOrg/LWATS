@@ -1,0 +1,134 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/item_page/fixed_11/B005X7IXTK/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+	[13] heading 'Instruction: i need cruelty free deodorant that has a woody scent and is 1.6 oz, and price lower than 50.00 dollars'
+	[17] button 'Back to Search'
+	[20] button '< Prev'
+	[24] image '', url='https://m.media-amazon.com/images/I/41Kuvd3DMvL.jpg'
+	[26] heading 'scent'
+	[28] radio 'floral', checked='false'
+	[29] LabelText ''
+	[30] radio 'woody scent', checked='false'
+	[31] LabelText ''
+	[33] heading 'size'
+	[35] radio '1.7 ounce (pack of 1)', checked='false'
+	[36] LabelText ''
+	[37] radio '1.6 ounce (pack of 1)', checked='false'
+	[38] LabelText ''
+	[40] heading "L'Erbolario - Iris - Deodorant Cream - Floral and Powdery Scent - Anti-perspirant Properties - Maintains Freshness, Protects Skin - Made with Marshmallow, 1.6 Oz"
+	[41] heading 'Price: $35.5'
+	[42] heading 'Rating: N.A.'
+	[46] button 'Description'
+	[49] button 'Features'
+	[52] button 'Reviews'
+	[55] button 'Attributes'
+	[59] button 'Buy Now'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

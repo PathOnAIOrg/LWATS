@@ -1,0 +1,66 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_3/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5"
+	[13] heading 'Instruction: i want to buy a folding storage box ottoman which i can easily install and has faux leather, the size of it should be 60x40x40cm, and price lower than 170.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 5 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/31+QkV-g1UL.jpg'
+	[33] list ''
+		[36] heading 'B08KLHMPP9'
+			[37] link 'B08KLHMPP9', url="http://54.224.220.64:3000/item_page/fixed_3/B08KLHMPP9/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[38] heading 'GYYARSX Foot Stool Ottoman Home Plastic Environmental Protection Low Stool, Children Simplicity Lightweight Tread Footstool, White (Color : White, Size : 33X20X21CM)'
+		[40] heading '$100.0'
+	[43] image '', url='https://m.media-amazon.com/images/I/412aYZY4hCL.jpg'
+	[45] list ''
+		[48] heading 'B01N4QB5WP'
+			[49] link 'B01N4QB5WP', url="http://54.224.220.64:3000/item_page/fixed_3/B01N4QB5WP/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[50] heading 'MADISON & PARK Office Desk Chair Leather Computer Executive Conference Task Study Chair Adjustable Swivel Chair with Adjustable Arms (CAPPUCCINO)'
+		[52] heading '$249.0'
+	[55] image '', url='https://m.media-amazon.com/images/I/41z0-xgDz9L.jpg'
+	[57] list ''
+		[60] heading 'B07L6DV555'
+			[61] link 'B07L6DV555', url="http://54.224.220.64:3000/item_page/fixed_3/B07L6DV555/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[62] heading "Merrell Men's Primer Mid LTR Fashion Boot"
+		[64] heading '$112.91 to $134.33'
+	[67] image '', url='https://m.media-amazon.com/images/I/41OEbKpQYJL.jpg'
+	[69] list ''
+		[72] heading 'B07N325S5H'
+			[73] link 'B07N325S5H', url="http://54.224.220.64:3000/item_page/fixed_3/B07N325S5H/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[74] heading "Van Eli Laren Women's Oxford 10 C/D US White"
+		[76] heading '$64.99'
+	[79] image '', url='https://m.media-amazon.com/images/I/41oAXSSwdaL.jpg'
+	[81] list ''
+		[84] heading 'B07TB37SG5'
+			[85] link 'B07TB37SG5', url="http://54.224.220.64:3000/item_page/fixed_3/B07TB37SG5/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[86] heading 'DORCEV 5x4ft Under The Sea World Photography Backdrop Underwater World Theme Birthday Party Summer Holiday Party Background Underwater Coral Nature Reef Sunlight Wallpaper Sea Photo Studio Props'
+		[88] heading '$15.99'
+	[91] image '', url='https://m.media-amazon.com/images/I/41+VUb+PLGL.jpg'
+	[93] list ''
+		[96] heading 'B08FQTMCNM'
+			[97] link 'B08FQTMCNM', url="http://54.224.220.64:3000/item_page/fixed_3/B08FQTMCNM/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[98] heading 'Yaheetech Swivel Accent Chair Height Adjustable Modern Round Back Tilt Chair with Chrome Frame for Lounge, Pub, Bar - Dark Grey'
+		[100] heading '$109.99'
+	[103] image '', url='https://m.media-amazon.com/images/I/41cTfTyL+NL.jpg'
+	[105] list ''
+		[108] heading 'B084VWH12H'
+			[109] link 'B084VWH12H', url="http://54.224.220.64:3000/item_page/fixed_3/B084VWH12H/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[110] heading 'Look Bella 10x Magnifying Compact Folding Double Mirror. Magnification for Hair Removal. Perfect for Purses. Distortion Free - Rose Gold'
+		[112] heading '$11.99'
+	[115] image '', url='https://m.media-amazon.com/images/I/31xUAsoyosL.jpg'
+	[117] list ''
+		[120] heading 'B008QYOGZ2'
+			[121] link 'B008QYOGZ2', url="http://54.224.220.64:3000/item_page/fixed_3/B008QYOGZ2/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[122] heading "OluKai MEA Ola - Men's Supportive Sandal Charcoal/Dkjava - 14"
+		[124] heading '$100.0'
+	[127] image '', url='https://m.media-amazon.com/images/I/41DsD53YecL.jpg'
+	[129] list ''
+		[132] heading 'B01N9I1E62'
+			[133] link 'B01N9I1E62', url="http://54.224.220.64:3000/item_page/fixed_3/B01N9I1E62/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[134] heading "Woolrich Women's Autumn Ridge Ii Slipper"
+		[136] heading '$24.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/412gZk2banL.jpg'
+	[141] list ''
+		[144] heading 'B08DK9WBQL'
+			[145] link 'B08DK9WBQL', url="http://54.224.220.64:3000/item_page/fixed_3/B08DK9WBQL/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/5/%7B%7D"
+		[146] heading 'Shaving Mirror with 10X Magnification, LED Bathroom Mirrors Wall Mounted, 360°Swivel and Extendable, Chrome, Double Source, 7inch'
+		[148] heading '$69.99'

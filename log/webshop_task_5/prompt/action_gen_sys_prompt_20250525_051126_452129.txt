@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "fill('18', '120 ml hair mask treatment under 120 dollars')", 'action_description': "Enter '120 ml hair mask treatment under 120 dollars' into the search textbox.", 'action_result': 'Based on the screenshot, the goal has not been fully achieved yet. The search box displays the query "120 ml hair mask treatment under 120 dollars," but there is no indication of search results or confirmation that a product has been found that meets the requirements.\n\nTo complete the goal, results or a confirmation should be visible in the screenshot showing a 120 ml hair mask treatment priced under 120 dollars. Without this information, it\'s unclear if the desired product is available or if further action is required.\n\n', 'pre_action_url': 'http://54.224.220.64:3000/fixed_5', 'post_action_url': 'http://54.224.220.64:3000/fixed_5'}, {'action': "click('20')", 'action_description': "Click on the 'Search' button to execute the search for a 120 ml hair mask treatment under $120.", 'action_result': "Based on the screenshot, the goal is not completely achieved. The objective is to find a 120 ml hair mask treatment for under $120.00. \n\n- The first product shown is a 60 ml hair treatment priced at $100.00, which does not meet the 120 ml requirement.\n- The second product details don't specify the volume or price explicitly in the visible portion.\n\nTherefore, the search needs to continue, possibly by looking at more results or filtering for the required volume.", 'pre_action_url': 'http://54.224.220.64:3000/fixed_5', 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/1"}, {'action': "click('25')", 'action_description': "Click on the 'Next >' button to view more search results.", 'action_result': 'Based on the screenshot provided, the goal is not finished. The goal was to find a 120 ml hair mask treatment priced lower than $120. However, the visible products are:\n\n1. A "Seacrest White Kitchen Cart" priced at $331.77.\n2. A "Hair Serum Roller Set," but it\'s not specified as a hair mask, and the price is not visible.\n\nNeither product matches the criteria of being a 120 ml hair mask treatment under $120. You may need to continue searching or refine the search criteria.', 'pre_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/1", 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/2"}, {'action': "click('27')", 'action_description': "Click on the 'Next >' button to view more search results.", 'action_result': 'Based on the screenshot, the goal is not finished. The displayed items, such as an office desk pad and a cubes storage organizer, do not match the requirement for a 120 ml hair mask treatment. Additionally, the products shown do not meet the specified category and purpose. You should continue searching for the desired item.', 'pre_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/2", 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3"}, {'action': "click('27')", 'action_description': "Click on the 'Next >' button to view more search results.", 'action_result': 'Based on the screenshot, the goal is not finished. The listed items do not match the requirement for a 120 ml hair mask treatment priced lower than $120.00. The screenshot displays an acne body spray and a bottle of Chenin Blanc, neither of which are hair masks.', 'pre_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3", 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/4"}, {'action': "click('27')", 'action_description': "Click on the 'Next >' button to view more search results.", 'action_result': 'Based on the screenshot, the goal of finding a 120 ml hair mask treatment for less than 120.00 dollars is not met. The visible products include:\n\n1. **Gimax 8 Way Coax Cable Splitter** – This is not related to a hair mask treatment.\n2. **2 Pack Metal Hair Pick** – This is a hair styling tool, not a hair mask.\n\nNeither product matches the requirement of being a hair mask treatment. You may need to continue searching or refine the search criteria.', 'pre_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/4", 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/5"}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            i need a 120 ml hair mask treatment, and price lower than 120.00 dollars
+            

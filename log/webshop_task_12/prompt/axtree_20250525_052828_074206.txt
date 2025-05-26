@@ -1,0 +1,7 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_12'
+	[11] heading 'WebShop'
+	[13] heading 'Instruction: i am looking fresh scent body lotion for dry skin, and price lower than 30.00 dollars'
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value='fresh scent body lotion for dry skin under 30 dollars', focused, required
+			[20] button 'Search'

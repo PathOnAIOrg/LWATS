@@ -1,0 +1,147 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/item_page/fixed_10/B099231V35/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+	[13] heading "Instruction: hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+		StaticText "hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+	[17] button 'Back to Search'
+	[20] button '< Prev'
+	[24] image '', url='https://m.media-amazon.com/images/I/41EtKhfNAQL.jpg'
+	[26] heading 'color'
+	[28] radio 'black', checked='false'
+	[29] LabelText ''
+	[30] radio 'green', checked='false'
+	[31] LabelText ''
+	[32] radio 'orange', checked='false'
+	[33] LabelText ''
+	[34] radio 'yellow', checked='false'
+	[35] LabelText ''
+	[37] heading 'size'
+	[39] radio 'small', checked='false'
+	[40] LabelText ''
+	[41] radio 'medium', checked='false'
+	[42] LabelText ''
+	[43] radio 'large', checked='false'
+	[44] LabelText ''
+	[45] radio 'x-large', checked='false'
+	[46] LabelText ''
+	[47] radio 'xx-large', checked='false'
+	[48] LabelText ''
+	[49] radio '3x-large', checked='false'
+	[50] LabelText ''
+	[52] heading 'Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall'
+	[53] heading 'Price: $16.79'
+	[54] heading 'Rating: N.A.'
+	[58] button 'Description'
+	[61] button 'Features'
+	[64] button 'Reviews'
+	[67] button 'Attributes'
+	[71] button 'Buy Now'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

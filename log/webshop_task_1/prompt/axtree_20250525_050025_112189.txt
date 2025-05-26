@@ -1,0 +1,66 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_1/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3"
+	[13] heading 'Instruction: place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor, and price lower than 60.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 3 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/41EMdDJhV6L.jpg'
+	[33] list ''
+		[36] heading 'B074FMTQNC'
+			[37] link 'B074FMTQNC', url="http://54.224.220.64:3000/item_page/fixed_1/B074FMTQNC/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[38] heading "Mendove Sexy Men's Smooth Bikini Briefs Airplane Underwear"
+		[40] heading '$13.59'
+	[43] image '', url='https://m.media-amazon.com/images/I/41h-62JPp2L.jpg'
+	[45] list ''
+		[48] heading 'B09R8RN6S5'
+			[49] link 'B09R8RN6S5', url="http://54.224.220.64:3000/item_page/fixed_1/B09R8RN6S5/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[50] heading "A Blend Above Garlic Lover's 5 Pack"
+		[52] heading '$24.95'
+	[55] image '', url='https://m.media-amazon.com/images/I/51YdyVMGV9L.jpg'
+	[57] list ''
+		[60] heading 'B009LHWYO8'
+			[61] link 'B009LHWYO8', url="http://54.224.220.64:3000/item_page/fixed_1/B009LHWYO8/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[62] heading 'Pilon Espresso Coffee, 10 Ounce (Pack of 12)'
+		[64] heading '$53.88'
+	[67] image '', url='https://m.media-amazon.com/images/I/41ajpGsttyS.jpg'
+	[69] list ''
+		[72] heading 'B094Q7B3SS'
+			[73] link 'B094Q7B3SS', url="http://54.224.220.64:3000/item_page/fixed_1/B094Q7B3SS/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[74] heading 'Women Cold Shoulder Tops, Summer Butterfly Print Shirts Fashion Casual Short Sleeve Plus-Size Tunic Top Tee and Blouse'
+		[76] heading '$9.49 to $14.98'
+	[79] image '', url='https://m.media-amazon.com/images/I/512TuiOB6HL.jpg'
+	[81] list ''
+		[84] heading 'B097DSB79F'
+			[85] link 'B097DSB79F', url="http://54.224.220.64:3000/item_page/fixed_1/B097DSB79F/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[86] heading 'DiGiorno Original Rising Crust Three Meat Frozen Pizza - 5 Pack (29.8 oz Each) - Crispy Crust - No Artificial Flavors'
+		[88] heading '$119.99'
+	[91] image '', url='https://m.media-amazon.com/images/I/41khB5UGYLS.jpg'
+	[93] list ''
+		[96] heading 'B09P57ZKGP'
+			[97] link 'B09P57ZKGP', url="http://54.224.220.64:3000/item_page/fixed_1/B09P57ZKGP/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[98] heading '10 Pack 512MB USB Flash Drives Gift Stick Business Bidding Thumb Drive USB 2.0 high Speed Pen Drives (512MB, Black)'
+		[100] heading '$100.0'
+	[103] image '', url='https://m.media-amazon.com/images/I/41zckvU8+dL.jpg'
+	[105] list ''
+		[108] heading 'B007F4B69S'
+			[109] link 'B007F4B69S', url="http://54.224.220.64:3000/item_page/fixed_1/B007F4B69S/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[110] heading 'Crest 3D White Luxe Glamorous White Teeth Whitening Vibrant Mint Toothpaste, 4.1 Oz'
+		[112] heading '$14.81'
+	[115] image '', url='https://m.media-amazon.com/images/I/51bWKZUpvQL.jpg'
+	[117] list ''
+		[120] heading 'B09FNLS51H'
+			[121] link 'B09FNLS51H', url="http://54.224.220.64:3000/item_page/fixed_1/B09FNLS51H/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[122] heading "2021 Kellogg's Cereal Straws Froot Loops Edible Breakfast Straw Alternatives for Milk, 90's Childhood Nostalgic Treat for Drinking and Eating, Cereals for Kids, Pack of 3, 18 Count"
+		[124] heading '$24.99'
+	[127] image '', url='https://m.media-amazon.com/images/I/41dZisHS50L.jpg'
+	[129] list ''
+		[132] heading 'B09QMPV75P'
+			[133] link 'B09QMPV75P', url="http://54.224.220.64:3000/item_page/fixed_1/B09QMPV75P/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[134] heading 'EATOP USB 3.0 512GB Flash Drive Photo Stick for iPhone (13/12/12 pro/12 pro max/11/11 Pro/XR/X/8/7/6) iPhone Memory Stick External Photo Storage Drive for iPhone iPad Android Computer (Purple)'
+		[136] heading '$29.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/31bHRiVrNgL.jpg'
+	[141] list ''
+		[144] heading 'B08MBG3421'
+			[145] link 'B08MBG3421', url="http://54.224.220.64:3000/item_page/fixed_1/B08MBG3421/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/3/%7B%7D"
+		[146] heading 'PEEL Ultra Thin iPhone 12 Pro Max Case, Black - Minimalist Design | Branding Free | Protects and Showcases Your Apple iPhone 12 Pro Max'
+		[148] heading '$29.0'

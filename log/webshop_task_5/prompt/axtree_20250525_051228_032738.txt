@@ -1,0 +1,6 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/8"
+	[13] heading 'Instruction: i need a 120 ml hair mask treatment, and price lower than 120.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 8 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'

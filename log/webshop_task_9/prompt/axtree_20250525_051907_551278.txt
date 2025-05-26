@@ -1,0 +1,6 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_9/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/7"
+	[13] heading 'Instruction: i am looking for x-large, red color women faux fur lined winter warm jacket coat, and price lower than 90.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 7 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'

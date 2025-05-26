@@ -1,0 +1,6 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_1/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/7"
+	[13] heading 'Instruction: place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor, and price lower than 60.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 7 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'

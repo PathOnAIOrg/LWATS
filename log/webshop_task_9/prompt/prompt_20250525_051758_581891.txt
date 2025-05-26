@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_9/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4"
+	[13] heading 'Instruction: i am looking for x-large, red color women faux fur lined winter warm jacket coat, and price lower than 90.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 4 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/51iy+5gsVpL.jpg'
+	[33] list ''
+		[36] heading 'B09NPML43M'
+			[37] link 'B09NPML43M', url="http://54.224.220.64:3000/item_page/fixed_9/B09NPML43M/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[38] heading 'Womens Short Sleeve Tops, Womens Casual Dandelion Printing T-Shirts Loose O-Neck Blouse Tops Funny Graphic Tee Shirts'
+		[40] heading '$1.01 to $1.74'
+	[43] image '', url='https://m.media-amazon.com/images/I/41s+9zEXilS.jpg'
+	[45] list ''
+		[48] heading 'B08ZB1MN8D'
+			[49] link 'B08ZB1MN8D', url="http://54.224.220.64:3000/item_page/fixed_9/B08ZB1MN8D/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[50] heading 'Unipro Mens Jogger Pants 2 Pack Tech Fleece Sweatpants Lightweight Running Pant for Men'
+		[52] heading '$22.99 to $24.99'
+	[55] image '', url='https://m.media-amazon.com/images/I/41YzaEIf-lL.jpg'
+	[57] list ''
+		[60] heading 'B09QXG3BM2'
+			[61] link 'B09QXG3BM2', url="http://54.224.220.64:3000/item_page/fixed_9/B09QXG3BM2/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[62] heading 'Women Lingerie Sexy Sets - Cage Bra + Corset Bandage Hollow G String Thong Panties Racy Muslin Sleepwear Underwear'
+		[64] heading '$10.3'
+	[67] image '', url='https://m.media-amazon.com/images/I/41J5D0sviUL.jpg'
+	[69] list ''
+		[72] heading 'B072PCHZC3'
+			[73] link 'B072PCHZC3', url="http://54.224.220.64:3000/item_page/fixed_9/B072PCHZC3/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[74] heading "Thin Red Line USA Flag Firefighter Men's Hoodie Sweatshirt"
+		[76] heading '$44.95 to $47.95'
+	[79] image '', url='https://m.media-amazon.com/images/I/B1EryObaEWS.png'
+	[81] list ''
+		[84] heading 'B07JVVDJ6L'
+			[85] link 'B07JVVDJ6L', url="http://54.224.220.64:3000/item_page/fixed_9/B07JVVDJ6L/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[86] heading 'Canadian Tuxedo T Shirt - Novelty Denim Tux T-Shirt'
+		[88] heading '$19.99'
+	[91] image '', url='https://m.media-amazon.com/images/I/A13usaonutL.png'
+	[93] list ''
+		[96] heading 'B09P39QN2W'
+			[97] link 'B09P39QN2W', url="http://54.224.220.64:3000/item_page/fixed_9/B09P39QN2W/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[98] heading 'I Tackled 100 Day Of School Football Boy 100th Day School T-Shirt'
+		[100] heading '$16.99'
+	[103] image '', url='https://m.media-amazon.com/images/I/51SqNN7S1tL.jpg'
+	[105] list ''
+		[108] heading 'B09R7H66FC'
+			[109] link 'B09R7H66FC', url="http://54.224.220.64:3000/item_page/fixed_9/B09R7H66FC/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[110] heading "Men's Shiny Sequins Suit Jacket Blazer One Button Weddings Prom Dinner Party Tuxedo BZ07"
+		[112] heading '$59.99'
+	[115] image '', url='https://m.media-amazon.com/images/I/A1Ig7DnP6sL.png'
+	[117] list ''
+		[120] heading 'B09P7H5YK7'
+			[121] link 'B09P7H5YK7', url="http://54.224.220.64:3000/item_page/fixed_9/B09P7H5YK7/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[122] heading "It's In My DNA Palestinian Shirt Arabic Gifts Palestine Flag Tank Top"
+		[124] heading '$19.99'
+	[127] image '', url='https://m.media-amazon.com/images/I/A1Ig7DnP6sL.png'
+	[129] list ''
+		[132] heading 'B08226NDZW'
+			[133] link 'B08226NDZW', url="http://54.224.220.64:3000/item_page/fixed_9/B08226NDZW/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[134] heading 'Disney Winnie The Pooh Tigger Upside Down Portrait Tank Top'
+		[136] heading '$25.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/51JSP3QB7cL.jpg'
+	[141] list ''
+		[144] heading 'B09NSC5VDG'
+			[145] link 'B09NSC5VDG', url="http://54.224.220.64:3000/item_page/fixed_9/B09NSC5VDG/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/4/%7B%7D"
+		[146] heading 'CofeeMO Womens Lingerie Sleep Lounge Everyday Nursing Bras Printed Underwear Seamless Printed Bralette for Sex Naughty Play'
+		[148] heading '$14.99'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

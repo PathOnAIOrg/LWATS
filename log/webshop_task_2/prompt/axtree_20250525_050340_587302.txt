@@ -1,0 +1,66 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_2/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1"
+	[13] heading "Instruction: i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+		StaticText "i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/41yDXMLb34L.jpg'
+	[31] list ''
+		[34] heading 'B082MT9162'
+			[35] link 'B082MT9162', url="http://54.224.220.64:3000/item_page/fixed_2/B082MT9162/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[36] heading "GLOBALWIN Men's Casual Slip On Penny Loafers Lightweight Driving Shoes"
+		[38] heading '$29.99 to $49.99'
+	[41] image '', url='https://m.media-amazon.com/images/I/41PBBUE4lNL.jpg'
+	[43] list ''
+		[46] heading 'B07HP6LVRS'
+			[47] link 'B07HP6LVRS', url="http://54.224.220.64:3000/item_page/fixed_2/B07HP6LVRS/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[48] heading 'MCICI Mens Loafers Moccasin Driving Shoes Premium Genuine Leather Casual Slip On Flats Fashion Slipper Breathable Big Size'
+		[50] heading '$15.99 to $32.99'
+	[53] image '', url='https://m.media-amazon.com/images/I/417wl6qwtUL.jpg'
+	[55] list ''
+		[58] heading 'B09F2MFG1Q'
+			[59] link 'B09F2MFG1Q', url="http://54.224.220.64:3000/item_page/fixed_2/B09F2MFG1Q/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[60] heading 'Womens Mens house slippers Memory Foam Garden Plush Lining Slip On Rubber sole Indoor Outdoor House Casual Shoes （Black adult-10.5-11)'
+		[62] heading '$100.0'
+	[65] image '', url='https://m.media-amazon.com/images/I/41tgTFNeH3L.jpg'
+	[67] list ''
+		[70] heading 'B07RPMCNKD'
+			[71] link 'B07RPMCNKD', url="http://54.224.220.64:3000/item_page/fixed_2/B07RPMCNKD/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[72] heading "ULTRAIDEAS Women's Comfy Lightweight Slippers Non-Slip House Shoes for Indoor & Outdoor"
+		[74] heading '$19.99 to $21.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/51SvIs1I3BL.jpg'
+	[79] list ''
+		[82] heading 'B07S7HDC88'
+			[83] link 'B07S7HDC88', url="http://54.224.220.64:3000/item_page/fixed_2/B07S7HDC88/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[84] heading 'VanciLin Mens Casual Leather Fashion Slip-on Loafers'
+		[86] heading '$33.99 to $35.99'
+	[89] image '', url='https://m.media-amazon.com/images/I/41-En679KGS.jpg'
+	[91] list ''
+		[94] heading 'B09QXF3V3X'
+			[95] link 'B09QXF3V3X', url="http://54.224.220.64:3000/item_page/fixed_2/B09QXF3V3X/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[96] heading "DEUVOUM Summer Trend Mesh Shoes Men's Sports Shoes Solid Color Lace-Up Sneakers Fashion All-Match Walking Shoes Outdoor Hiking Shoes Non-Slip Shock-Absorbing Casual Sports Shoes"
+		[98] heading '$100.0'
+	[101] image '', url='https://m.media-amazon.com/images/I/31iSSPkR5uL.jpg'
+	[103] list ''
+		[106] heading 'B07CN9RZ1C'
+			[107] link 'B07CN9RZ1C', url="http://54.224.220.64:3000/item_page/fixed_2/B07CN9RZ1C/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[108] heading "Ecco Men's Melbourne Plain Toe Slip on Loafer"
+		[110] heading '$114.99'
+	[113] image '', url='https://m.media-amazon.com/images/I/41sXBNVyGzL.jpg'
+	[115] list ''
+		[118] heading 'B002RRT0NM'
+			[119] link 'B002RRT0NM', url="http://54.224.220.64:3000/item_page/fixed_2/B002RRT0NM/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[120] heading "Berkemann Women's Clogs and Mules, 5 UK"
+		[122] heading '$78.42 to $94.9'
+	[125] image '', url='https://m.media-amazon.com/images/I/51-wTh9LzaL.jpg'
+	[127] list ''
+		[130] heading 'B094RBNS2K'
+			[131] link 'B094RBNS2K', url="http://54.224.220.64:3000/item_page/fixed_2/B094RBNS2K/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[132] heading 'Mens Running Tennis Blade Shoes Lightweight Casual Walking Sneakers Mesh Breathable Sport Sneakers Sheet Shoes'
+		[134] heading '$27.0'
+	[137] image '', url='https://m.media-amazon.com/images/I/31xUAsoyosL.jpg'
+	[139] list ''
+		[142] heading 'B008QYOGZ2'
+			[143] link 'B008QYOGZ2', url="http://54.224.220.64:3000/item_page/fixed_2/B008QYOGZ2/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[144] heading "OluKai MEA Ola - Men's Supportive Sandal Charcoal/Dkjava - 14"
+		[146] heading '$100.0'

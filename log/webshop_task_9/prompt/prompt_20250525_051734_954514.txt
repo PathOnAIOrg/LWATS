@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_9/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3"
+	[13] heading 'Instruction: i am looking for x-large, red color women faux fur lined winter warm jacket coat, and price lower than 90.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 3 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/41Swm5f0VQL.jpg'
+	[33] list ''
+		[36] heading 'B09LVMQ1K6'
+			[37] link 'B09LVMQ1K6', url="http://54.224.220.64:3000/item_page/fixed_9/B09LVMQ1K6/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[38] heading "Women's Warm Fall Winter Tops, Thicken Padded Plus Size Outerwear Drawstring Long Sleeve Pockets Hooded Overcoats S-5XL"
+		[40] heading '$71.99 to $79.99'
+	[43] image '', url='https://m.media-amazon.com/images/I/51wmcRafCgL.jpg'
+	[45] list ''
+		[48] heading 'B08HXR3BGR'
+			[49] link 'B08HXR3BGR', url="http://54.224.220.64:3000/item_page/fixed_9/B08HXR3BGR/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[50] heading 'HATOKU 24pcs Artificial Seeded Eucalyptus Leaves Stems Faux Silver Dollar Eucalyptus Plant Branches in Grey Green for Wedding Holiday Homey Greenery Decor'
+		[52] heading '$15.99'
+	[55] image '', url='https://m.media-amazon.com/images/I/31Qo5LzPPjL.jpg'
+	[57] list ''
+		[60] heading 'B09PBPZ24Z'
+			[61] link 'B09PBPZ24Z', url="http://54.224.220.64:3000/item_page/fixed_9/B09PBPZ24Z/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[62] heading "myhehthw Women's High Waisted Jeans for Women Distressed Ripped Jeans Slim Fit Butt Lifting Skinny Stretch Jeans Trousers"
+		[64] heading '$22.99 to $25.99'
+	[67] image '', url='https://m.media-amazon.com/images/I/51N6n2g7nNL.jpg'
+	[69] list ''
+		[72] heading 'B08P8LRFZ4'
+			[73] link 'B08P8LRFZ4', url="http://54.224.220.64:3000/item_page/fixed_9/B08P8LRFZ4/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[74] heading 'MTFY Cute Faux Fur Desk Chair for Girls Women, Comfy Fluffy Modern Home Office Chair with Wheels, Elegant Swivel Fuzzy Vanity Chair Makeup Arm Chair for Living Room, Bedroom'
+		[76] heading '$95.99'
+	[79] image '', url='https://m.media-amazon.com/images/I/31xpwjLrRGL.jpg'
+	[81] list ''
+		[84] heading 'B09SHVH1K7'
+			[85] link 'B09SHVH1K7', url="http://54.224.220.64:3000/item_page/fixed_9/B09SHVH1K7/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[86] heading 'jsaierl Pajama Pants for Men Soft Long Tall Lounge with Pockets Jogger Yoga Pants Comfort PJs Sleepwear'
+		[88] heading '$100.0'
+	[91] image '', url='https://m.media-amazon.com/images/I/51CeT4nI48L.jpg'
+	[93] list ''
+		[96] heading 'B09KWX51GJ'
+			[97] link 'B09KWX51GJ', url="http://54.224.220.64:3000/item_page/fixed_9/B09KWX51GJ/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[98] heading 'Monbix 3 Piece Queen Bed Set All Season Luxury Breathable Microfiber Bedding Collection Cozy Comforter Set Soft Washable Foil Marble Pattern Grey with Shams'
+		[100] heading '$49.99'
+	[103] image '', url='https://m.media-amazon.com/images/I/A1rfiWsscnL.png'
+	[105] list ''
+		[108] heading 'B08HF132PN'
+			[109] link 'B08HF132PN', url="http://54.224.220.64:3000/item_page/fixed_9/B08HF132PN/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[110] heading 'Flamingo Pink waterbird costume Gift Premium T-Shirt'
+		[112] heading '$19.99'
+	[115] image '', url='https://m.media-amazon.com/images/I/41erXBtz7QS.jpg'
+	[117] list ''
+		[120] heading 'B09PJ5ZXGH'
+			[121] link 'B09PJ5ZXGH', url="http://54.224.220.64:3000/item_page/fixed_9/B09PJ5ZXGH/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[122] heading 'Lingerie for Women Sexy One Piece Lace Sleepwear Teddy Bodysuit Babydoll Backless Chemise Nightwear'
+		[124] heading '$3.99 to $10.99'
+	[127] image '', url='https://m.media-amazon.com/images/I/31bHcdNct1L.jpg'
+	[129] list ''
+		[132] heading 'B09ND8P2QR'
+			[133] link 'B09ND8P2QR', url="http://54.224.220.64:3000/item_page/fixed_9/B09ND8P2QR/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[134] heading "InterestPrint Deer and Stars Men's Loungewear Pajama Sets - Long Sleeve Tee and Jogger Pant"
+		[136] heading '$43.59'
+	[139] image '', url='https://m.media-amazon.com/images/I/41kEp7XJz7L.jpg'
+	[141] list ''
+		[144] heading 'B09ND9DP7J'
+			[145] link 'B09ND9DP7J', url="http://54.224.220.64:3000/item_page/fixed_9/B09ND9DP7J/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/3/%7B%7D"
+		[146] heading "InterestPrint Gold Horse Pattern Men's 2-Piece Sleepwear Set, Long Sleeve Shirt with Pants Loungewear"
+		[148] heading '$43.59'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

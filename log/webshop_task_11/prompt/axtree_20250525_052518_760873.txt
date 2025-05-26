@@ -1,0 +1,13 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/item_page/fixed_11/B08XQWJX8P/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+	[13] heading 'Instruction: i need cruelty free deodorant that has a woody scent and is 1.6 oz, and price lower than 50.00 dollars'
+	[17] button 'Back to Search'
+	[20] button '< Prev'
+	[24] image '', url='https://m.media-amazon.com/images/I/51gDhcURgKL.jpg'
+	[26] heading 'Oriental Eau de Toilette – Natural Eau de Toilette for Men Woody Eau de Toilette Infused with Essential Oils Fragrance for Men with Oriental Woody Tones NOU Oliban Eau de Toilette for Men – 1.7 Fl Oz'
+	[27] heading 'Price: $21.95'
+	[28] heading 'Rating: N.A.'
+	[32] button 'Description'
+	[35] button 'Features'
+	[38] button 'Reviews'
+	[41] button 'Attributes'
+	[45] button 'Buy Now'

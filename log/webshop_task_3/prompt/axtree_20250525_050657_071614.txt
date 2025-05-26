@@ -1,0 +1,6 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_3/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/6"
+	[13] heading 'Instruction: i want to buy a folding storage box ottoman which i can easily install and has faux leather, the size of it should be 60x40x40cm, and price lower than 170.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 6 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'

@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_5/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3"
+	[13] heading 'Instruction: i need a 120 ml hair mask treatment, and price lower than 120.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 3 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/51Wk27E17kS.jpg'
+	[33] list ''
+		[36] heading 'B095KCTB3Y'
+			[37] link 'B095KCTB3Y', url="http://54.224.220.64:3000/item_page/fixed_5/B095KCTB3Y/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[38] heading 'Office Desk Pad, Writing Mat with Full Grip Fixation Lip, Non-Slip PU Leather Table Blotter Desk Protector Gaming Mat Laptop Keyboard Working Mat, Waterproof Table Protective Pad'
+		[40] heading '$34.99'
+	[43] image '', url='https://m.media-amazon.com/images/I/412+rnm7wCL.jpg'
+	[45] list ''
+		[48] heading 'B09J4RH84G'
+			[49] link 'B09J4RH84G', url="http://54.224.220.64:3000/item_page/fixed_5/B09J4RH84G/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[50] heading 'Cubes Storage Organizer DIY Plastic Stackable Shelves Multifunctional Modular Bookcase Closet Cabinet Interlocking Plastic Cubes with Divider Design Modular Cabinet for Books Clothes Toys Artworks'
+		[52] heading '$15.99'
+	[55] image '', url='https://m.media-amazon.com/images/I/41Ad+uyb+pL.jpg'
+	[57] list ''
+		[60] heading 'B09PTQFBNT'
+			[61] link 'B09PTQFBNT', url="http://54.224.220.64:3000/item_page/fixed_5/B09PTQFBNT/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[62] heading 'Mulyyds Computer Desk with Drawers and Open Shelves, Modern Writing Desk Student Study Table Gaming Workstations PC Laptop Corner Desk for Small Spaces Home Office Dormitory (White, 43x19x27in)'
+		[64] heading '$159.99'
+	[67] image '', url='https://m.media-amazon.com/images/I/51wmcRafCgL.jpg'
+	[69] list ''
+		[72] heading 'B08HXR3BGR'
+			[73] link 'B08HXR3BGR', url="http://54.224.220.64:3000/item_page/fixed_5/B08HXR3BGR/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[74] heading 'HATOKU 24pcs Artificial Seeded Eucalyptus Leaves Stems Faux Silver Dollar Eucalyptus Plant Branches in Grey Green for Wedding Holiday Homey Greenery Decor'
+		[76] heading '$15.99'
+	[79] image '', url='https://m.media-amazon.com/images/I/41bCeewNbeL.jpg'
+	[81] list ''
+		[84] heading 'B07GRP1WCD'
+			[85] link 'B07GRP1WCD', url="http://54.224.220.64:3000/item_page/fixed_5/B07GRP1WCD/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[86] heading 'iDealBed Luxe Series iQ5 Hybrid Luxury Plush Mattress 4i Custom Adjustable Bed Set, Wireless, Massage, Nightlight, Zero-Gravity, Anti-Snore, Memory Pre-Sets (Queen)'
+		[88] heading '$1899.95'
+	[91] image '', url='https://m.media-amazon.com/images/I/41kR+kTyqeL.jpg'
+	[93] list ''
+		[96] heading 'B08D4MH7XQ'
+			[97] link 'B08D4MH7XQ', url="http://54.224.220.64:3000/item_page/fixed_5/B08D4MH7XQ/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[98] heading 'Neutrogena Stubborn Acne AM Face Treatment with 2.5% Micronized Benzoyl Peroxide Acne Medicine, Oil-Free Daily Facial Treatment to Reduce Size & Redness of Breakouts, Paraben-Free, 2 oz'
+		[100] heading '$9.2'
+	[103] image '', url='https://m.media-amazon.com/images/I/41zNdnc-QwL.jpg'
+	[105] list ''
+		[108] heading 'B09QGK5XHZ'
+			[109] link 'B09QGK5XHZ', url="http://54.224.220.64:3000/item_page/fixed_5/B09QGK5XHZ/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[110] heading "WENKOMG1 Men's Long Sleeve Undershirt with Mask Turtleneck Hooded T-Shirt Solid Color Workout Tops Zipper Side Slit Shirts Slim Fit Sweatshirt Spring/Summer Tee Shirts(Gray,)"
+		[112] heading '$8.39'
+	[115] image '', url='https://m.media-amazon.com/images/I/41qqxSJkAYL.jpg'
+	[117] list ''
+		[120] heading 'B09P147DN2'
+			[121] link 'B09P147DN2', url="http://54.224.220.64:3000/item_page/fixed_5/B09P147DN2/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[122] heading 'Erwazi Android 6.0 Tablet, 7Inch Duad Core Tablet PC 1GB + 8GB Dual Camera WiFi Blue-Tooth Tablet Best for Childrens 2022 New Years Gift Boys Girls School Learning Birthday Gift (Green)'
+		[124] heading '$36.99'
+	[127] image '', url='https://m.media-amazon.com/images/I/41M4GsbXoJL.jpg'
+	[129] list ''
+		[132] heading 'B085GLK7X4'
+			[133] link 'B085GLK7X4', url="http://54.224.220.64:3000/item_page/fixed_5/B085GLK7X4/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[134] heading 'Slip Silk Sleep Mask, Hollywood Hills (One Size) - 100% Pure Mulberry 22 Momme Silk Eye Mask - Comfortable Sleeping Mask with Elastic Band + Pure Silk Filler and Internal Liner'
+		[136] heading '$89.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/514Jj9FryoL.jpg'
+	[141] list ''
+		[144] heading 'B014HKGM9Q'
+			[145] link 'B014HKGM9Q', url="http://54.224.220.64:3000/item_page/fixed_5/B014HKGM9Q/%5B'120',%20'ml',%20'hair',%20'mask',%20'treatment',%20'under',%20'120',%20'dollars'%5D/3/%7B%7D"
+		[146] heading "Hartley's Orange Jelly - 135g - Pack of 6 (135g x 6)"
+		[148] heading '$13.96'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

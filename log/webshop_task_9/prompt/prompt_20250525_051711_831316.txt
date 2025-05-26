@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_9/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2"
+	[13] heading 'Instruction: i am looking for x-large, red color women faux fur lined winter warm jacket coat, and price lower than 90.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 2 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/41sNfAanjHL.jpg'
+	[33] list ''
+		[36] heading 'B09QQP3356'
+			[37] link 'B09QQP3356', url="http://54.224.220.64:3000/item_page/fixed_9/B09QQP3356/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[38] heading "HAUKLIE Men's Sports Waffle Ribbed Polo Shirts Summer Short Sleeve Cotton Muscle Quarter-Zip Henley T-Shirt Tunics Tops"
+		[40] heading '$10.99'
+	[43] image '', url='https://m.media-amazon.com/images/I/315klBbTGGL.jpg'
+	[45] list ''
+		[48] heading 'B09M63B87V'
+			[49] link 'B09M63B87V', url="http://54.224.220.64:3000/item_page/fixed_9/B09M63B87V/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[50] heading 'YALFJV Women Long Sleeve Crew Neck Side Button T Shirts Tunic Dress Loose Asymmetric Hem Tunic Pullover to Wear with Leggings'
+		[52] heading '$10.71 to $18.34'
+	[55] image '', url='https://m.media-amazon.com/images/I/41UeBNxi9SL.jpg'
+	[57] list ''
+		[60] heading 'B08Q43LJKJ'
+			[61] link 'B08Q43LJKJ', url="http://54.224.220.64:3000/item_page/fixed_9/B08Q43LJKJ/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[62] heading 'Womens Winter Plus Velvet Thick Lamb Velvet Leggings Trousers High-Waisted Leggings Warm Pants'
+		[64] heading '$19.43 to $22.31'
+	[67] image '', url='https://m.media-amazon.com/images/I/31IBFWvlQtL.jpg'
+	[69] list ''
+		[72] heading 'B09QCVCYVY'
+			[73] link 'B09QCVCYVY', url="http://54.224.220.64:3000/item_page/fixed_9/B09QCVCYVY/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[74] heading 'Burband Womens High Waist Bike Shorts Tummy Control Workout Yoga Pants Running Exercise Running Shorts with Side Pockets'
+		[76] heading '$6.82'
+	[79] image '', url='https://m.media-amazon.com/images/I/41UXlJTjcBL.jpg'
+	[81] list ''
+		[84] heading 'B08DXL22JN'
+			[85] link 'B08DXL22JN', url="http://54.224.220.64:3000/item_page/fixed_9/B08DXL22JN/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[86] heading 'Cicy Bell Womens Casual Blazers Open Front Long Sleeve Work Office Jackets Blazer'
+		[88] heading '$48.99'
+	[91] image '', url='https://m.media-amazon.com/images/I/31x2jozzltL.jpg'
+	[93] list ''
+		[96] heading 'B09NTCCVGX'
+			[97] link 'B09NTCCVGX', url="http://54.224.220.64:3000/item_page/fixed_9/B09NTCCVGX/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[98] heading 'Ottoman Footstools Folding Storage Box with Lid, Large Storage Seat Faux Leather Footstool Toy Storage Box, Yellow, 40x40x40cm (Color : Yellow, Size : 40X40X40cm)'
+		[100] heading '$149.97'
+	[103] image '', url='https://m.media-amazon.com/images/I/41uV5eJkeCL.jpg'
+	[105] list ''
+		[108] heading 'B09PLBDCBY'
+			[109] link 'B09PLBDCBY', url="http://54.224.220.64:3000/item_page/fixed_9/B09PLBDCBY/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[110] heading 'Lingerie for Women Faux Leather Teddy Bodysuit Halter Tops Sleepwear Sexy One Piece Babydoll Exotic Nightwear Bodycon'
+		[112] heading '$2.99 to $6.99'
+	[115] image '', url='https://m.media-amazon.com/images/I/41QWOwu-+OL.jpg'
+	[117] list ''
+		[120] heading 'B09Q37JQZ6'
+			[121] link 'B09Q37JQZ6', url="http://54.224.220.64:3000/item_page/fixed_9/B09Q37JQZ6/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[122] heading "Women's Sexy Swimsuit One Piece High Neck Halter Bikini Floral Stiching See Through Monokini Tummy Control Beachwear"
+		[124] heading '$10.99 to $18.99'
+	[127] image '', url='https://m.media-amazon.com/images/I/41DsD53YecL.jpg'
+	[129] list ''
+		[132] heading 'B01N9I1E62'
+			[133] link 'B01N9I1E62', url="http://54.224.220.64:3000/item_page/fixed_9/B01N9I1E62/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[134] heading "Woolrich Women's Autumn Ridge Ii Slipper"
+		[136] heading '$24.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/A1Rz2T5IgLL.png'
+	[141] list ''
+		[144] heading 'B07T3VMGDG'
+			[145] link 'B07T3VMGDG', url="http://54.224.220.64:3000/item_page/fixed_9/B07T3VMGDG/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/2/%7B%7D"
+		[146] heading 'Tuxedo Cat 4th of July Hat Patriotic Gift Adults Kids Raglan Baseball Tee'
+		[148] heading '$23.99'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

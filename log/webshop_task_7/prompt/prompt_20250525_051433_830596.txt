@@ -1,0 +1,176 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_7/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1"
+	[13] heading 'Instruction: i need some draw string shorts that are official cleveland university. the need to be small and charcoal along with being machine washable, and price lower than 60.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/415H07lYJQL.jpg'
+	[31] list ''
+		[34] heading 'B09HX5CD2D'
+			[35] link 'B09HX5CD2D', url="http://54.224.220.64:3000/item_page/fixed_7/B09HX5CD2D/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[36] heading 'CSU Cleveland State University Vikings Property Fleece Drawstring Shorts Heather Charcoal'
+		[38] heading '$39.95'
+	[41] image '', url='https://m.media-amazon.com/images/I/31IBFWvlQtL.jpg'
+	[43] list ''
+		[46] heading 'B09QCVCYVY'
+			[47] link 'B09QCVCYVY', url="http://54.224.220.64:3000/item_page/fixed_7/B09QCVCYVY/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[48] heading 'Burband Womens High Waist Bike Shorts Tummy Control Workout Yoga Pants Running Exercise Running Shorts with Side Pockets'
+		[50] heading '$6.82'
+	[53] image '', url='https://m.media-amazon.com/images/I/51qX8RM+KfL.jpg'
+	[55] list ''
+		[58] heading 'B07XTK3P89'
+			[59] link 'B07XTK3P89', url="http://54.224.220.64:3000/item_page/fixed_7/B07XTK3P89/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[60] heading 'Lunarable Oriental Storage Toy Bag Chair, Eastern Bohem Detail Ottoman Tile Work Inspired Flowers, Stuffed Animal Organizer Washable Bag, Small Size, Turquoise Marigold'
+		[62] heading '$39.99'
+	[65] image '', url='https://m.media-amazon.com/images/I/51w88WMq+dL.jpg'
+	[67] list ''
+		[70] heading 'B09GVJBPRR'
+			[71] link 'B09GVJBPRR', url="http://54.224.220.64:3000/item_page/fixed_7/B09GVJBPRR/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[72] heading 'Gold Placemats Set of 8 for Dining Table, Pressed Vinyl 15 inch Round Place Mats Non-Slip Washable Dining Table Mates,8 Placemats and 8 Coaster for Wedding Party Holiday'
+		[74] heading '$21.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/41q5PCDmRML.jpg'
+	[79] list ''
+		[82] heading 'B09KTB1VG6'
+			[83] link 'B09KTB1VG6', url="http://54.224.220.64:3000/item_page/fixed_7/B09KTB1VG6/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[84] heading 'FOHOG Collection Flannel Fleece Silky Soft Throw Shaggy Blanket Lightweight Comfy and Cozy Plush Microfiber Travel Silk 50" X 60" for Sofa Couch Bed (127 cm X 152 cm) (Buffalo Plaid)'
+		[86] heading '$11.99'
+	[89] image '', url='https://m.media-amazon.com/images/I/41s+9zEXilS.jpg'
+	[91] list ''
+		[94] heading 'B08ZB1MN8D'
+			[95] link 'B08ZB1MN8D', url="http://54.224.220.64:3000/item_page/fixed_7/B08ZB1MN8D/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[96] heading 'Unipro Mens Jogger Pants 2 Pack Tech Fleece Sweatpants Lightweight Running Pant for Men'
+		[98] heading '$22.99 to $24.99'
+	[101] image '', url='https://m.media-amazon.com/images/I/31M-Cz1Y0YL.jpg'
+	[103] list ''
+		[106] heading 'B07HRFSNL4'
+			[107] link 'B07HRFSNL4', url="http://54.224.220.64:3000/item_page/fixed_7/B07HRFSNL4/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[108] heading "Nautica Men's Solid Crew Neck Short-Sleeve Pocket T-Shirt"
+		[110] heading '$16.05 to $40.98'
+	[113] image '', url='https://m.media-amazon.com/images/I/51O1+tw-amL.jpg'
+	[115] list ''
+		[118] heading 'B09Q5ZHRVM'
+			[119] link 'B09Q5ZHRVM', url="http://54.224.220.64:3000/item_page/fixed_7/B09Q5ZHRVM/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[120] heading 'Yinimo Mens Gym Shorts Fashionable Loose Beach Drawstring Turkey Print Beach Cool Shorts'
+		[122] heading '$19.19'
+	[125] image '', url='https://m.media-amazon.com/images/I/41EtKhfNAQL.jpg'
+	[127] list ''
+		[130] heading 'B099231V35'
+			[131] link 'B099231V35', url="http://54.224.220.64:3000/item_page/fixed_7/B099231V35/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[132] heading 'Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall'
+		[134] heading '$16.79'
+	[137] image '', url='https://m.media-amazon.com/images/I/512H6v6aqbL.jpg'
+	[139] list ''
+		[142] heading 'B07BB1FJV8'
+			[143] link 'B07BB1FJV8', url="http://54.224.220.64:3000/item_page/fixed_7/B07BB1FJV8/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1/%7B%7D"
+		[144] heading "Edna Wig Color FS4/30 - Foxy Silver Wigs Short Pixie Wispy Fringe Synthetic Straight Layers African American Women's Machine Wefted Lightweight Average Cap Bundle with MaxWigs Hairloss Booklet"
+		[146] heading '$36.69'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

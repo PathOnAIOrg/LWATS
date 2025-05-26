@@ -1,0 +1,66 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_1/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2"
+	[13] heading 'Instruction: place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor, and price lower than 60.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 2 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/418+htbGRaL.jpg'
+	[33] list ''
+		[36] heading 'B072MR7PPJ'
+			[37] link 'B072MR7PPJ', url="http://54.224.220.64:3000/item_page/fixed_1/B072MR7PPJ/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[38] heading 'Amazon Brand - Happy Belly Amazon Brand Sliced Almonds, 12 Ounce'
+		[40] heading '$5.46'
+	[43] image '', url='https://m.media-amazon.com/images/I/51QBLdqrWbL.jpg'
+	[45] list ''
+		[48] heading 'B07XP6DGJH'
+			[49] link 'B07XP6DGJH', url="http://54.224.220.64:3000/item_page/fixed_1/B07XP6DGJH/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[50] heading "Savannah's Candy Kitchen | Gourmet Handmade Candy Gift Box - Pralines, Chocolate Turtle Gophers, Handmade Divinity (24)"
+		[52] heading '$79.95'
+	[55] image '', url='https://m.media-amazon.com/images/I/51d+Or3BGXL.jpg'
+	[57] list ''
+		[60] heading 'B09NX4RGK7'
+			[61] link 'B09NX4RGK7', url="http://54.224.220.64:3000/item_page/fixed_1/B09NX4RGK7/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[62] heading 'Good Catch Plant-Based Seafood Sandwich Variety Pack | 6 Boxes of Frozen Vegan and Vegetarian Salmon Burgers, Fish Burgers, and Fish Fillets |Kosher, Fish-Free & Crab-Free| 12 Total Servings'
+		[64] heading '$100.0'
+	[67] image '', url='https://m.media-amazon.com/images/I/41D+7Y1arOL.jpg'
+	[69] list ''
+		[72] heading 'B07BBQDRDR'
+			[73] link 'B07BBQDRDR', url="http://54.224.220.64:3000/item_page/fixed_1/B07BBQDRDR/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[74] heading 'Puresea, Brisling Sardines In BBQ Sauce, 3.75 Ounce'
+		[76] heading '$100.0'
+	[79] image '', url='https://m.media-amazon.com/images/I/513xQed-L7L.jpg'
+	[81] list ''
+		[84] heading 'B08BPTT8MX'
+			[85] link 'B08BPTT8MX', url="http://54.224.220.64:3000/item_page/fixed_1/B08BPTT8MX/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[86] heading 'Pediasure Grow & Gain with Immune Support, Kids Protein Shake, 27 Vitamins and Minerals, 7g Protein, Helps Kids Catch Up On Growth, Non-GMO, Gluten-Free, Chocolate, 8 Fl Oz, 16 Count'
+		[88] heading '$100.0'
+	[91] image '', url='https://m.media-amazon.com/images/I/61gIelmK8yL.jpg'
+	[93] list ''
+		[96] heading 'B08ZKDQPZ3'
+			[97] link 'B08ZKDQPZ3', url="http://54.224.220.64:3000/item_page/fixed_1/B08ZKDQPZ3/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[98] heading 'Hair Tinsel Kit Strands With Tool 47 Inch 12 Colors 2100 Strands Fairy Hair Tinsel Kit Hair Extensions Sparkling Glitter Shiny Silk Tinsel (12 colors)'
+		[100] heading '$13.96'
+	[103] image '', url='https://m.media-amazon.com/images/I/51F4K++Bq-L.jpg'
+	[105] list ''
+		[108] heading 'B07VQJM594'
+			[109] link 'B07VQJM594', url="http://54.224.220.64:3000/item_page/fixed_1/B07VQJM594/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[110] heading 'MorningStar Farms Veggie Breakfast Meatless Sausage Patties, Plant Based Protein, Frozen Breakfast, Maple Flavored, 8oz Bag (6 Patties)'
+		[112] heading '$100.0'
+	[115] image '', url='https://m.media-amazon.com/images/I/31F8gxACDxL.jpg'
+	[117] list ''
+		[120] heading 'B075GC6LWC'
+			[121] link 'B075GC6LWC', url="http://54.224.220.64:3000/item_page/fixed_1/B075GC6LWC/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[122] heading 'True + Luscious Sheer Halo Velvet Matte Oil-Control Face Powder Compact - Vegan, Cruelty Free, Talc Free. Multi-use Powder Foundation - 0.35 oz (Shade 0: Porcelain w/Neutral to Pink Undertones)'
+		[124] heading '$32.0'
+	[127] image '', url='https://m.media-amazon.com/images/I/31BQ1W+4hjL.jpg'
+	[129] list ''
+		[132] heading 'B0017WNF34'
+			[133] link 'B0017WNF34', url="http://54.224.220.64:3000/item_page/fixed_1/B0017WNF34/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[134] heading "DeMet's Turtles Milk Chocolate Caramel Nut Cluster Bar (1.76 Ounce, 3-Piece Bar, 24 Count), Perfect Grab-N-Go Snack or Sit & Savor"
+		[136] heading '$100.0'
+	[139] image '', url='https://m.media-amazon.com/images/I/51AJ1BpnuPL.jpg'
+	[141] list ''
+		[144] heading 'B01N37FSYX'
+			[145] link 'B01N37FSYX', url="http://54.224.220.64:3000/item_page/fixed_1/B01N37FSYX/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/2/%7B%7D"
+		[146] heading 'Delicious & Sons - Organic - Non-GMO - Gluten-free - Italian Basil Pesto Genovese Sauce with Parmigiano Reggiano PDO Cheese (6.70 oz.)'
+		[148] heading '$14.99'

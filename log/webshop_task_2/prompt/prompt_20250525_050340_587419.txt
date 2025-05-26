@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_2/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1"
+	[13] heading "Instruction: i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+		StaticText "i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/41yDXMLb34L.jpg'
+	[31] list ''
+		[34] heading 'B082MT9162'
+			[35] link 'B082MT9162', url="http://54.224.220.64:3000/item_page/fixed_2/B082MT9162/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[36] heading "GLOBALWIN Men's Casual Slip On Penny Loafers Lightweight Driving Shoes"
+		[38] heading '$29.99 to $49.99'
+	[41] image '', url='https://m.media-amazon.com/images/I/41PBBUE4lNL.jpg'
+	[43] list ''
+		[46] heading 'B07HP6LVRS'
+			[47] link 'B07HP6LVRS', url="http://54.224.220.64:3000/item_page/fixed_2/B07HP6LVRS/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[48] heading 'MCICI Mens Loafers Moccasin Driving Shoes Premium Genuine Leather Casual Slip On Flats Fashion Slipper Breathable Big Size'
+		[50] heading '$15.99 to $32.99'
+	[53] image '', url='https://m.media-amazon.com/images/I/417wl6qwtUL.jpg'
+	[55] list ''
+		[58] heading 'B09F2MFG1Q'
+			[59] link 'B09F2MFG1Q', url="http://54.224.220.64:3000/item_page/fixed_2/B09F2MFG1Q/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[60] heading 'Womens Mens house slippers Memory Foam Garden Plush Lining Slip On Rubber sole Indoor Outdoor House Casual Shoes （Black adult-10.5-11)'
+		[62] heading '$100.0'
+	[65] image '', url='https://m.media-amazon.com/images/I/41tgTFNeH3L.jpg'
+	[67] list ''
+		[70] heading 'B07RPMCNKD'
+			[71] link 'B07RPMCNKD', url="http://54.224.220.64:3000/item_page/fixed_2/B07RPMCNKD/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[72] heading "ULTRAIDEAS Women's Comfy Lightweight Slippers Non-Slip House Shoes for Indoor & Outdoor"
+		[74] heading '$19.99 to $21.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/51SvIs1I3BL.jpg'
+	[79] list ''
+		[82] heading 'B07S7HDC88'
+			[83] link 'B07S7HDC88', url="http://54.224.220.64:3000/item_page/fixed_2/B07S7HDC88/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[84] heading 'VanciLin Mens Casual Leather Fashion Slip-on Loafers'
+		[86] heading '$33.99 to $35.99'
+	[89] image '', url='https://m.media-amazon.com/images/I/41-En679KGS.jpg'
+	[91] list ''
+		[94] heading 'B09QXF3V3X'
+			[95] link 'B09QXF3V3X', url="http://54.224.220.64:3000/item_page/fixed_2/B09QXF3V3X/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[96] heading "DEUVOUM Summer Trend Mesh Shoes Men's Sports Shoes Solid Color Lace-Up Sneakers Fashion All-Match Walking Shoes Outdoor Hiking Shoes Non-Slip Shock-Absorbing Casual Sports Shoes"
+		[98] heading '$100.0'
+	[101] image '', url='https://m.media-amazon.com/images/I/31iSSPkR5uL.jpg'
+	[103] list ''
+		[106] heading 'B07CN9RZ1C'
+			[107] link 'B07CN9RZ1C', url="http://54.224.220.64:3000/item_page/fixed_2/B07CN9RZ1C/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[108] heading "Ecco Men's Melbourne Plain Toe Slip on Loafer"
+		[110] heading '$114.99'
+	[113] image '', url='https://m.media-amazon.com/images/I/41sXBNVyGzL.jpg'
+	[115] list ''
+		[118] heading 'B002RRT0NM'
+			[119] link 'B002RRT0NM', url="http://54.224.220.64:3000/item_page/fixed_2/B002RRT0NM/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[120] heading "Berkemann Women's Clogs and Mules, 5 UK"
+		[122] heading '$78.42 to $94.9'
+	[125] image '', url='https://m.media-amazon.com/images/I/51-wTh9LzaL.jpg'
+	[127] list ''
+		[130] heading 'B094RBNS2K'
+			[131] link 'B094RBNS2K', url="http://54.224.220.64:3000/item_page/fixed_2/B094RBNS2K/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[132] heading 'Mens Running Tennis Blade Shoes Lightweight Casual Walking Sneakers Mesh Breathable Sport Sneakers Sheet Shoes'
+		[134] heading '$27.0'
+	[137] image '', url='https://m.media-amazon.com/images/I/31xUAsoyosL.jpg'
+	[139] list ''
+		[142] heading 'B008QYOGZ2'
+			[143] link 'B008QYOGZ2', url="http://54.224.220.64:3000/item_page/fixed_2/B008QYOGZ2/%5B%22men's%22,%20'size',%20'10.5',%20'black',%20'loafers',%20'with',%20'rubber',%20'soles',%20'under',%20'60',%20'dollars'%5D/1/%7B%7D"
+		[144] heading "OluKai MEA Ola - Men's Supportive Sandal Charcoal/Dkjava - 14"
+		[146] heading '$100.0'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

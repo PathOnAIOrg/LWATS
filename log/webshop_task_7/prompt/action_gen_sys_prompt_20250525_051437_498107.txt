@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "fill('18', 'Cleveland University drawstring shorts small charcoal machine washable under 60')", 'action_description': 'Type the search query for Cleveland University drawstring shorts that meet the specified requirements into the search box.', 'action_result': 'The goal does not appear to be finished based on the screenshot. The search query entered is "drawstring shorts small charcoal machine washable under 60," which aligns with some aspects of the goal, but there is no confirmation or visual indication of the search results or availability of the item matching all the specific requirements, such as being official Cleveland University shorts. \n\nTo determine if the goal is completed, the search results need to be shown, confirming the availability of the exact item specified in the instruction.', 'pre_action_url': 'http://54.224.220.64:3000/fixed_7', 'post_action_url': 'http://54.224.220.64:3000/fixed_7'}, {'action': "click('20')", 'action_description': "Click the 'Search' button to initiate the query and display the results for the entered search criteria.", 'action_result': 'Based on the screenshot, the goal appears to be finished:\n\n1. **Official Cleveland University Shorts**: The product listed is "CSU Cleveland State University Vikings Property Fleece Drawstring Shorts," which is official merchandise.\n\n2. **Color**: The shorts are described as "Heather Charcoal," which matches the charcoal color requirement.\n\n3. **Size**: The image description does not specify if the shorts are available in small size. This would need to be confirmed separately.\n\n4. **Price**: The price is $39.95, which is within the budget of $60.00.\n\n5. **Machine Washable**: The image does not specify if they are machine washable; this detail would need to be confirmed with the product description elsewhere.\n\nOverall, the screenshot displays a product that closely matches the requirements, but you may need to verify availability in a small size and confirm that the shorts are machine washable.', 'pre_action_url': 'http://54.224.220.64:3000/fixed_7', 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_7/%5B'cleveland',%20'university',%20'drawstring',%20'shorts',%20'small',%20'charcoal',%20'machine',%20'washable',%20'under',%20'60'%5D/1"}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            i need some draw string shorts that are official cleveland university. the need to be small and charcoal along with being machine washable, and price lower than 60.00 dollars
+            

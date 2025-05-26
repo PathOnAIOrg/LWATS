@@ -1,0 +1,8 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_2'
+	[11] heading 'WebShop'
+	[13] heading "Instruction: i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+		StaticText "i am looking for a pair of men's size 10.5 black loafers with rubber soles, and price lower than 60.00 dollars"
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value="men's size 10.5 black loafers with rubber soles under 60 dollars", focused, required
+			[20] button 'Search'

@@ -1,0 +1,65 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_12/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1"
+	[13] heading 'Instruction: i am looking fresh scent body lotion for dry skin, and price lower than 30.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/41EDlwJbqjL.jpg'
+	[31] list ''
+		[34] heading 'B087Y28XLM'
+			[35] link 'B087Y28XLM', url="http://54.224.220.64:3000/item_page/fixed_12/B087Y28XLM/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[36] heading "Palmer's Mens Body/face Lotion 8.5 Ounce"
+		[38] heading '$5.99'
+	[41] image '', url='https://m.media-amazon.com/images/I/41Kuvd3DMvL.jpg'
+	[43] list ''
+		[46] heading 'B005X7IXTK'
+			[47] link 'B005X7IXTK', url="http://54.224.220.64:3000/item_page/fixed_12/B005X7IXTK/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[48] heading "L'Erbolario - Iris - Deodorant Cream - Floral and Powdery Scent - Anti-perspirant Properties - Maintains Freshness, Protects Skin - Made with Marshmallow, 1.6 Oz"
+		[50] heading '$35.5'
+	[53] image '', url='https://m.media-amazon.com/images/I/41-4rfop0fL.jpg'
+	[55] list ''
+		[58] heading 'B004VMVLLU'
+			[59] link 'B004VMVLLU', url="http://54.224.220.64:3000/item_page/fixed_12/B004VMVLLU/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[60] heading 'Eminence Cinnamon Paprika Body Lotion, 8.4 Ounce'
+		[62] heading '$39.94'
+	[65] image '', url='https://m.media-amazon.com/images/I/41dLq9JQyEL.jpg'
+	[67] list ''
+		[70] heading 'B07VTR9SYD'
+			[71] link 'B07VTR9SYD', url="http://54.224.220.64:3000/item_page/fixed_12/B07VTR9SYD/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[72] heading 'BioCorneum Advanced Scar Treatment Gel with SPF 30 - Silishield Patented Crosslinking Silicone - 50 gram - Certified Distributor'
+		[74] heading '$47.49'
+	[77] image '', url='https://m.media-amazon.com/images/I/31cS6gEAHZL.jpg'
+	[79] list ''
+		[82] heading 'B0065YIB8I'
+			[83] link 'B0065YIB8I', url="http://54.224.220.64:3000/item_page/fixed_12/B0065YIB8I/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[84] heading 'Body Drench Quick Tan Instant Self-Tanner, Bronzing Mousse, Medium Dark, 4.2 oz'
+		[86] heading '$10.0'
+	[89] image '', url='https://m.media-amazon.com/images/I/41hMKAqkv9L.jpg'
+	[91] list ''
+		[94] heading 'B01IA9BY1G'
+			[95] link 'B01IA9BY1G', url="http://54.224.220.64:3000/item_page/fixed_12/B01IA9BY1G/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[96] heading 'Vaseline Men Extra Strength Body And Face Lotion - 10 Oz ( Pack of 5 )'
+		[98] heading '$15.95'
+	[101] image '', url='https://m.media-amazon.com/images/I/41p7mOgkSQL.jpg'
+	[103] list ''
+		[106] heading 'B07DJJXGB5'
+			[107] link 'B07DJJXGB5', url="http://54.224.220.64:3000/item_page/fixed_12/B07DJJXGB5/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[108] heading 'Face, Body Acne Spray with Benzoyl Peroxide - Body, Chest, Butt, Back Acne Treatment with Tea Tree Oil - Salicylic Acid Spray for Men, Women, Teens - Cystic Hormonal Acne Treatment - Acne Body Spray'
+		[110] heading '$19.97'
+	[113] image '', url='https://m.media-amazon.com/images/I/31PEYdJptZL.jpg'
+	[115] list ''
+		[118] heading 'B09Q3PZ8JK'
+			[119] link 'B09Q3PZ8JK', url="http://54.224.220.64:3000/item_page/fixed_12/B09Q3PZ8JK/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[120] heading 'C.O. Bigelow Hair & Body Wash, Elixir Black, No. 1605, 8 fl oz'
+		[122] heading '$18.0'
+	[125] image '', url='https://m.media-amazon.com/images/I/31H6QaKjjRL.jpg'
+	[127] list ''
+		[130] heading 'B08FY843HB'
+			[131] link 'B08FY843HB', url="http://54.224.220.64:3000/item_page/fixed_12/B08FY843HB/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[132] heading 'Terry Jacobs Honey Cleansing Milk Clover Blossom Extract | Moisturizing Skin Care Facial Cleanser for Normal and Dry Skin | Gentle Face Wash and Make Up Remover, Promotes Soft and Smooth Skin 8oz'
+		[134] heading '$29.95'
+	[137] image '', url='https://m.media-amazon.com/images/I/415nrR9xqwL.jpg'
+	[139] list ''
+		[142] heading 'B08T9KJJPZ'
+			[143] link 'B08T9KJJPZ', url="http://54.224.220.64:3000/item_page/fixed_12/B08T9KJJPZ/%5B'fresh',%20'scent',%20'body',%20'lotion',%20'for',%20'dry',%20'skin',%20'under',%20'30',%20'dollars'%5D/1/%7B%7D"
+		[144] heading 'Avon Anew Dark Circle Corrector Dual Eye System 2 Phase Care Against Dark Circles 20ml - 0.68 fl.oz'
+		[146] heading '$8.5'

@@ -1,0 +1,65 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_11/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1"
+	[13] heading 'Instruction: i need cruelty free deodorant that has a woody scent and is 1.6 oz, and price lower than 50.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/41Kuvd3DMvL.jpg'
+	[31] list ''
+		[34] heading 'B005X7IXTK'
+			[35] link 'B005X7IXTK', url="http://54.224.220.64:3000/item_page/fixed_11/B005X7IXTK/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[36] heading "L'Erbolario - Iris - Deodorant Cream - Floral and Powdery Scent - Anti-perspirant Properties - Maintains Freshness, Protects Skin - Made with Marshmallow, 1.6 Oz"
+		[38] heading '$35.5'
+	[41] image '', url='https://m.media-amazon.com/images/I/51gDhcURgKL.jpg'
+	[43] list ''
+		[46] heading 'B08XQWJX8P'
+			[47] link 'B08XQWJX8P', url="http://54.224.220.64:3000/item_page/fixed_11/B08XQWJX8P/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[48] heading 'Oriental Eau de Toilette – Natural Eau de Toilette for Men Woody Eau de Toilette Infused with Essential Oils Fragrance for Men with Oriental Woody Tones NOU Oliban Eau de Toilette for Men – 1.7 Fl Oz'
+		[50] heading '$21.95'
+	[53] image '', url='https://m.media-amazon.com/images/I/51d0b74YbML.jpg'
+	[55] list ''
+		[58] heading 'B01N1T77OM'
+			[59] link 'B01N1T77OM', url="http://54.224.220.64:3000/item_page/fixed_11/B01N1T77OM/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[60] heading 'Rexona Womans Motion Sense Invisible Pure Deodorant Stick 40ml / 1.35 Oz Travel Size (Pack of 6)'
+		[62] heading '$33.0'
+	[65] image '', url='https://m.media-amazon.com/images/I/41QkWVcVhIL.jpg'
+	[67] list ''
+		[70] heading 'B01M0FH8J8'
+			[71] link 'B01M0FH8J8', url="http://54.224.220.64:3000/item_page/fixed_11/B01M0FH8J8/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[72] heading 'Deodorant Stone Crystal Mist Natural Deodorant Spray 8 oz. Bundle, Pack of 4'
+		[74] heading '$25.62'
+	[77] image '', url='https://m.media-amazon.com/images/I/31F8gxACDxL.jpg'
+	[79] list ''
+		[82] heading 'B075GC6LWC'
+			[83] link 'B075GC6LWC', url="http://54.224.220.64:3000/item_page/fixed_11/B075GC6LWC/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[84] heading 'True + Luscious Sheer Halo Velvet Matte Oil-Control Face Powder Compact - Vegan, Cruelty Free, Talc Free. Multi-use Powder Foundation - 0.35 oz (Shade 0: Porcelain w/Neutral to Pink Undertones)'
+		[86] heading '$32.0'
+	[89] image '', url='https://m.media-amazon.com/images/I/31o1KgehyEL.jpg'
+	[91] list ''
+		[94] heading 'B01LR85M1U'
+			[95] link 'B01LR85M1U', url="http://54.224.220.64:3000/item_page/fixed_11/B01LR85M1U/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[96] heading 'E.L.F. Cosmetics, Lip Primer & Plumper, Clear/Natural, 0.05 oz (1.6 g)/0.06 oz (1.7 g)'
+		[98] heading '$12.99'
+	[101] image '', url='https://m.media-amazon.com/images/I/41XTshtYdzL.jpg'
+	[103] list ''
+		[106] heading 'B004Q5CYH2'
+			[107] link 'B004Q5CYH2', url="http://54.224.220.64:3000/item_page/fixed_11/B004Q5CYH2/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[108] heading 'Axe Excite Deodorant Anti-perspirant Body Spray 5 Oz/150 Ml &.'
+		[110] heading '$8.98'
+	[113] image '', url='https://m.media-amazon.com/images/I/51Yt+2IqB3L.jpg'
+	[115] list ''
+		[118] heading 'B089VWZB64'
+			[119] link 'B089VWZB64', url="http://54.224.220.64:3000/item_page/fixed_11/B089VWZB64/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[120] heading 'Dukhni Pure Attar Oil Blends - Alcohol Free, Vegan & Pure. Set of 6 x 6ml (0.2 Fl Oz Each) - Oud Mukhallat, Oud Mubakhar, Oud Abyad (White Oud), Oud Ya Aini, Attar Al Bakhoor, Ambar Oud'
+		[122] heading '$21.99'
+	[125] image '', url='https://m.media-amazon.com/images/I/41LhutDzhIL.jpg'
+	[127] list ''
+		[130] heading 'B08X31TV2P'
+			[131] link 'B08X31TV2P', url="http://54.224.220.64:3000/item_page/fixed_11/B08X31TV2P/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[132] heading 'Zermat Xtreme Roll-On Antiperspirant Deodorant for Boys 1.06 oz. Set of 2'
+		[134] heading '$15.79'
+	[137] image '', url='https://m.media-amazon.com/images/I/41F-Bt0xeFL.jpg'
+	[139] list ''
+		[142] heading 'B006Y3IDMO'
+			[143] link 'B006Y3IDMO', url="http://54.224.220.64:3000/item_page/fixed_11/B006Y3IDMO/%5B'cruelty',%20'free',%20'deodorant',%20'woody',%20'scent',%20'1.6',%20'oz',%20'under',%20'50',%20'dollars'%5D/1/%7B%7D"
+		[144] heading 'OLD SPICE High Endurance Antiperspirant Invisible Solid, Fresh, 3 Oz (Pack of 3)'
+		[146] heading '$15.3'

@@ -1,0 +1,65 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_1/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1"
+	[13] heading 'Instruction: place order for a pack of 12 blue diamond almonds that is gluten free and has the pecan flavor, and price lower than 60.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/51qPFhNZqsL.jpg'
+	[31] list ''
+		[34] heading 'B003I567W4'
+			[35] link 'B003I567W4', url="http://54.224.220.64:3000/item_page/fixed_1/B003I567W4/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[36] heading 'Blue Diamond Almonds Nut Thins Gluten Free Cracker Crisps, Hint of Sea Salt, 4.25 Oz Boxes (Pack of 12)'
+		[38] heading '$34.44'
+	[41] image '', url='https://m.media-amazon.com/images/I/51Uf4cRMrNL.jpg'
+	[43] list ''
+		[46] heading 'B09DBYG4XD'
+			[47] link 'B09DBYG4XD', url="http://54.224.220.64:3000/item_page/fixed_1/B09DBYG4XD/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[48] heading 'Italian Herb Nuts - Vegan, Kosher, Gluten-free, GMO-free - 12oz (PACK OF 3 BAGS), Satisfaction Guarantee'
+		[50] heading '$17.95'
+	[53] image '', url='https://m.media-amazon.com/images/I/51Ldigu9knL.jpg'
+	[55] list ''
+		[58] heading 'B07HYF111T'
+			[59] link 'B07HYF111T', url="http://54.224.220.64:3000/item_page/fixed_1/B07HYF111T/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[60] heading 'KETO BARS : The Original High Fat, Low Carb, Ketogenic Bar. Gluten Free, Vegan, Homemade with simple ingredients. [Chocolate Peanut Butter, 10 Pack]'
+		[62] heading '$29.95'
+	[65] image '', url='https://m.media-amazon.com/images/I/51BT0AZa4lL.jpg'
+	[67] list ''
+		[70] heading 'B09RLQR5NP'
+			[71] link 'B09RLQR5NP', url="http://54.224.220.64:3000/item_page/fixed_1/B09RLQR5NP/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[72] heading "M&M's Peanut Butter Chocolate Fun Size Packs American Candy In A Variety Of Fun Colors Bulk Party Mix Packaged In Resealable Wholesale Pantry Bag 2 Lbs. (32 Oz)"
+		[74] heading '$29.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/415G0GOLOjL.jpg'
+	[79] list ''
+		[82] heading 'B08P28NXH3'
+			[83] link 'B08P28NXH3', url="http://54.224.220.64:3000/item_page/fixed_1/B08P28NXH3/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[84] heading 'Schoolyard Snacks Low Carb Keto Cheese Puffs - Cheddar Cheese - High Protein - All Natural - Gluten & Grain-Free - Healthy Chips - Low Calorie Food - 12 Pack Single Serve Bags - 100 Calories'
+		[86] heading '$25.49'
+	[89] image '', url='https://m.media-amazon.com/images/I/41ABWCrEKsS.jpg'
+	[91] list ''
+		[94] heading 'B08LQZ5BRC'
+			[95] link 'B08LQZ5BRC', url="http://54.224.220.64:3000/item_page/fixed_1/B08LQZ5BRC/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[96] heading 'Organic Raw Sprouted Hi-Protein Whole Food Bars - Vanilla (12-pack)'
+		[98] heading '$42.99'
+	[101] image '', url='https://m.media-amazon.com/images/I/517Tf0OslpL.jpg'
+	[103] list ''
+		[106] heading 'B07L6PR5WS'
+			[107] link 'B07L6PR5WS', url="http://54.224.220.64:3000/item_page/fixed_1/B07L6PR5WS/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[108] heading 'Movie Night Gift Box with Snacks and Redbox Movie Rental Code'
+		[110] heading '$36.95'
+	[113] image '', url='https://m.media-amazon.com/images/I/41EFvqNqmwL.jpg'
+	[115] list ''
+		[118] heading 'B07FYPSNH8'
+			[119] link 'B07FYPSNH8', url="http://54.224.220.64:3000/item_page/fixed_1/B07FYPSNH8/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[120] heading 'OWYN - 100% Vegan Plant-Based Protein Shakes | Cold Brew Coffee, 12 Fl Oz | Dairy-Free, Gluten-Free, Soy-Free, Tree Nut-Free, Egg-Free, Allergy-Free, Vegetarian'
+		[122] heading '$11.07'
+	[125] image '', url='https://m.media-amazon.com/images/I/417Wjkgn9IL.jpg'
+	[127] list ''
+		[130] heading 'B002C56QX6'
+			[131] link 'B002C56QX6', url="http://54.224.220.64:3000/item_page/fixed_1/B002C56QX6/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[132] heading 'Crunchmaster Gourmet Toasted Sesame Rice Cracker, 3.5-Ounce (Pack of 12)'
+		[134] heading '$100.0'
+	[137] image '', url='https://m.media-amazon.com/images/I/31QXnpfIp5L.jpg'
+	[139] list ''
+		[142] heading 'B09K4S16YT'
+			[143] link 'B09K4S16YT', url="http://54.224.220.64:3000/item_page/fixed_1/B09K4S16YT/%5B'12',%20'blue',%20'diamond',%20'almonds',%20'gluten',%20'free',%20'pecan',%20'flavor'%5D/1/%7B%7D"
+		[144] heading 'Sconza Candy Coated Milk Chocolate Almonds | Chocolate Covered Almonds with Shades of Blue & Silver Candy Shell | Pack of 1 (5 lbs. Bulk)'
+		[146] heading '$41.99'

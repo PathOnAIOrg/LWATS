@@ -1,0 +1,7 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_6'
+	[11] heading 'WebShop'
+	[13] heading 'Instruction: i want a pink niuta 2 pack hair towel wrap for dry hair, and price lower than 30.00 dollars'
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value='pink niuta 2 pack hair towel wrap', focused, required
+			[20] button 'Search'

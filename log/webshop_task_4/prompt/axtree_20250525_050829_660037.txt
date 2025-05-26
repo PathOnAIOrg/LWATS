@@ -1,0 +1,7 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_4'
+	[11] heading 'WebShop'
+	[13] heading 'Instruction: i am looking for a gluten free, 100% vegan plant based protein shake that is soy-free, and price lower than 50.00 dollars'
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value='gluten free 100% vegan plant based protein shake soy-free under 50 dollars', focused, required
+			[20] button 'Search'

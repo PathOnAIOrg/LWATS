@@ -1,0 +1,7 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_8'
+	[11] heading 'WebShop'
+	[13] heading 'Instruction: show me an one organic hair growth serum roller set for all hair types, and price lower than 50.00 dollars'
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value='organic hair growth serum roller set for all hair types under 50 dollars', focused, required
+			[20] button 'Search'

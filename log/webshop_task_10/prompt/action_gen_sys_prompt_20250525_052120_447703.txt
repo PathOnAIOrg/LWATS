@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "fill('18', 'orange cargo pants hiking under 50')", 'action_description': "Fill the search box with the query 'orange cargo pants hiking under 50'.", 'action_result': 'The goal is not yet finished. The screenshot shows the search input box with the text "orange cargo pants hiking under 50" and a search button. However, there\'s no indication of search results being displayed, such as a list of cargo pants or specific product details that match the criteria (orange, suitable for hiking, under $50). To consider the goal as complete, results should be shown confirming the availability of such items.', 'pre_action_url': 'http://54.224.220.64:3000/fixed_10', 'post_action_url': 'http://54.224.220.64:3000/fixed_10'}, {'action': "click('20')", 'action_description': "Click on the 'Search' button to execute the search for orange cargo pants under 50 dollars.", 'action_result': "Based on the screenshot, the goal is not fully met. The request was for orange cargo pants that are hiking-friendly and under $50.00. \n\nThe pants shown in the screenshot are $16.79, which meets the price criteria, but they appear to be more neon or high visibility rather than orange. Given this, while the price is right, the color requirement isn't fulfilled. More options should be explored to find an orange pair.", 'pre_action_url': 'http://54.224.220.64:3000/fixed_10', 'post_action_url': "http://54.224.220.64:3000/search_results/fixed_10/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1"}, {'action': "click('35')", 'action_description': "Click on the link for the product 'Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers' to view more details about these pants.", 'action_result': 'No, the goal is not finished.\n\nThe goal is to find a pair of orange cargo pants suitable for everyday casual wear and hiking, priced below $50.00. The screenshot shows pants that are yellow, not orange. Additionally, no indication shows that the orange option is selected. Here are the key points:\n\n1. **Color**: The pants displayed are yellow, not orange.\n2. **Price**: The price is $16.79, which meets the budget requirement.\n3. **Use**: Described as suitable for outdoor hiking.\n\nTo achieve the goal, an orange option needs to be selected, ensuring it matches the desired color criteria.', 'pre_action_url': "http://54.224.220.64:3000/search_results/fixed_10/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1", 'post_action_url': "http://54.224.220.64:3000/item_page/fixed_10/B099231V35/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars
+            

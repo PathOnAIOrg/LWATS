@@ -1,0 +1,177 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_3/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4"
+	[13] heading 'Instruction: i want to buy a folding storage box ottoman which i can easily install and has faux leather, the size of it should be 60x40x40cm, and price lower than 170.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 4 (Total results: 50)'
+	[24] button '< Prev'
+	[27] button 'Next >'
+	[31] image '', url='https://m.media-amazon.com/images/I/41CVJTO6jXL.jpg'
+	[33] list ''
+		[36] heading 'B01EX1BWE4'
+			[37] link 'B01EX1BWE4', url="http://54.224.220.64:3000/item_page/fixed_3/B01EX1BWE4/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[38] heading "Milwaukee Leather MBM9075 Men's Black 6-inch Plain Toe Dual Zipper Lock Leather Boots"
+		[40] heading '$99.82 to $134.99'
+	[43] image '', url='https://m.media-amazon.com/images/I/51RDv5pBbbL.jpg'
+	[45] list ''
+		[48] heading 'B06ZYS6NW4'
+			[49] link 'B06ZYS6NW4', url="http://54.224.220.64:3000/item_page/fixed_3/B06ZYS6NW4/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[50] heading 'LALUZ Faux-Wood Pendant Lighting, Farmhouse Hanging Lamp with Water Glass Shade for Kitchen Island, Living Room, Foyer, A03182'
+		[52] heading '$59.99'
+	[55] image '', url='https://m.media-amazon.com/images/I/41p9dAvjOoL.jpg'
+	[57] list ''
+		[60] heading 'B09NNMV9LN'
+			[61] link 'B09NNMV9LN', url="http://54.224.220.64:3000/item_page/fixed_3/B09NNMV9LN/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[62] heading 'JSPOYOU Mens Short Sleeve Crewneck 3D Graphic Tunic Shirts Big & Tall Tie Dye Summer Top Basic Designed Classic Cotton Shirt'
+		[64] heading '$3.99 to $10.99'
+	[67] image '', url='https://m.media-amazon.com/images/I/51XsoZdj1GL.jpg'
+	[69] list ''
+		[72] heading 'B09Q67H373'
+			[73] link 'B09Q67H373', url="http://54.224.220.64:3000/item_page/fixed_3/B09Q67H373/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[74] heading 'JSPOYOU 2022 Newly T-Shirt for Mens Funny 3D Graphics Pattern Crewneck Short Sleeve Tees Big and Tall Summer Casual Comfy Top'
+		[76] heading '$1.99 to $8.99'
+	[79] image '', url='https://m.media-amazon.com/images/I/31iSSPkR5uL.jpg'
+	[81] list ''
+		[84] heading 'B07CN9RZ1C'
+			[85] link 'B07CN9RZ1C', url="http://54.224.220.64:3000/item_page/fixed_3/B07CN9RZ1C/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[86] heading "Ecco Men's Melbourne Plain Toe Slip on Loafer"
+		[88] heading '$114.99'
+	[91] image '', url='https://m.media-amazon.com/images/I/41yVbifjURL.jpg'
+	[93] list ''
+		[96] heading 'B09S6S7LG1'
+			[97] link 'B09S6S7LG1', url="http://54.224.220.64:3000/item_page/fixed_3/B09S6S7LG1/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[98] heading 'TV Stand for 70 Inch TV Entertainment Center Stand TV Stand with Storage for TV Console Cabinet Media Cable Box Gaming 70 inch TV Stands for Bedroom Living Room'
+		[100] heading '$169.99'
+	[103] image '', url='https://m.media-amazon.com/images/I/519wJWhyxpS.jpg'
+	[105] list ''
+		[108] heading 'B0973XVPCD'
+			[109] link 'B0973XVPCD', url="http://54.224.220.64:3000/item_page/fixed_3/B0973XVPCD/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[110] heading 'Wood USB C Headphones Hi-Fi Stereo Bass Headphones Wired with Mic Volume Control in-Ear Earbuds for Samsung Galaxy S22 Ultra Z Flip 3 Fold 2 S21 S20 FE,OnePlus 10 Pro,iPad Mini Pro Air,Pixel 6 Pro 5G'
+		[112] heading '$10.99'
+	[115] image '', url='https://m.media-amazon.com/images/I/41bCeewNbeL.jpg'
+	[117] list ''
+		[120] heading 'B07GRP1WCD'
+			[121] link 'B07GRP1WCD', url="http://54.224.220.64:3000/item_page/fixed_3/B07GRP1WCD/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[122] heading 'iDealBed Luxe Series iQ5 Hybrid Luxury Plush Mattress 4i Custom Adjustable Bed Set, Wireless, Massage, Nightlight, Zero-Gravity, Anti-Snore, Memory Pre-Sets (Queen)'
+		[124] heading '$1899.95'
+	[127] image '', url='https://m.media-amazon.com/images/I/51CeT4nI48L.jpg'
+	[129] list ''
+		[132] heading 'B09KWX51GJ'
+			[133] link 'B09KWX51GJ', url="http://54.224.220.64:3000/item_page/fixed_3/B09KWX51GJ/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[134] heading 'Monbix 3 Piece Queen Bed Set All Season Luxury Breathable Microfiber Bedding Collection Cozy Comforter Set Soft Washable Foil Marble Pattern Grey with Shams'
+		[136] heading '$49.99'
+	[139] image '', url='https://m.media-amazon.com/images/I/41gxr+og3wL.jpg'
+	[141] list ''
+		[144] heading 'B06W51MMKY'
+			[145] link 'B06W51MMKY', url="http://54.224.220.64:3000/item_page/fixed_3/B06W51MMKY/%5B'folding',%20'storage',%20'box',%20'ottoman',%20'faux',%20'leather',%20'60x40x40cm'%5D/4/%7B%7D"
+		[146] heading "Alegria Women's Kourtney"
+		[148] heading '$62.99 to $129.99'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

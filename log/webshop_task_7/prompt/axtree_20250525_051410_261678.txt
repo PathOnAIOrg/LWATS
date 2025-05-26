@@ -1,0 +1,7 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_7'
+	[11] heading 'WebShop'
+	[13] heading 'Instruction: i need some draw string shorts that are official cleveland university. the need to be small and charcoal along with being machine washable, and price lower than 60.00 dollars'
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...' value='Cleveland University drawstring shorts small charcoal machine washable under 60', focused, required
+			[20] button 'Search'

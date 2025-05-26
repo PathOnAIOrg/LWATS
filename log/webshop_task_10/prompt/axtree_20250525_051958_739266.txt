@@ -1,0 +1,8 @@
+RootWebArea '', focused, url='http://54.224.220.64:3000/fixed_10'
+	[11] heading 'WebShop'
+	[13] heading "Instruction: hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+		StaticText "hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+	[15] form ''
+		[17] LayoutTable ''
+			[18] textbox 'Search...', required
+			[20] button 'Search'

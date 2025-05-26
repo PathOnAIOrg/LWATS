@@ -1,0 +1,34 @@
+
+            # Instructions
+            Review the current state of the page and all other information to find the best
+            possible next action and a natural language description of the action (example of natural language description is like)
+            "click the navbar button" or "select the portrait option" etc) to accomplish your goal.
+            Your answer will be interpreted and executed by a program, make sure to follow the formatting instructions.
+            
+            Respond using valid JSON format, which can be parsed by python json.loads(), with keys:
+            - context (containing the action)
+            - natural_language_description
+            - finished (boolean: IMPORTANT - must be False if content field contains an action.
+                    Only set to True when NO more actions are needed and content field is empty)
+            
+            Example response format:
+            {
+                "content": "action here",
+                "natural_language_description": "description here",
+                "finished": false  # Must be false because content contains an action
+            }
+            
+            # Rules for finished field:
+            - If content field contains any action: finished MUST be False
+            - Only set finished to True when:
+                1. The goal is completely achieved
+                2. No more actions are needed
+                3. Content field is empty
+            
+            Previous actions and action results are: [{'action': "fill('18', 'gluten free 100% vegan plant based protein shake soy-free under 50 dollars')", 'action_description': 'Enter the search criteria into the search box to find the desired product.', 'action_result': 'Based on the screenshot, the goal does not appear to be finished. The search term has been entered, but there\'s no indication that search results have been displayed. The application interface shows a search bar with the query entered and a "Search" button, but there’s no visible list or results for a gluten-free, 100% vegan, soy-free protein shake under $50. For the goal to be considered complete, the application would need to display matching products or indicate that there are no results that fit the criteria.', 'pre_action_url': 'http://54.224.220.64:3000/fixed_4', 'post_action_url': 'http://54.224.220.64:3000/fixed_4'}]
+            
+            Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+            
+            # Goal:
+            i am looking for a gluten free, 100% vegan plant based protein shake that is soy-free, and price lower than 50.00 dollars
+            

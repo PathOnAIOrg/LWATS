@@ -1,0 +1,176 @@
+
+    
+        # Current Accessibility Tree:
+        RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_9/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1"
+	[13] heading 'Instruction: i am looking for x-large, red color women faux fur lined winter warm jacket coat, and price lower than 90.00 dollars'
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/31Nkx3FT1hL.jpg'
+	[31] list ''
+		[34] heading 'B09KP78G37'
+			[35] link 'B09KP78G37', url="http://54.224.220.64:3000/item_page/fixed_9/B09KP78G37/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[36] heading 'Women Faux Fur Lined Jacket Coat Winter Warm Thick Fleece Outwear Trench Zipper Plus Size Long Sleeve Plush Overcoat'
+		[38] heading '$47.41 to $59.07'
+	[41] image '', url='https://m.media-amazon.com/images/I/51modP3dIdL.jpg'
+	[43] list ''
+		[46] heading 'B07ZXBGDXF'
+			[47] link 'B07ZXBGDXF', url="http://54.224.220.64:3000/item_page/fixed_9/B07ZXBGDXF/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[48] heading "Women's Coat, FORUU Winter Faux Fur Fleece Outwear Warm Lapel Biker Motor Aviator Jacket"
+		[50] heading '$21.49 to $24.99'
+	[53] image '', url='https://m.media-amazon.com/images/I/417qAowkc5L.jpg'
+	[55] list ''
+		[58] heading 'B09MSZ4VS8'
+			[59] link 'B09MSZ4VS8', url="http://54.224.220.64:3000/item_page/fixed_9/B09MSZ4VS8/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[60] heading 'Goldweather Women Winter Leggings Printed Warm Fleece Lined Yoga Pants Trousers Thermal High Waist Thicken Cashmere Tights (Navy, L)'
+		[62] heading '$20.99'
+	[65] image '', url='https://m.media-amazon.com/images/I/41aNjScdGtL.jpg'
+	[67] list ''
+		[70] heading 'B09GLVMLMS'
+			[71] link 'B09GLVMLMS', url="http://54.224.220.64:3000/item_page/fixed_9/B09GLVMLMS/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[72] heading 'Anniou Electric Heated Jacket Adjustable Temp USB Heated Coat Winter Hooded Jacket Men Women'
+		[74] heading '$64.99 to $114.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/3132OhXlziL.jpg'
+	[79] list ''
+		[82] heading 'B09C8YNWWB'
+			[83] link 'B09C8YNWWB', url="http://54.224.220.64:3000/item_page/fixed_9/B09C8YNWWB/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[84] heading 'Clarks Womens Suede Leather Slipper with Gore and Bungee JMH2213 - Warm Plush Faux Fur Lining - Indoor Outdoor House Slippers For Women'
+		[86] heading '$44.95'
+	[89] image '', url='https://m.media-amazon.com/images/I/412AX6VrkyL.jpg'
+	[91] list ''
+		[94] heading 'B09S3BN15C'
+			[95] link 'B09S3BN15C', url="http://54.224.220.64:3000/item_page/fixed_9/B09S3BN15C/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[96] heading "Mens Linen Shirt,Men's Striped Shirts Casual Short Sleeve Button Down Shirts Regular Fit Hawaiian Shirts Beach Tees Tops"
+		[98] heading '$3.78 to $11.38'
+	[101] image '', url='https://m.media-amazon.com/images/I/51GSWJ2p2lL.jpg'
+	[103] list ''
+		[106] heading 'B000J3HZXS'
+			[107] link 'B000J3HZXS', url="http://54.224.220.64:3000/item_page/fixed_9/B000J3HZXS/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[108] heading 'Laguna Floating Planting Bag, Aquatic Pond Planter'
+		[110] heading '$19.99'
+	[113] image '', url='https://m.media-amazon.com/images/I/41D54yBGD-L.jpg'
+	[115] list ''
+		[118] heading 'B07DKGJR74'
+			[119] link 'B07DKGJR74', url="http://54.224.220.64:3000/item_page/fixed_9/B07DKGJR74/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[120] heading "Amazon Brand - Daily Ritual Women's 100% Cotton Oversized Fit V-Neck Pullover Sweater"
+		[122] heading '$20.66 to $29.2'
+	[125] image '', url='https://m.media-amazon.com/images/I/41BFuOLZqNS.jpg'
+	[127] list ''
+		[130] heading 'B098XT346Y'
+			[131] link 'B098XT346Y', url="http://54.224.220.64:3000/item_page/fixed_9/B098XT346Y/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[132] heading 'Fjackets Real Lambskin Sherpa Jacket - Mens Leather Jacket'
+		[134] heading '$187.0 to $219.0'
+	[137] image '', url='https://m.media-amazon.com/images/I/41JKaj6mh8S.jpg'
+	[139] list ''
+		[142] heading 'B0957XW92M'
+			[143] link 'B0957XW92M', url="http://54.224.220.64:3000/item_page/fixed_9/B0957XW92M/%5B'x-large',%20'red',%20'women',%20'faux',%20'fur',%20'lined',%20'winter',%20'warm',%20'jacket',%20'coat',%20'under',%20'90',%20'dollars'%5D/1/%7B%7D"
+		[144] heading 'Giantex Faux Fur Vanity Stool Chair, Round Footstool Ottoman with Metal Legs for Living Room, Fluffy Chair with Furry Padded Seat, Makeup Stool for Bedroom, Decorative Furniture Footrest White'
+		[146] heading '$52.99'
+        
+        # Action Space
+        
+15 different types of actions are available.
+
+noop(wait_ms: float = 1000)
+    Examples:
+        noop()
+
+        noop(500)
+
+scroll(delta_x: float, delta_y: float)
+    Examples:
+        scroll(0, 200)
+
+        scroll(-50.2, -100.5)
+
+fill(bid: str, value: str, timeout: int = 10000, retry_attempts: int = 3)
+    Examples:
+        fill('237', 'example value')
+
+        fill('45', 'multi-line\nexample')
+
+        fill('a12', 'example with "quotes"')
+
+click(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [], timeout: int = 3000)
+    Examples:
+        click('a51')
+
+        click('b22', button='right')
+
+        click('48', button='middle', modifiers=['Shift'])
+
+dblclick(bid: str, button: Literal['left', 'middle', 'right'] = 'left', modifiers: list[typing.Literal['Alt', 'Control', 'Meta', 'Shift']] = [])
+    Examples:
+        dblclick('12')
+
+        dblclick('ca42', button='right')
+
+        dblclick('178', button='middle', modifiers=['Shift'])
+
+hover(bid: str)
+    Examples:
+        hover('b8')
+
+press(bid: str, key_comb: str)
+    Examples:
+        press('88', 'Backspace')
+
+        press('a26', 'Control+a')
+
+        press('a61', 'Meta+Shift+t')
+
+focus(bid: str)
+    Examples:
+        focus('b455')
+
+clear(bid: str)
+    Examples:
+        clear('996')
+
+drag_and_drop(from_bid: str, to_bid: str)
+    Examples:
+        drag_and_drop('56', '498')
+
+upload_file(bid: str, file: str | list[str])
+    Examples:
+        upload_file('572', 'my_receipt.pdf')
+
+        upload_file('63', ['/home/bob/Documents/image.jpg', '/home/bob/Documents/file.zip'])
+
+go_back()
+    Examples:
+        go_back()
+
+go_forward()
+    Examples:
+        go_forward()
+
+goto(url: str)
+    Examples:
+        goto('http://www.example.com')
+
+select_option(bid: str, options: str | list[str])
+    Examples:
+        select_option('a48', 'blue')
+
+        select_option('c48', ['red', 'green', 'blue'])
+
+Multiple actions can be provided at once, but will be executed sequentially without any feedback from the page.
+More than 2-3 actions usually leads to failure or unexpected behavior. Example:
+fill('a12', 'example with "quotes"')
+click('a51')
+click('48', button='middle', modifiers=['Shift'])
+
+
+        # Screenshot
+        The image provided is a screenshot of the current application state, corresponding to the Accessibility Tree above.
+
+        Here is an example with chain of thought of a valid action when clicking on a button:
+        "
+        In order to accomplish my goal I need to click on the button with bid 12
+        ```click('12')```
+        "
+
+        Please analyze the screenshot and the Accessibility Tree to determine the next appropriate action. Refer to visual elements from the screenshot if relevant to your decision.
+        Provide ONLY ONE action. Do not suggest multiple actions or a sequence of actions.
+        

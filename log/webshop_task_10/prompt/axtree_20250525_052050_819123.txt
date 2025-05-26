@@ -1,0 +1,66 @@
+RootWebArea '', focused, url="http://54.224.220.64:3000/search_results/fixed_10/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1"
+	[13] heading "Instruction: hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+		StaticText "hello, i'm looking for a pair of cargo pants for everyday casual wear? but also hiking-friendly. also, i want an orange pair please, and price lower than 50.00 dollars"
+	[17] button 'Back to Search'
+	[21] heading 'Page 1 (Total results: 50)'
+	[25] button 'Next >'
+	[29] image '', url='https://m.media-amazon.com/images/I/41EtKhfNAQL.jpg'
+	[31] list ''
+		[34] heading 'B099231V35'
+			[35] link 'B099231V35', url="http://54.224.220.64:3000/item_page/fixed_10/B099231V35/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[36] heading 'Mens Casual Cargo Pants Hi Vis Viz Reflective Overalls High Visibility Safe Work Pants Outdoor Hiking Trousers Big and Tall'
+		[38] heading '$16.79'
+	[41] image '', url='https://m.media-amazon.com/images/I/316p1KLaQwL.jpg'
+	[43] list ''
+		[46] heading 'B08JD14GJF'
+			[47] link 'B08JD14GJF', url="http://54.224.220.64:3000/item_page/fixed_10/B08JD14GJF/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[48] heading "COOrun Women's UPF 50+ Sun Protection Shirts Quick Dry Long Sleeve Shirts Lightweight T-Shirt Outdoor Hiking Runing Fishing"
+		[50] heading '$9.98 to $16.98'
+	[53] image '', url='https://m.media-amazon.com/images/I/51O1+tw-amL.jpg'
+	[55] list ''
+		[58] heading 'B09Q5ZHRVM'
+			[59] link 'B09Q5ZHRVM', url="http://54.224.220.64:3000/item_page/fixed_10/B09Q5ZHRVM/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[60] heading 'Yinimo Mens Gym Shorts Fashionable Loose Beach Drawstring Turkey Print Beach Cool Shorts'
+		[62] heading '$19.19'
+	[65] image '', url='https://m.media-amazon.com/images/I/317yUg75IQS.jpg'
+	[67] list ''
+		[70] heading 'B08LKKSL8F'
+			[71] link 'B08LKKSL8F', url="http://54.224.220.64:3000/item_page/fixed_10/B08LKKSL8F/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[72] heading 'BOCOMAL FR Pants for Men Cargo Flame Resistant Pants(2112&CAT2) 100% C 7.5oz Utility Fire Resistant Pants'
+		[74] heading '$45.99 to $49.99'
+	[77] image '', url='https://m.media-amazon.com/images/I/41p9dAvjOoL.jpg'
+	[79] list ''
+		[82] heading 'B09NNMV9LN'
+			[83] link 'B09NNMV9LN', url="http://54.224.220.64:3000/item_page/fixed_10/B09NNMV9LN/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[84] heading 'JSPOYOU Mens Short Sleeve Crewneck 3D Graphic Tunic Shirts Big & Tall Tie Dye Summer Top Basic Designed Classic Cotton Shirt'
+		[86] heading '$3.99 to $10.99'
+	[89] image '', url='https://m.media-amazon.com/images/I/51XsoZdj1GL.jpg'
+	[91] list ''
+		[94] heading 'B09Q67H373'
+			[95] link 'B09Q67H373', url="http://54.224.220.64:3000/item_page/fixed_10/B09Q67H373/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[96] heading 'JSPOYOU 2022 Newly T-Shirt for Mens Funny 3D Graphics Pattern Crewneck Short Sleeve Tees Big and Tall Summer Casual Comfy Top'
+		[98] heading '$1.99 to $8.99'
+	[101] image '', url='https://m.media-amazon.com/images/I/417qAowkc5L.jpg'
+	[103] list ''
+		[106] heading 'B09MSZ4VS8'
+			[107] link 'B09MSZ4VS8', url="http://54.224.220.64:3000/item_page/fixed_10/B09MSZ4VS8/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[108] heading 'Goldweather Women Winter Leggings Printed Warm Fleece Lined Yoga Pants Trousers Thermal High Waist Thicken Cashmere Tights (Navy, L)'
+		[110] heading '$20.99'
+	[113] image '', url='https://m.media-amazon.com/images/I/41tba19g1CL.jpg'
+	[115] list ''
+		[118] heading 'B07WMMYB6G'
+			[119] link 'B07WMMYB6G', url="http://54.224.220.64:3000/item_page/fixed_10/B07WMMYB6G/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[120] heading "MAGCOMSEN Men's Gym Workout Shorts with Pockets Mesh Liner Quick Dry Running Shorts for Jogging, Hiking"
+		[122] heading '$17.98 to $17.99'
+	[125] image '', url='https://m.media-amazon.com/images/I/41-En679KGS.jpg'
+	[127] list ''
+		[130] heading 'B09QXF3V3X'
+			[131] link 'B09QXF3V3X', url="http://54.224.220.64:3000/item_page/fixed_10/B09QXF3V3X/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[132] heading "DEUVOUM Summer Trend Mesh Shoes Men's Sports Shoes Solid Color Lace-Up Sneakers Fashion All-Match Walking Shoes Outdoor Hiking Shoes Non-Slip Shock-Absorbing Casual Sports Shoes"
+		[134] heading '$100.0'
+	[137] image '', url='https://m.media-amazon.com/images/I/31IBFWvlQtL.jpg'
+	[139] list ''
+		[142] heading 'B09QCVCYVY'
+			[143] link 'B09QCVCYVY', url="http://54.224.220.64:3000/item_page/fixed_10/B09QCVCYVY/%5B'orange',%20'cargo',%20'pants',%20'hiking',%20'under',%20'50'%5D/1/%7B%7D"
+		[144] heading 'Burband Womens High Waist Bike Shorts Tummy Control Workout Yoga Pants Running Exercise Running Shorts with Side Pockets'
+		[146] heading '$6.82'
